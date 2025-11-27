@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://10hyg23v3xxr"]
+
+[ext_resource type="PackedScene" uid="uid://r106neer2h80" path="res://assets/Spiders/spider.fbx" id="1_il4u6"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="spider" parent="." instance=ExtResource("1_il4u6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.91582125, 0)
