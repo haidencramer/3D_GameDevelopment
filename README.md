@@ -1,3 +1,29 @@
+# Assignment Specs
+
+<p>
+  All Games must include:
+
+  - Controllable Character
+  - Smooth feeling movement
+  - movement modifiers that fit with terrain
+  - Interesting design
+  - Varied Node Types (RigidBodies, StaticBodies, KinematicBodies etc.)
+  - Basic Menus
+  - Credits
+  - Audio Effects and Sound Track
+  - Playable with at least 2 peers
+  - More than one Viewport (Minimap, SplitScreen, etc.)
+  - Interesting Lighting Effects
+  - 3D affects or Assets
+ 
+
+Group Games Must:
+
+  - Must take advantage of 3D Views (First-Person, Third-Person, etc.)
+  - Dedicated Server (doesn't need to be hosted outside of LAN, remember this will be a video demo)
+</p>
+---
+
 # 3D Spider Fighting Game Development Plan
 
 ## Step-by-Step Process
