@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://fw6xhhi357nd"]
+
+[ext_resource type="PackedScene" uid="uid://cc1yiyfu4hv0d" path="res://assets/ALL/Katana/Katana.blend" id="1_8g2ia"]
+[ext_resource type="Script" uid="uid://bgibg4xtdqjum" path="res://scripts/weapon.gd" id="1_ym1nn"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ym1nn"]
+height = 2.0499268
+radius = 0.7036133
+
+[node name="Katana" type="RigidBody3D"]
+script = ExtResource("1_ym1nn")
+weapon_name = "Katana"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.1645417, 0, 0, 0, 2.3065264, 0, 0, 0, 0.055477414, 0.026340723, 0.096795306, 0)
+shape = SubResource("CylinderShape3D_ym1nn")
+
+[node name="Katana" parent="." instance=ExtResource("1_8g2ia")]
+
+[node name="GripPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07975423, -1.6527336, 0)
