@@ -1,0 +1,3125 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyhvbso41web5"]
+
+[ext_resource type="ArrayMesh" uid="uid://li6o0p2s830c" path="res://assets/Modular Village/Cobblestone_Floor_1.obj" id="1_wl4x5"]
+[ext_resource type="ArrayMesh" uid="uid://ckukehjekgu6u" path="res://assets/Modular Village/Stone_Wall_1.obj" id="2_olpmc"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xdvfk"]
+points = PackedVector3Array(-1.5, -0.2, -0.5, -1.5, -0.2, 1.5, -1.5, -1.1011958e-05, -0.5, 0.5, -0.2, -0.5, -1.5, -1.1011958e-05, 1.5, 0.5, -0.2, 1.5, -1.4833595, 0.028125003, 1.1055207, -1.4859045, 0.0140569955, -0.30344558, -1.4410728, 0.0140569955, -0.43754894, -0.6427173, 0.028125003, -0.48238057, 0.5, -1.1011958e-05, -0.5, -1.2556773, 0.028125003, 1.4800314, -1.4350039, 0.028125003, 1.3457322, 0.5, -1.1011958e-05, 1.5, -0.30305398, 0.028125003, 1.4853171, -1.4324589, 0.028125003, -0.0052858293, -1.2907205, 0.028125003, -0.24158183, -1.1045419, 0.028125003, -0.3811668, -0.12862182, 0.028125003, -0.4755286, 0.30892718, 0.028125003, -0.4350039, 0.48375094, 0.028125003, -0.3913469, 0.48590446, 0.028125003, 0.79992175, 0.47963977, 0.028125003, 1.4373531, 0.29659355, 0.028125003, 1.454581)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7ft05"]
+points = PackedVector3Array(-0.5000049, 1, 0.5, -0.49375, 0.97494125, 0.47494125, -0.5000049, 1, -0.5, -0.55, 1, 0.5, -0.5000049, 0, 0.5, -0.49375, 0.97494125, -0.47503915, -0.49375, 0.024960846, 0.47494125, -0.55, 1, -0.5, -0.5000049, 0, -0.5, -0.55, 0, 0.5, -0.49375, 0.024960846, -0.47503915, -0.55, 0, -0.5)
+
+[node name="Arena" type="Node3D"]
+
+[node name="ArenaFloor" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor2"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor2"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor3"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor3"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor4" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor4"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor4"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor5" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor5"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor5"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor6" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor6"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor6"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor7" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor7"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor7"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor8" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor8"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor8"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor9" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor9"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor9"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor10" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor10"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor10"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor11" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor11"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor11"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor12" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor12"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor12"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor13" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor13"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor13"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor14" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor14"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor14"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor15" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor15"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor15"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor16" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor16"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor16"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor17" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor17"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor17"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor18" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor18"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor18"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor19" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor19"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor19"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor20" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor20"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor20"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor21" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor21"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor21"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor22" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor22"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor22"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor23" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor23"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor23"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor24" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor24"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor24"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor25" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor25"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor25"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor26" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor26"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor26"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor27" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor27"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor27"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor28" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor28"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor28"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor29" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor29"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor29"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor30" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor30"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor30"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor31" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor31"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor31"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor32" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor32"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor32"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor33" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor33"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor33"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor34" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor34"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor34"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor35" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor35"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor35"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor36" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor36"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor36"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor37" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor37"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor37"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor38" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor38"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor38"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor39" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor39"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor39"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor40" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor40"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor40"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor41" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor41"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor41"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor42" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor42"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor42"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor43" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor43"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor43"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor44" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor44"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor44"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor45" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor45"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor45"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor46" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor46"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor46"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor47" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor47"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor47"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor48" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor48"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor48"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor49" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor49"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor49"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor50" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor50"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor50"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor51" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor51"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor51"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor52" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor52"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor52"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor53" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor53"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor53"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor54" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor54"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor54"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor55" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor55"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor55"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor56" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor56"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor56"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor57" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor57"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor57"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor58" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor58"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor58"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor59" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor59"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor59"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor60" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor60"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor60"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor61" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor61"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor61"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor62" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor62"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor62"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor63" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor63"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor63"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor64" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor64"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor64"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor65" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor65"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor65"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor66" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor66"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor66"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor67" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor67"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor67"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor68" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor68"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor68"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor69" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor69"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor69"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor70" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor70"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor70"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor71" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor71"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor71"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaFloor72" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor72"]
+mesh = ExtResource("1_wl4x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor72"]
+shape = SubResource("ConvexPolygonShape3D_xdvfk")
+
+[node name="ArenaWall" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall2"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall2"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall3"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall3"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall4" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall4"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall4"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall5" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall5"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall5"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall6" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall6"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall6"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall7" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall7"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall7"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall8" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall8"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall8"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall9" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall9"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall9"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall10" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall10"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall10"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall11" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall11"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall11"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall12" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall12"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall12"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall13" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall13"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall13"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall14" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall14"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall14"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall15" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall15"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall15"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall16" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall16"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall16"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall17" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall17"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall17"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall18" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall18"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall18"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall19" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall19"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall19"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall20" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall20"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall20"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall21" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall21"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall21"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall22" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall22"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall22"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall23" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall23"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall23"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall24" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall24"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall24"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall25" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall25"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall25"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall26" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, 7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall26"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall26"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall27" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, 7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall27"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall27"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall28" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall28"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall28"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall29" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall29"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall29"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall30" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall30"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall30"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall31" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall31"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall31"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall32" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, 5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall32"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall32"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall33" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, 5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall33"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall33"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall34" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall34"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall34"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall35" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall35"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall35"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall36" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall36"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall36"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall37" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall37"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall37"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall38" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall38"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall38"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall39" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall39"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall39"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall40" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall40"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall40"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall41" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall41"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall41"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall42" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall42"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall42"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall43" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall43"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall43"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall44" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall44"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall44"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall45" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall45"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall45"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall46" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall46"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall46"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall47" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall47"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall47"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall48" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall48"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall48"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall49" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall49"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall49"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall50" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall50"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall50"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall51" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall51"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall51"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall52" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall52"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall52"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall53" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall53"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall53"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall54" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall54"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall54"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall55" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall55"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall55"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall56" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, -3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall56"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall56"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall57" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, -3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall57"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall57"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall58" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall58"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall58"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall59" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall59"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall59"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall60" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall60"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall60"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall61" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall61"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall61"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall62" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall62"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall62"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall63" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall63"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall63"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall64" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall64"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall64"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall65" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall65"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall65"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall66" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall66"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall66"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall67" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall67"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall67"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall68" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall68"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall68"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall69" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall69"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall69"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall70" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall70"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall70"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall71" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall71"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall71"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall72" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall72"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall72"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall73" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall73"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall73"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall74" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall74"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall74"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall75" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall75"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall75"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall76" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall76"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall76"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall77" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall77"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall77"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall78" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall78"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall78"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall79" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall79"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall79"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall80" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall80"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall80"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall81" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall81"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall81"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall82" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall82"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall82"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall83" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall83"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall83"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall84" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall84"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall84"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall85" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall85"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall85"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall86" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall86"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall86"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall87" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall87"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall87"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall88" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall88"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall88"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall89" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall89"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall89"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall90" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall90"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall90"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall91" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall91"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall91"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall92" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall92"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall92"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall93" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall93"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall93"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall94" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall94"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall94"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall95" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall95"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall95"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall96" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall96"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall96"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall97" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall97"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall97"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall98" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall98"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall98"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall99" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall99"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall99"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall100" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall100"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall100"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall101" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall101"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall101"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall102" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall102"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall102"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall103" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall103"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall103"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall104" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall104"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall104"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall105" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall105"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall105"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall106" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall106"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall106"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall107" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall107"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall107"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall108" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall108"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall108"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall109" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall109"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall109"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall110" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall110"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall110"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall111" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall111"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall111"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall112" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall112"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall112"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall113" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall113"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall113"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall114" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall114"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall114"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall115" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall115"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall115"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall116" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall116"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall116"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall117" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall117"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall117"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall118" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall118"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall118"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall119" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall119"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall119"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall120" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall120"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall120"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall121" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall121"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall121"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall122" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall122"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall122"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall123" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall123"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall123"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall124" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall124"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall124"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall125" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall125"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall125"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall126" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall126"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall126"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall127" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall127"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall127"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall128" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall128"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall128"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall129" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall129"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall129"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall130" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall130"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall130"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall131" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall131"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall131"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall132" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall132"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall132"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall133" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall133"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall133"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall134" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall134"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall134"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall135" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall135"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall135"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall136" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall136"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall136"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall137" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall137"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall137"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall138" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall138"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall138"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall139" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall139"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall139"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall140" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall140"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall140"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall141" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall141"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall141"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall142" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall142"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall142"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall143" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall143"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall143"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall144" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall144"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall144"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall145" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall145"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall145"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall146" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall146"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall146"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall147" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall147"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall147"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall148" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall148"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall148"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall149" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall149"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall149"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall150" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall150"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall150"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall151" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall151"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall151"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall152" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall152"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall152"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall153" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall153"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall153"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall154" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall154"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall154"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall155" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall155"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall155"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall156" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall156"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall156"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall157" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall157"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall157"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall158" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, -3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall158"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall158"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall159" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, -3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall159"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall159"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall160" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, -3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall160"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall160"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall161" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, -3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall161"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall161"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall162" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall162"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall162"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall163" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall163"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall163"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall164" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall164"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall164"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall165" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall165"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall165"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall166" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall166"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall166"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall167" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall167"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall167"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall168" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall168"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall168"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall169" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall169"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall169"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall170" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall170"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall170"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall171" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall171"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall171"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall172" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall172"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall172"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall173" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall173"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall173"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall174" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall174"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall174"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall175" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall175"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall175"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall176" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall176"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall176"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall177" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall177"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall177"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall178" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall178"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall178"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall179" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall179"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall179"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall180" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall180"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall180"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall181" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall181"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall181"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall182" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall182"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall182"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall183" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall183"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall183"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall184" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall184"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall184"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall185" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall185"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall185"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall186" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall186"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall186"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall187" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall187"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall187"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall188" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall188"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall188"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall189" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall189"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall189"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall190" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, 5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall190"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall190"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall191" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, 5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall191"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall191"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall192" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, 5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall192"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall192"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall193" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, 5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall193"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall193"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall194" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall194"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall194"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall195" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall195"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall195"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall196" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall196"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall196"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall197" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall197"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall197"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall198" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, 7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall198"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall198"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall199" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, 7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall199"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall199"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall200" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, 7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall200"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall200"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall201" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, 7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall201"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall201"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall202" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall202"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall202"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall203" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall203"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall203"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall204" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall204"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall204"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall205" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall205"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall205"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall206" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall206"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall206"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall207" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall207"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall207"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall208" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall208"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall208"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall209" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall209"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall209"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall210" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall210"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall210"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall211" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 8, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall211"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall211"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall212" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 8, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall212"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall212"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall213" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 8, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall213"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall213"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall214" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 8, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall214"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall214"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall215" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 7, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall215"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall215"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall216" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 7, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall216"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall216"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall217" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 7, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall217"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall217"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall218" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 7, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall218"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall218"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall219" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 6, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall219"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall219"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall220" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 6, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall220"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall220"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall221" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 6, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall221"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall221"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall222" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 6, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall222"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall222"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall223" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 5, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall223"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall223"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall224" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 5, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall224"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall224"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall225" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 5, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall225"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall225"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall226" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 5, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall226"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall226"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall227" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 4, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall227"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall227"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall228" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 4, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall228"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall228"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall229" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 4, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall229"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall229"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall230" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 4, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall230"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall230"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall231" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 3, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall231"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall231"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall232" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 3, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall232"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall232"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall233" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 3, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall233"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall233"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall234" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 3, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall234"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall234"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall235" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 2, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall235"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall235"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall236" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 2, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall236"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall236"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall237" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 2, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall237"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall237"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall238" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 2, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall238"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall238"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall239" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 1, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall239"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall239"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall240" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 1, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall240"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall240"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall241" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 1, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall241"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall241"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall242" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 1, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall242"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall242"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall243" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 0, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall243"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall243"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall244" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 0, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall244"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall244"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall245" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 0, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall245"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall245"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall246" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 0, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall246"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall246"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall247" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -1, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall247"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall247"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall248" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -1, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall248"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall248"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall249" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -1, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall249"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall249"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall250" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -1, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall250"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall250"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall251" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -2, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall251"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall251"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall252" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -2, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall252"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall252"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall253" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -2, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall253"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall253"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall254" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -2, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall254"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall254"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall255" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -3, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall255"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall255"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall256" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -3, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall256"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall256"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall257" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -3, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall257"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall257"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall258" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -3, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall258"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall258"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall259" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -4, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall259"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall259"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall260" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -4, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall260"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall260"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall261" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -4, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall261"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall261"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall262" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -4, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall262"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall262"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall263" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -5, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall263"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall263"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall264" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -5, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall264"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall264"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall265" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -5, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall265"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall265"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall266" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -5, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall266"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall266"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall267" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -6, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall267"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall267"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall268" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -6, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall268"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall268"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall269" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -6, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall269"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall269"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall270" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -6, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall270"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall270"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall271" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -7, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall271"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall271"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall272" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -7, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall272"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall272"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall273" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -7, 2, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall273"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall273"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")
+
+[node name="ArenaWall274" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -7, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaWall274"]
+mesh = ExtResource("2_olpmc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaWall274"]
+shape = SubResource("ConvexPolygonShape3D_7ft05")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://caxurjhk2aufq"]
+
+[ext_resource type="PackedScene" uid="uid://cyhvbso41web5" path="res://scenes/arena.tscn" id="1_rxmmw"]
+[ext_resource type="ArrayMesh" uid="uid://cuh74npjebx37" path="res://assets/Modular Village/Wood_Floor_Straight_1.obj" id="2_y56iy"]
+
+[node name="ArenaDecorations" type="Node3D"]
+
+[node name="Arena" parent="." instance=ExtResource("1_rxmmw")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 9)
+mesh = ExtResource("2_y56iy")
