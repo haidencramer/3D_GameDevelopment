@@ -1,76 +1,106 @@
-
 class_name Player extends CharacterBody3D
 
-@export_range(1, 35, 1) var speed: float = 10 # m/s
-@export_range(10, 400, 1) var acceleration: float = 100 # m/s^2
-
-@export_range(0.1, 3.0, 0.1) var jump_height: float = 1 # m
-@export_range(0.1, 3.0, 0.1, "or_greater") var camera_sens: float = 1
-
-var jumping: bool = false
-var mouse_captured: bool = false
+@export var speed: float = 10.0
+@export var turn_speed: float = 2.0
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
+var mouse_captured: bool = false
 
-var move_dir: Vector2 # Input direction for movement
-var look_dir: Vector2 # Input direction for look/aim
-
-var walk_vel: Vector3 # Walking velocity 
-var grav_vel: Vector3 # Gravity velocity 
-var jump_vel: Vector3 # Jumping velocity
-
-@onready var camera: Camera3D = $CollisionShape3D/spider/Camera3D
+@onready var camera_pivot: Node3D = $CameraPivot
+@onready var anim_player: AnimationPlayer = $SpiderModel/spider/AnimationPlayer
 
 func _ready() -> void:
-	capture_mouse()
+	# DON'T capture mouse for now - let's test without it
+	# capture_mouse()
+	
+	if anim_player:
+		anim_player.animation_finished.connect(_on_animation_finished)
+		var anim_library = anim_player.get_animation_library("")
+		if anim_library:
+			for anim_name in anim_library.get_animation_list():
+				var animation = anim_library.get_animation(anim_name)
+				if animation:
+					animation.loop_mode = Animation.LOOP_LINEAR
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion:
-		look_dir = event.relative * 0.001
-		if mouse_captured: _rotate_camera()
-	if Input.is_action_just_pressed(&"exit"): get_tree().quit()
+func _on_animation_finished(anim_name: String) -> void:
+	if anim_player:
+		anim_player.play(anim_name)
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed(&"jump"): jumping = true
-	if mouse_captured: _handle_joypad_camera_rotation(delta)
-	velocity = _walk(delta) + _gravity(delta) + _jump(delta)
+	# Use direct key detection instead of input actions
+	var key_w = Input.is_key_pressed(KEY_W)
+	var key_s = Input.is_key_pressed(KEY_S)
+	var key_a = Input.is_key_pressed(KEY_A)
+	var key_d = Input.is_key_pressed(KEY_D)
+	
+	print("Keys: W=", key_w, " S=", key_s, " A=", key_a, " D=", key_d)
+	
+	# === ROTATION with A and D ===
+	if key_a:
+		rotation.y += turn_speed * delta
+		print("ROTATING LEFT")
+	
+	if key_d:
+		rotation.y -= turn_speed * delta
+		print("ROTATING RIGHT")
+	
+	# === MOVEMENT with W and S ===
+	var move_direction = Vector3.ZERO
+	
+	if key_w:
+		move_direction = -global_transform.basis.z
+		print("MOVING FORWARD")
+	
+	if key_s:
+		move_direction = global_transform.basis.z
+		print("MOVING BACKWARD")
+	
+	# Apply movement
+	if move_direction != Vector3.ZERO:
+		velocity.x = move_direction.x * speed
+		velocity.z = move_direction.z * speed
+	else:
+		velocity.x = 0
+		velocity.z = 0
+	
+	# Apply gravity
+	if not is_on_floor():
+		velocity.y -= gravity * delta
+	else:
+		velocity.y = 0
+	
+	# Jump
+	if Input.is_key_pressed(KEY_SPACE) and is_on_floor():
+		velocity.y = sqrt(4 * 1.0 * gravity)
+	
+	# Update animations
+	var is_moving = move_direction != Vector3.ZERO
+	_update_animation(is_moving)
+	
 	move_and_slide()
+
+func _update_animation(is_moving: bool) -> void:
+	if not anim_player:
+		return
+	
+	var current_anim = anim_player.current_animation
+	
+	if not is_on_floor():
+		if anim_player.has_animation("Armature|Jump") and current_anim != "Armature|Jump":
+			anim_player.play("Armature|Jump")
+	elif is_moving:
+		if anim_player.has_animation("Armature|Walk") and current_anim != "Armature|Walk":
+			anim_player.play("Armature|Walk")
+		anim_player.speed_scale = 1.0
+	else:
+		if anim_player.has_animation("Armature|Idle"):
+			if current_anim != "Armature|Idle":
+				anim_player.play("Armature|Idle")
+		elif anim_player.has_animation("Armature|Walk"):
+			if current_anim != "Armature|Walk":
+				anim_player.play("Armature|Walk")
+			anim_player.speed_scale = 0.3
 
 func capture_mouse() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	mouse_captured = true
-
-func release_mouse() -> void:
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	mouse_captured = false
-
-func _rotate_camera(sens_mod: float = 1.0) -> void:
-	camera.rotation.y -= look_dir.x * camera_sens * sens_mod
-	camera.rotation.x = clamp(camera.rotation.x - look_dir.y * camera_sens * sens_mod, -1.5, 1.5)
-
-func _handle_joypad_camera_rotation(delta: float, sens_mod: float = 1.0) -> void:
-	var joypad_dir: Vector2 = Input.get_vector(&"ui_left", &"ui_right", &"ui_up", &"ui_down")
-	if joypad_dir.length() > 0:
-		look_dir += joypad_dir * delta
-		_rotate_camera(sens_mod)
-		look_dir = Vector2.ZERO
-
-func _walk(delta: float) -> Vector3:
-	
-	move_dir = Input.get_vector(&"move_left", &"move_right", &"move_up", &"move_down")
-	var _forward: Vector3 = camera.global_transform.basis * Vector3(move_dir.x, 0, move_dir.y)
-	var walk_dir: Vector3 = Vector3(_forward.x, 0, _forward.z).normalized()
-	walk_vel = walk_vel.move_toward(walk_dir * speed * move_dir.length(), acceleration * delta)
-	return walk_vel
-
-func _gravity(delta: float) -> Vector3:
-	grav_vel = Vector3.ZERO if is_on_floor() else grav_vel.move_toward(Vector3(0, velocity.y - gravity, 0), gravity * delta)
-	return grav_vel
-
-func _jump(delta: float) -> Vector3:
-	if jumping:
-		if is_on_floor(): jump_vel = Vector3(0, sqrt(4 * jump_height * gravity), 0)
-		jumping = false
-		return jump_vel
-	jump_vel = Vector3.ZERO if is_on_floor() or is_on_ceiling_only() else jump_vel.move_toward(Vector3.ZERO, gravity * delta)
-	return jump_vel
