@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://vtt7g3lbpi5s"]
+
+[ext_resource type="PackedScene" uid="uid://b2ngqnselvgrv" path="res://assets/ALL/Zweihander/Zweihander.blend" id="1_irh4i"]
+[ext_resource type="Script" uid="uid://bgibg4xtdqjum" path="res://scripts/weapon.gd" id="1_q3o1u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q3o1u"]
+size = Vector3(1, 1.1146927, 1)
+
+[node name="Zweihander" type="RigidBody3D"]
+script = ExtResource("1_q3o1u")
+weapon_name = "Zweihander"
+weight = 20.0
+angular_drag = 10.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.14547469, 0, 0, 0, 3.0416586, 0, 0, 0, 0.07978414, 0, 1.6447169, 0)
+shape = SubResource("BoxShape3D_q3o1u")
+
+[node name="GripPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3773432, 0)
+
+[node name="Zweihander" parent="." instance=ExtResource("1_irh4i")]
