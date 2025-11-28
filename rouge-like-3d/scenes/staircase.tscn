@@ -86,7 +86,7 @@ transform = Transform3D(1, 0, 0, 0, -1.3659809e-08, 0.3125, 0, -0.12820512, -5.6
 script = ExtResource("3_f8b18")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(2.458966, 0, 0, 0, 1.005196, 0, 0, 0, 2.3764455, -21.24453, 12.688215, 12.335775)
+transform = Transform3D(2.458966, 0, 0, 0, 1.0774878, 0, 0, 0, 2.3764455, -21.24453, 12.688215, 12.335775)
 shape = SubResource("CylinderShape3D_or3vb")
 
 [node name="SpiderModel" type="Node3D" parent="CharacterBody3D"]
