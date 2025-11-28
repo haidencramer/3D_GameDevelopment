@@ -96,9 +96,10 @@ transform = Transform3D(2.458966, 0, 0, 0, 0.6032852, 0, 0, 0, 3.2313428, -22.12
 transform = Transform3D(-0.406675, 0, 3.5552663e-08, 0, 1.6575909, 0, -2.7054632e-08, 0, -0.30946892, 0.34114647, 0.784008, -0.20634556)
 
 [node name="CameraPivot" type="Node3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.128, 12.604, 11.75)
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/CameraPivot"]
-transform = Transform3D(0.9997733, 0.008219227, -0.01964099, 5.3290705e-15, 0.9224842, 0.38603488, 0.021291412, -0.38594738, 0.92227507, -21.630983, 16.684595, 17.451284)
+transform = Transform3D(0.9997733, 0.008219227, -0.01964099, 5.3290705e-15, 0.9224842, 0.38603488, 0.021291412, -0.38594738, 0.92227507, 0.47, 7.645, 8.411)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_f8b18")
