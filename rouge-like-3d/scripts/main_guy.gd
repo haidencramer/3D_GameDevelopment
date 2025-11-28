@@ -66,12 +66,12 @@ func _physics_process(delta: float) -> void:
 func _handle_turning(delta: float) -> void:
 	# A/D keys turn the character (rotate around Y axis)
 	if Input.is_action_pressed(&"move_left"):
-		rotation.y += turn_speed * delta  # Turn left (positive rotation)
+		spider_model.rotation.y += turn_speed * delta  # Turn left (positive rotation)
 		print("Turning LEFT - Rotation Y: ", rotation.y)
 	if Input.is_action_pressed(&"move_right"):
-		rotation.y -= turn_speed * delta  # Turn right (negative rotation)
-		print("Turning RIGHT - Rotation Y: ", rotation.y)
-
+		spider_model.rotation.y -= turn_speed * delta  # Turn right (negative rotation)
+		print("Turning RIGHT - Rotation Y: ", spider_model.rotation.y)
+	camera_pivot.rotation.y = spider_model.rotation.y
 func _walk(delta: float) -> Vector3:
 	# W/S for forward/backward movement relative to character facing
 	var forward_input = Input.get_axis(&"move_down", &"move_up")
@@ -80,7 +80,7 @@ func _walk(delta: float) -> Vector3:
 	
 	if forward_input != 0:
 		# Move in the direction the character is facing
-		var forward = -transform.basis.z
+		var forward = -spider_model.transform.basis.z
 		var walk_dir = forward.normalized()
 		walk_vel = walk_vel.move_toward(walk_dir * speed * forward_input, acceleration * delta)
 	else:
@@ -135,3 +135,14 @@ func _jump(delta: float) -> Vector3:
 		return jump_vel
 	jump_vel = Vector3.ZERO if is_on_floor() or is_on_ceiling_only() else jump_vel.move_toward(Vector3.ZERO, gravity * delta)
 	return jump_vel
+	
+#Camera control via mouse input
+
+#func _unhandled_input(event: InputEvent) -> void:
+	#if event is InputEventMouseMotion and mouse_captured:
+		#camera_pivot.rotation.y -= event.relative.x * mouse_sensitivity
+		#
+		#camera_pivot.rotation.x -= event.relative.y * mouse_sensitivity
+		#
+		#camera_pivot.rotation.x = clamp(camera_pivot.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+		
