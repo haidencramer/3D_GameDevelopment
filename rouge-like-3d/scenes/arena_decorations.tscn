@@ -1,14 +1,3186 @@
-[gd_scene load_steps=3 format=3 uid="uid://caxurjhk2aufq"]
+[gd_scene load_steps=40 format=3 uid="uid://caxurjhk2aufq"]
 
 [ext_resource type="PackedScene" uid="uid://cyhvbso41web5" path="res://scenes/arena.tscn" id="1_rxmmw"]
 [ext_resource type="ArrayMesh" uid="uid://cuh74npjebx37" path="res://assets/Modular Village/Wood_Floor_Straight_1.obj" id="2_y56iy"]
+[ext_resource type="ArrayMesh" uid="uid://bhmeo36rh1nix" path="res://assets/Modular Village/Wood_Floor_Straight_2.obj" id="3_ceb2g"]
+[ext_resource type="ArrayMesh" uid="uid://dhgmfwcfxkesf" path="res://assets/Modular Village/Wood_Railing_Straight.obj" id="4_0x2rv"]
+[ext_resource type="ArrayMesh" uid="uid://ddxd5gb3a3qwu" path="res://assets/Modular Village/Prop_Lamp_Street.obj" id="5_c41x5"]
+[ext_resource type="ArrayMesh" uid="uid://cdmav2bl7285a" path="res://assets/Modular Village/Wood_Floor_Straight_3.obj" id="6_q6yr8"]
+[ext_resource type="ArrayMesh" uid="uid://ci5opdfrt6u4o" path="res://assets/Modular Village/Roof_Accent_Rake_Straight.obj" id="7_tud6g"]
+[ext_resource type="ArrayMesh" uid="uid://li6o0p2s830c" path="res://assets/Modular Village/Cobblestone_Floor_1.obj" id="8_q4tp1"]
+[ext_resource type="ArrayMesh" uid="uid://covbtw070p4xx" path="res://assets/Modular Village/Wood_Railing_Corner.obj" id="9_856gu"]
+[ext_resource type="ArrayMesh" uid="uid://b8ak8xkcu7sv5" path="res://assets/Modular Village/Wood_Rope_Corner.obj" id="9_v4rv3"]
+[ext_resource type="ArrayMesh" uid="uid://bb3kvcccxn2lo" path="res://assets/Modular Village/Wood_Rope_Straight.obj" id="10_3kj1q"]
+[ext_resource type="ArrayMesh" uid="uid://bhouvra71gf37" path="res://assets/Modular Village/Canopy_Beam.obj" id="11_ooy5m"]
+[ext_resource type="ArrayMesh" uid="uid://805guvt1cio4" path="res://assets/Modular Village/Wood_Post_Large.obj" id="12_ejp88"]
+[ext_resource type="ArrayMesh" uid="uid://cvrc1ogh6xgr8" path="res://assets/Modular Village/Roof_Accent_Rake_Convex.obj" id="13_o2bv3"]
+[ext_resource type="ArrayMesh" uid="uid://cb3fe8yhpjb6q" path="res://assets/Modular Village/Roof_Accent_Rake_Concave.obj" id="15_0qnhv"]
+[ext_resource type="ArrayMesh" uid="uid://bdpsf6suro7s2" path="res://assets/Modular Village/Stucco_Prop_Support_Pillar_3.obj" id="16_r8ues"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_v4rv3"]
+points = PackedVector3Array(-0.5, -0.1, -0.5, -0.5, -0.1, 0.5, -0.5, -0.05000979, -0.5, 0.5, -0.1, -0.5, -0.5, -0.05000979, 0.5, 0.5, -0.1, 0.5, -0.48756853, 0, -0.5, 0.5, -0.05000979, -0.5, -0.48756853, 0, 0.5, 0.5, -0.05000979, 0.5, 0.48747063, 0, -0.5, 0.48747063, 0, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3kj1q"]
+points = PackedVector3Array(-0.5, -0.1, -0.5, -0.5, -0.1, 0.5, -0.5, -0.05000979, -0.5, 0.5, -0.1, -0.5, -0.5, -0.05000979, 0.5, 0.5, -0.1, 0.5, -0.5, -0.05, 0.2999217, -0.48756853, 0, -0.5, 0.5, -0.05000979, -0.5, -0.48756853, 0, 0.5, 0.5, -0.05000979, 0.5, 0.48747063, 0, -0.5, 0.48747063, 0, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ooy5m"]
+points = PackedVector3Array(0.5, 0.53852546, 0.54998046, 0.5, 0.10968058, 0.6, 0.5, 0.53852546, 0.44998044, -0.5, 0.53852546, 0.54998046, 0.5, -0.1440983, 0.6, -0.5, 0.10968058, 0.6, 0.5, 0.10968058, 0.4, -0.5, 0.53852546, 0.44998044, 0.5, -0.1440983, 0.4, -0.5, -0.1440983, 0.6, -0.5, 0.10968058, 0.4, -0.5, -0.1440983, 0.4)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ejp88"]
+points = PackedVector3Array(-0.6774814, 1.0635278, -0.06118833, -0.6774814, 1.0635278, 0.061165504, -0.6000954, 1.25, -0.10001631, -0.6000954, 0, -0.10001631, -0.67309004, 0.94129306, -0.06118833, -0.6000954, 1.25, 0.09999349, -0.67309004, 0.94129306, 0.061165504, -0.6000954, 0, 0.09999349, -0.40004337, 1.25, -0.10001631, -0.11460328, 0.6942541, -0.11666667, -0.40004337, 0, -0.10001631, -0.40004337, 1.25, 0.09999349, -0.11460328, 0.6942541, 0.11666668, -0.40004337, 0, 0.09999349, 0.23202354, 1.0965642, -0.07646828, 0.11872572, 0.6942541, -0.11666667, 0.0954026, 0.43094167, -0.093347035, 0.092475, 0.41992953, -0.09042352, 0.23202354, 1.0965642, 0.07644545, 0.11872572, 0.6942541, 0.11666668, 0.092475, 0.41992953, 0.09040069, 0.0954026, 0.43094167, 0.09332421, 0.31946093, 1.021804, -2.2828579e-05, 0.23758596, 0.9437402, -0.07646828, 0.23758596, 0.9437402, 0.07644545)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o2bv3"]
+points = PackedVector3Array(-0.5, -0.1, -0.5, -0.5, -0.1, 0.5, -0.5, -0.05000979, -0.5, 0.5, -0.1, -0.5, -0.5, -0.05000979, 0.5, 0.5, -0.1, 0.5, -0.48756853, 0, -0.5, 0.5, -0.05000979, -0.5, -0.48756853, 0, 0.5, 0.5, -0.05000979, 0.5, 0.48747063, 0, -0.5, 0.48747063, 0, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0qnhv"]
+points = PackedVector3Array(-0.5, 1.0999608, 0.2, -0.5, 1.0999608, 0.4, -0.5, 1.3, 0.2, 0.5, 0.1, 0.2, 0.5, 0.1, 0.4, -0.5, 1.3, 0.4, 0.5, 0.2999217, 0.2, 0.5, 0.2999217, 0.4)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_r8ues"]
+points = PackedVector3Array(-1.5, -0.2, -0.5, -1.5, -0.2, 1.5, -1.5, -1.1011958e-05, -0.5, 0.5, -0.2, -0.5, -1.5, -1.1011958e-05, 1.5, 0.5, -0.2, 1.5, -1.4833595, 0.028125003, 1.1055207, -1.4859045, 0.0140569955, -0.30344558, -1.4410728, 0.0140569955, -0.43754894, -0.6427173, 0.028125003, -0.48238057, 0.5, -1.1011958e-05, -0.5, -1.2556773, 0.028125003, 1.4800314, -1.4350039, 0.028125003, 1.3457322, 0.5, -1.1011958e-05, 1.5, -0.30305398, 0.028125003, 1.4853171, -1.4324589, 0.028125003, -0.0052858293, -1.2907205, 0.028125003, -0.24158183, -1.1045419, 0.028125003, -0.3811668, -0.12862182, 0.028125003, -0.4755286, 0.30892718, 0.028125003, -0.4350039, 0.48375094, 0.028125003, -0.3913469, 0.48590446, 0.028125003, 0.79992175, 0.47963977, 0.028125003, 1.4373531, 0.29659355, 0.028125003, 1.454581)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fak7k"]
+points = PackedVector3Array(0.5, 0.53852546, 0.54998046, 0.5, 0.10968058, 0.6, 0.5, 0.53852546, 0.44998044, -0.5, 0.53852546, 0.54998046, 0.5, -0.1440983, 0.6, -0.5, 0.10968058, 0.6, 0.5, 0.10968058, 0.4, -0.5, 0.53852546, 0.44998044, 0.5, -0.1440983, 0.4, -0.5, -0.1440983, 0.6, -0.5, 0.10968058, 0.4, -0.5, -0.1440983, 0.4)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nesbh"]
+points = PackedVector3Array(-0.600104, -0.14410307, -0.5, -0.5770646, -0.3343847, 0.4229954, -0.6155, -0.28447476, 0.38445085, -0.600104, 0.10963827, -0.5, -0.40006524, -0.14410307, -0.5, -0.5770646, -0.3343847, 0.5769553, -0.4231046, -0.3343847, 0.4229954, -0.6155, 0.6113696, 0.38445085, -0.6155, -0.28447476, 0.6155, -0.53502584, 0.46895084, -0.49050033, -0.51755524, 0.44058403, -0.49792537, -0.56254214, 0.14716822, -0.5, -0.40006524, 0.10963827, -0.5, 0.5, -0.14410307, 0.399956, -0.4231046, -0.3343847, 0.5769553, -0.6155, 0.6113696, 0.6155, -0.5770646, 0.66147447, 0.4229954, -0.51755524, 0.49731764, -0.48307532, -0.38456005, -0.28447476, 0.6155, -0.48250479, 0.44058403, -0.49792537, -0.43751788, 0.14716822, -0.5, 0.5, 0.10963827, 0.399956, -0.46503413, 0.46895084, -0.49050033, 0.5, -0.14410307, 0.5999948, -0.5770646, 0.66147447, 0.5769553, -0.38456005, 0.6113696, 0.6155, -0.4231046, 0.66147447, 0.4229954, -0.48250479, 0.49731764, -0.48307532, 0.49039114, 0.46895084, 0.46492493, 0.4978162, 0.44058403, 0.4823956, 0.5, 0.14716822, 0.4374087, 0.5, 0.10963827, 0.5999948, -0.4231046, 0.66147447, 0.5769553, 0.49039114, 0.46895084, 0.53491664, 0.48296607, 0.49731764, 0.51744604, 0.48296607, 0.49731764, 0.4823956, 0.4978162, 0.44058403, 0.51744604, 0.5, 0.14716822, 0.5624329)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ux3h4"]
+points = PackedVector3Array(0.47660536, 0.5054665, 0.5174824, 0.48747063, 0.47831386, 0.53498435, 0.47660536, 0.5054665, 0.48249805, -0.4767032, 0.5054665, 0.5174824, 0.5, 0.10968663, 0.6, 0.4982381, 0.45109767, 0.5174824, 0.48747063, 0.47831386, 0.4649961, -0.48756853, 0.47831386, 0.53498435, -0.4767032, 0.5054665, 0.48249805, 0.5, -0.1440983, 0.6, 0.5, 0.14720432, 0.5624902, -0.5, 0.10968663, 0.6, 0.4982381, 0.45109767, 0.48249805, 0.5, 0.10968663, 0.4, -0.48756853, 0.47831386, 0.4649961, -0.49833596, 0.45109767, 0.5174824, 0.5, -0.1440983, 0.4, -0.5, -0.1440983, 0.6, 0.5, 0.14720432, 0.43749022, -0.5, 0.14720432, 0.5624902, -0.5, 0.10968663, 0.4, -0.49833596, 0.45109767, 0.48249805, -0.5, -0.1440983, 0.4, -0.5, 0.14720432, 0.43749022)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_aatld"]
+points = PackedVector3Array(-0.6155, -0.28447476, 0.3845, -0.57701504, -0.3343847, 0.42298493, -0.6155, -0.28447476, 0.6155, -0.6155, 0.6113696, 0.3845, -0.3845, -0.28447476, 0.3845, -0.57701504, -0.3343847, 0.57699245, -0.42300752, -0.3343847, 0.42298493, -0.3845, -0.28447476, 0.6155, -0.6155, 0.6113696, 0.6155, -0.57701504, 0.66147447, 0.42298493, -0.3845, 0.6113696, 0.3845, -0.42300752, -0.3343847, 0.57699245, -0.3845, 0.6113696, 0.6155, -0.57701504, 0.66147447, 0.57699245, -0.42300752, 0.66147447, 0.42298493, -0.42300752, 0.66147447, 0.57699245)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ff53r"]
+points = PackedVector3Array(-0.6155, -0.28447476, 0.3845, -0.57701504, -0.3343847, 0.42298493, -0.6155, -0.28447476, 0.6155, -0.6155, 0.6113696, 0.3845, -0.3845, -0.28447476, 0.3845, -0.57701504, -0.3343847, 0.57699245, -0.42300752, -0.3343847, 0.42298493, -0.3845, -0.28447476, 0.6155, -0.6155, 0.6113696, 0.6155, -0.57701504, 0.66147447, 0.42298493, -0.3845, 0.6113696, 0.3845, -0.42300752, -0.3343847, 0.57699245, -0.3845, 0.6113696, 0.6155, -0.57701504, 0.66147447, 0.57699245, -0.42300752, 0.66147447, 0.42298493, -0.42300752, 0.66147447, 0.57699245)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_y268o"]
+points = PackedVector3Array(-0.5, 0.7999315, 0.4, -0.5, 0.7999315, 0.2, -0.5, 0.59999025, 0.4, -0.25009787, 0.74998045, 0.4, -0.5, 0.59999025, 0.2, -0.25009787, 0.74998045, 0.2, 0.5, 0.1, 0.4, -9.787083e-05, 0.6499413, 0.4, 0.5, 0.1, 0.2, -9.787083e-05, 0.6499413, 0.2, 0.5, 0.29994127, 0.4, 0.24990213, 0.49995106, 0.4, 0.5, 0.29994127, 0.2, 0.24990213, 0.49995106, 0.2)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hf41s"]
+points = PackedVector3Array(-0.5, 0.7999315, 0.4, -0.5, 0.7999315, 0.2, -0.5, 0.59999025, 0.4, -0.25009787, 0.74998045, 0.4, -0.5, 0.59999025, 0.2, -0.25009787, 0.74998045, 0.2, 0.5, 0.1, 0.4, -9.787083e-05, 0.6499413, 0.4, 0.5, 0.1, 0.2, -9.787083e-05, 0.6499413, 0.2, 0.5, 0.29994127, 0.4, 0.24990213, 0.49995106, 0.4, 0.5, 0.29994127, 0.2, 0.24990213, 0.49995106, 0.2)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2bs7e"]
+points = PackedVector3Array(-0.5, 0.7999315, 0.4, -0.5, 0.7999315, 0.2, -0.5, 0.59999025, 0.4, -0.25009787, 0.74998045, 0.4, -0.5, 0.59999025, 0.2, -0.25009787, 0.74998045, 0.2, 0.5, 0.1, 0.4, -9.787083e-05, 0.6499413, 0.4, 0.5, 0.1, 0.2, -9.787083e-05, 0.6499413, 0.2, 0.5, 0.29994127, 0.4, 0.24990213, 0.49995106, 0.4, 0.5, 0.29994127, 0.2, 0.24990213, 0.49995106, 0.2)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4qqrj"]
+points = PackedVector3Array(-0.5, 0.7999315, 0.4, -0.5, 0.7999315, 0.2, -0.5, 0.59999025, 0.4, -0.25009787, 0.74998045, 0.4, -0.5, 0.59999025, 0.2, -0.25009787, 0.74998045, 0.2, 0.5, 0.1, 0.4, -9.787083e-05, 0.6499413, 0.4, 0.5, 0.1, 0.2, -9.787083e-05, 0.6499413, 0.2, 0.5, 0.29994127, 0.4, 0.24990213, 0.49995106, 0.4, 0.5, 0.29994127, 0.2, 0.24990213, 0.49995106, 0.2)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_utvpe"]
+points = PackedVector3Array(-0.6, -0.1440983, -0.5, -0.6, -0.1440983, 0.6, -0.6, 0.10968058, -0.5, -0.40004897, -0.1440983, -0.5, -0.6, 0.10968058, 0.6, 0.5, -0.1440983, 0.6, -0.5500392, 0.53852546, -0.5, -0.40004897, 0.10968058, -0.5, 0.5, -0.1440983, 0.39994133, -0.5500392, 0.53852546, 0.5499315, 0.5, 0.10968058, 0.6, -0.45000982, 0.53852546, -0.5, 0.5, 0.10968058, 0.39994133, 0.49989235, 0.53852546, 0.5499315, 0.5, 0.14716609, 0.5624217, 0.49989235, 0.53852546, 0.44990218, 0.5, 0.14716609, 0.43741196)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_s1p7i"]
+points = PackedVector3Array(-0.5, 0.7999315, 0.4, -0.5, 0.7999315, 0.2, -0.5, 0.59999025, 0.4, 0.5, 0.29994127, 0.4, -0.5, 0.59999025, 0.2, 0.5, 0.29994127, 0.2, -0.25009787, 0.39998043, 0.4, 0.5, 0.1, 0.4, -0.25009787, 0.39998043, 0.2, 0.5, 0.1, 0.2, -9.787083e-05, 0.24999022, 0.4, 0.24990213, 0.14995106, 0.4, -9.787083e-05, 0.24999022, 0.2, 0.24990213, 0.14995106, 0.2)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_n44no"]
+points = PackedVector3Array(-0.5, 0.7999315, 0.4, -0.5, 0.7999315, 0.2, -0.5, 0.59999025, 0.4, 0.5, 0.29994127, 0.4, -0.5, 0.59999025, 0.2, 0.5, 0.29994127, 0.2, -0.25009787, 0.39998043, 0.4, 0.5, 0.1, 0.4, -0.25009787, 0.39998043, 0.2, 0.5, 0.1, 0.2, -9.787083e-05, 0.24999022, 0.4, 0.24990213, 0.14995106, 0.4, -9.787083e-05, 0.24999022, 0.2, 0.24990213, 0.14995106, 0.2)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gu5dc"]
+points = PackedVector3Array(-0.6, 0, 0.4, -0.4, 0, 0.4, -0.6, 0, 0.6, -0.6, 1, 0.4, -0.4, 0, 0.6, -0.4, 1, 0.4, -0.6, 1, 0.6, -0.4, 1, 0.6)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4fkk0"]
+points = PackedVector3Array(-0.6, 0, 0.4, -0.4, 0, 0.4, -0.6, 0, 0.6, -0.6, 1, 0.4, -0.4, 0, 0.6, -0.4, 1, 0.4, -0.6, 1, 0.6, -0.4, 1, 0.6)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ljtg0"]
+points = PackedVector3Array(-0.6, 0, 0.4, -0.4, 0, 0.4, -0.6, 0, 0.6, -0.6, 1, 0.4, -0.4, 0, 0.6, -0.4, 1, 0.4, -0.6, 1, 0.6, -0.4, 1, 0.6)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_21h2c"]
+points = PackedVector3Array(-0.6, 0, 0.4, -0.4, 0, 0.4, -0.6, 0, 0.6, -0.6, 1, 0.4, -0.4, 0, 0.6, -0.4, 1, 0.4, -0.6, 1, 0.6, -0.4, 1, 0.6)
 
 [node name="ArenaDecorations" type="Node3D"]
 
 [node name="Arena" parent="." instance=ExtResource("1_rxmmw")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="PlayerEntryPlank" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.038485765, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntryPlank"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 9)
 mesh = ExtResource("2_y56iy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntryPlank"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 9)
+shape = SubResource("ConvexPolygonShape3D_v4rv3")
+
+[node name="PlayerEntryPlank2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.051269054, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntryPlank2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 9)
+mesh = ExtResource("2_y56iy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntryPlank2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 9)
+shape = SubResource("ConvexPolygonShape3D_v4rv3")
+
+[node name="PlayerEntry" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.038851976, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 8)
+mesh = ExtResource("3_ceb2g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 8)
+shape = SubResource("ConvexPolygonShape3D_3kj1q")
+
+[node name="PlayerEntry2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.037006617, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntry2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 8)
+mesh = ExtResource("3_ceb2g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntry2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 8)
+shape = SubResource("ConvexPolygonShape3D_3kj1q")
+
+[node name="PlayerEntry3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.033905983, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntry3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 8)
+mesh = ExtResource("3_ceb2g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntry3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 8)
+shape = SubResource("ConvexPolygonShape3D_3kj1q")
+
+[node name="PlayerEntry4" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.035615444, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntry4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 8)
+mesh = ExtResource("3_ceb2g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntry4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 8)
+shape = SubResource("ConvexPolygonShape3D_3kj1q")
+
+[node name="PlayerEntry5" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049699068, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntry5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 8)
+mesh = ExtResource("3_ceb2g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntry5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 8)
+shape = SubResource("ConvexPolygonShape3D_3kj1q")
+
+[node name="PlayerEntry6" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.03941822, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntry6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 8)
+mesh = ExtResource("3_ceb2g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntry6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 8)
+shape = SubResource("ConvexPolygonShape3D_3kj1q")
+
+[node name="Railing" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 4, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Railing"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Railing"]
+shape = SubResource("ConvexPolygonShape3D_ooy5m")
+
+[node name="Light" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.49938062, 4.0959296, 7.098099)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Light"]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("5_c41x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Light"]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_ejp88")
+
+[node name="Light3" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -0.49938062, 4.0959296, -6.104854)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Light3"]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("5_c41x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Light3"]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_ejp88")
+
+[node name="Light4" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 1.5006194, 4.0959296, -6.104854)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Light4"]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("5_c41x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Light4"]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_ejp88")
+
+[node name="Light2" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.5012938, 4.0959296, 7.098099)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Light2"]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("5_c41x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Light2"]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_ejp88")
+
+[node name="Railing9" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 4, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Railing9"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Railing9"]
+shape = SubResource("ConvexPolygonShape3D_ooy5m")
+
+[node name="Railing10" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 4, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Railing10"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Railing10"]
+shape = SubResource("ConvexPolygonShape3D_ooy5m")
+
+[node name="Railing15" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 4, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Railing15"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Railing15"]
+shape = SubResource("ConvexPolygonShape3D_ooy5m")
+
+[node name="Railing16" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 4, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Railing16"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Railing16"]
+shape = SubResource("ConvexPolygonShape3D_ooy5m")
+
+[node name="Railing2" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 4, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Railing2"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Railing2"]
+shape = SubResource("ConvexPolygonShape3D_ooy5m")
+
+[node name="Railing7" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 4, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Railing7"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Railing7"]
+shape = SubResource("ConvexPolygonShape3D_ooy5m")
+
+[node name="Railing8" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 4, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Railing8"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Railing8"]
+shape = SubResource("ConvexPolygonShape3D_ooy5m")
+
+[node name="PlayerEntry7" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.025589, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntry7"]
+mesh = ExtResource("6_q6yr8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntry7"]
+shape = SubResource("ConvexPolygonShape3D_o2bv3")
+
+[node name="PlayerEntry8" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4.0273986, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntry8"]
+mesh = ExtResource("6_q6yr8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntry8"]
+shape = SubResource("ConvexPolygonShape3D_o2bv3")
+
+[node name="PlayerEntry9" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4.0198436, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntry9"]
+mesh = ExtResource("6_q6yr8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntry9"]
+shape = SubResource("ConvexPolygonShape3D_o2bv3")
+
+[node name="PlayerEntry10" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.019751, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntry10"]
+mesh = ExtResource("6_q6yr8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntry10"]
+shape = SubResource("ConvexPolygonShape3D_o2bv3")
+
+[node name="PlayerEntry11" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.0304947, -9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntry11"]
+mesh = ExtResource("6_q6yr8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntry11"]
+shape = SubResource("ConvexPolygonShape3D_o2bv3")
+
+[node name="PlayerEntry12" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4.0313363, -9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntry12"]
+mesh = ExtResource("6_q6yr8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntry12"]
+shape = SubResource("ConvexPolygonShape3D_o2bv3")
+
+[node name="PlayerEntry13" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4.035135, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntry13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004791498, -0.003709793, -0.0010290146)
+mesh = ExtResource("6_q6yr8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntry13"]
+shape = SubResource("ConvexPolygonShape3D_o2bv3")
+
+[node name="PlayerEntry14" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.029551, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntry14"]
+mesh = ExtResource("6_q6yr8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntry14"]
+shape = SubResource("ConvexPolygonShape3D_o2bv3")
+
+[node name="PlayerEntrySupport" type="StaticBody3D" parent="."]
+transform = Transform3D(4.3711378e-08, -8.742278e-08, 1, -0.86602545, -0.49999988, -5.8562115e-09, 0.49999988, -0.86602545, -9.756603e-08, -0.18576843, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntrySupport"]
+transform = Transform3D(0.86602616, -0.5000003, -3.785521e-08, 0.5000003, 0.86602616, -3.35681e-08, 4.956759e-08, 1.0143317e-08, 1, 0.04800892, -0.83524513, -0.6240731)
+mesh = ExtResource("7_tud6g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntrySupport"]
+transform = Transform3D(0.86602616, -0.5000003, -3.785521e-08, 0.5000003, 0.86602616, -3.35681e-08, 4.956759e-08, 1.0143317e-08, 1, 0.04800892, -0.83524513, -0.6240731)
+shape = SubResource("ConvexPolygonShape3D_0qnhv")
+
+[node name="PlayerEntrySupport3" type="StaticBody3D" parent="."]
+transform = Transform3D(-8.7422755e-08, 1.6313312e-07, -1, -0.86602557, -0.49999997, -5.856219e-09, -0.49999997, 0.86602557, 1.8498883e-07, 1.192615, 3, -8.041196)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntrySupport3"]
+transform = Transform3D(0.86602616, -0.5000003, -3.785521e-08, 0.5000003, 0.86602616, -3.35681e-08, 4.956759e-08, 1.0143317e-08, 1, 0.04800892, -0.83524513, -0.6240731)
+mesh = ExtResource("7_tud6g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntrySupport3"]
+transform = Transform3D(0.86602616, -0.5000003, -3.785521e-08, 0.5000003, 0.86602616, -3.35681e-08, 4.956759e-08, 1.0143317e-08, 1, 0.04800892, -0.83524513, -0.6240731)
+shape = SubResource("ConvexPolygonShape3D_0qnhv")
+
+[node name="PlayerEntrySupport4" type="StaticBody3D" parent="."]
+transform = Transform3D(-8.7422755e-08, 1.6313312e-07, -1, -0.86602557, -0.49999997, -5.856219e-09, -0.49999997, 0.86602557, 1.8498883e-07, -0.8335757, 3, -8.041196)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntrySupport4"]
+transform = Transform3D(0.86602616, -0.5000003, -3.785521e-08, 0.5000003, 0.86602616, -3.35681e-08, 4.956759e-08, 1.0143317e-08, 1, 0.04800892, -0.83524513, -0.6240731)
+mesh = ExtResource("7_tud6g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntrySupport4"]
+transform = Transform3D(0.86602616, -0.5000003, -3.785521e-08, 0.5000003, 0.86602616, -3.35681e-08, 4.956759e-08, 1.0143317e-08, 1, 0.04800892, -0.83524513, -0.6240731)
+shape = SubResource("ConvexPolygonShape3D_0qnhv")
+
+[node name="PlayerEntrySupport2" type="StaticBody3D" parent="."]
+transform = Transform3D(4.3711378e-08, -8.742278e-08, 1, -0.86602545, -0.49999988, -5.8562115e-09, 0.49999988, -0.86602545, -9.756603e-08, 1.8330293, 3, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerEntrySupport2"]
+transform = Transform3D(0.86602616, -0.5000003, -3.785521e-08, 0.5000003, 0.86602616, -3.35681e-08, 4.956759e-08, 1.0143317e-08, 1, 0.04800892, -0.83524513, -0.6240731)
+mesh = ExtResource("7_tud6g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerEntrySupport2"]
+transform = Transform3D(0.86602616, -0.5000003, -3.785521e-08, 0.5000003, 0.86602616, -3.35681e-08, 4.956759e-08, 1.0143317e-08, 1, 0.04800892, -0.83524513, -0.6240731)
+shape = SubResource("ConvexPolygonShape3D_0qnhv")
+
+[node name="PathwayAroundArena" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena2"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena2"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena3"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena3"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena4" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena4"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena4"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena5" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena5"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena5"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena6" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, 10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena6"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena6"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena7" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4, 10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena7"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena7"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena8" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4, 10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena8"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena8"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena9" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4, 10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena9"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena9"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena10" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena10"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena10"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena11" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, 10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena11"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena11"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena12" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena12"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena12"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena13" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, 10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena13"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena13"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena14" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, 10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena14"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena14"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena15" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, 10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena15"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena15"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena16" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena16"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena16"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena17" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena17"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena17"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena18" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena18"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena18"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena19" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena19"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena19"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena20" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena20"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena20"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena21" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena21"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena21"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena22" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena22"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena22"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena23" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena23"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena23"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena24" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena24"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena24"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena25" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena25"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena25"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena26" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena26"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena26"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena27" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena27"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena27"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena28" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena28"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena28"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena29" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena29"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena29"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena30" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena30"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena30"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena31" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena31"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena31"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena32" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena32"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena32"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena33" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena33"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena33"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena34" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena34"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena34"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena35" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena35"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena35"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena36" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena36"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena36"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena37" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena37"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena37"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="PathwayAroundArena38" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathwayAroundArena38"]
+mesh = ExtResource("8_q4tp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathwayAroundArena38"]
+shape = SubResource("ConvexPolygonShape3D_r8ues")
+
+[node name="ArenaRailingSurround" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround2" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround2"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround2"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround3" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround3"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround3"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround4" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, -3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround4"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround4"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround5" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround5"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround5"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround6" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround6"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround6"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround7" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround7"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround7"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround8" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround8"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround8"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround9" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround9"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround9"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround16" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround16"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround16"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround17" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround17"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround17"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround18" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround18"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround18"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround19" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, 5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround19"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround19"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround20" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround20"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround20"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround21" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, 7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround21"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround21"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround22" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround22"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround22"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround23" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 4, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround23"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround23"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround24" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround24"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround24"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround25" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 4, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround25"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround25"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround26" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround26"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround26"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround27" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 4, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround27"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround27"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround28" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround28"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround28"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround29" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround29"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround29"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround30" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround30"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround30"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround31" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 4, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround31"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround31"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround32" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround32"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround32"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround33" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 4, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround33"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround33"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround34" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround34"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround34"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRopeSurround" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround"]
+mesh = ExtResource("9_v4rv3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround"]
+shape = SubResource("ConvexPolygonShape3D_nesbh")
+
+[node name="ArenaRopeSurround2" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround2"]
+mesh = ExtResource("9_v4rv3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround2"]
+shape = SubResource("ConvexPolygonShape3D_nesbh")
+
+[node name="ArenaRopeSurround3" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround3"]
+mesh = ExtResource("9_v4rv3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround3"]
+shape = SubResource("ConvexPolygonShape3D_nesbh")
+
+[node name="ArenaRopeSurround4" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround4"]
+mesh = ExtResource("9_v4rv3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround4"]
+shape = SubResource("ConvexPolygonShape3D_nesbh")
+
+[node name="ArenaRopeSurround5" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, -9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround5"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround5"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround6" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround6"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround6"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaToppingSurround" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 5.2234764, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaToppingSurround"]
+mesh = ExtResource("12_ejp88")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaToppingSurround"]
+shape = SubResource("ConvexPolygonShape3D_aatld")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaToppingSurround"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9506993, 0)
+mesh = ExtResource("12_ejp88")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArenaToppingSurround"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9506993, 0)
+shape = SubResource("ConvexPolygonShape3D_ff53r")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ArenaToppingSurround"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4293537, 0.19669628)
+mesh = ExtResource("13_o2bv3")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ArenaToppingSurround"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4293537, 0.19669628)
+shape = SubResource("ConvexPolygonShape3D_y268o")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ArenaToppingSurround"]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -0.7967224, 0.4102602, -0.10805988)
+mesh = ExtResource("13_o2bv3")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ArenaToppingSurround"]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -0.7967224, 0.4102602, -0.10805988)
+shape = SubResource("ConvexPolygonShape3D_hf41s")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ArenaToppingSurround"]
+transform = Transform3D(-0.016702062, 0, -0.9998605, 0, 1, 0, 0.9998605, 0, -0.016702062, -0.18076229, 0.4130578, -1.1018462)
+mesh = ExtResource("13_o2bv3")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ArenaToppingSurround"]
+transform = Transform3D(-0.016702062, 0, -0.9998605, 0, 1, 0, 0.9998605, 0, -0.016702062, -0.18076229, 0.4130578, -1.1018462)
+shape = SubResource("ConvexPolygonShape3D_2bs7e")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ArenaToppingSurround"]
+transform = Transform3D(-0.9996799, 0, 0.025304565, 0, 1, 0, -0.025304565, 0, -0.9996799, 0.99318314, 0.43361092, 0.80800533)
+mesh = ExtResource("13_o2bv3")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ArenaToppingSurround"]
+transform = Transform3D(-0.9996799, 0, 0.025304565, 0, 1, 0, -0.025304565, 0, -0.9996799, 0.99318314, 0.43361092, 0.80800533)
+shape = SubResource("ConvexPolygonShape3D_4qqrj")
+
+[node name="ArenaToppingSurround4" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -9, 5.2234764, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaToppingSurround4"]
+mesh = ExtResource("12_ejp88")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaToppingSurround4"]
+shape = SubResource("ConvexPolygonShape3D_aatld")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaToppingSurround4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9506993, 0)
+mesh = ExtResource("12_ejp88")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArenaToppingSurround4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9506993, 0)
+shape = SubResource("ConvexPolygonShape3D_ff53r")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ArenaToppingSurround4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4293537, 0.19669628)
+mesh = ExtResource("13_o2bv3")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ArenaToppingSurround4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4293537, 0.19669628)
+shape = SubResource("ConvexPolygonShape3D_y268o")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ArenaToppingSurround4"]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -0.7967224, 0.4102602, -0.10805988)
+mesh = ExtResource("13_o2bv3")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ArenaToppingSurround4"]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -0.7967224, 0.4102602, -0.10805988)
+shape = SubResource("ConvexPolygonShape3D_hf41s")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ArenaToppingSurround4"]
+transform = Transform3D(-0.016702062, 0, -0.9998605, 0, 1, 0, 0.9998605, 0, -0.016702062, -0.18076229, 0.4130578, -1.1018462)
+mesh = ExtResource("13_o2bv3")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ArenaToppingSurround4"]
+transform = Transform3D(-0.016702062, 0, -0.9998605, 0, 1, 0, 0.9998605, 0, -0.016702062, -0.18076229, 0.4130578, -1.1018462)
+shape = SubResource("ConvexPolygonShape3D_2bs7e")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ArenaToppingSurround4"]
+transform = Transform3D(-0.9996799, 0, 0.025304565, 0, 1, 0, -0.025304565, 0, -0.9996799, 0.99318314, 0.43361092, 0.80800533)
+mesh = ExtResource("13_o2bv3")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ArenaToppingSurround4"]
+transform = Transform3D(-0.9996799, 0, 0.025304565, 0, 1, 0, -0.025304565, 0, -0.9996799, 0.99318314, 0.43361092, 0.80800533)
+shape = SubResource("ConvexPolygonShape3D_4qqrj")
+
+[node name="ArenaToppingSurround2" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 10, 5.2234764, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaToppingSurround2"]
+mesh = ExtResource("12_ejp88")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaToppingSurround2"]
+shape = SubResource("ConvexPolygonShape3D_aatld")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaToppingSurround2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9506993, 0)
+mesh = ExtResource("12_ejp88")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArenaToppingSurround2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9506993, 0)
+shape = SubResource("ConvexPolygonShape3D_ff53r")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ArenaToppingSurround2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4293537, 0.19669628)
+mesh = ExtResource("13_o2bv3")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ArenaToppingSurround2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4293537, 0.19669628)
+shape = SubResource("ConvexPolygonShape3D_y268o")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ArenaToppingSurround2"]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -0.7967224, 0.4102602, -0.10805988)
+mesh = ExtResource("13_o2bv3")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ArenaToppingSurround2"]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -0.7967224, 0.4102602, -0.10805988)
+shape = SubResource("ConvexPolygonShape3D_hf41s")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ArenaToppingSurround2"]
+transform = Transform3D(-0.016702062, 0, -0.9998605, 0, 1, 0, 0.9998605, 0, -0.016702062, -0.18076229, 0.4130578, -1.1018462)
+mesh = ExtResource("13_o2bv3")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ArenaToppingSurround2"]
+transform = Transform3D(-0.016702062, 0, -0.9998605, 0, 1, 0, 0.9998605, 0, -0.016702062, -0.18076229, 0.4130578, -1.1018462)
+shape = SubResource("ConvexPolygonShape3D_2bs7e")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ArenaToppingSurround2"]
+transform = Transform3D(-0.9996799, 0, 0.025304565, 0, 1, 0, -0.025304565, 0, -0.9996799, 0.99318314, 0.43361092, 0.80800533)
+mesh = ExtResource("13_o2bv3")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ArenaToppingSurround2"]
+transform = Transform3D(-0.9996799, 0, 0.025304565, 0, 1, 0, -0.025304565, 0, -0.9996799, 0.99318314, 0.43361092, 0.80800533)
+shape = SubResource("ConvexPolygonShape3D_4qqrj")
+
+[node name="ArenaToppingSurround3" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 10, 5.2234764, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaToppingSurround3"]
+mesh = ExtResource("12_ejp88")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaToppingSurround3"]
+shape = SubResource("ConvexPolygonShape3D_aatld")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaToppingSurround3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9506993, 0)
+mesh = ExtResource("12_ejp88")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArenaToppingSurround3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9506993, 0)
+shape = SubResource("ConvexPolygonShape3D_ff53r")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ArenaToppingSurround3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4293537, 0.19669628)
+mesh = ExtResource("13_o2bv3")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ArenaToppingSurround3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4293537, 0.19669628)
+shape = SubResource("ConvexPolygonShape3D_y268o")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ArenaToppingSurround3"]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -0.7967224, 0.4102602, -0.10805988)
+mesh = ExtResource("13_o2bv3")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ArenaToppingSurround3"]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -0.7967224, 0.4102602, -0.10805988)
+shape = SubResource("ConvexPolygonShape3D_hf41s")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ArenaToppingSurround3"]
+transform = Transform3D(-0.016702062, 0, -0.9998605, 0, 1, 0, 0.9998605, 0, -0.016702062, -0.18076229, 0.4130578, -1.1018462)
+mesh = ExtResource("13_o2bv3")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ArenaToppingSurround3"]
+transform = Transform3D(-0.016702062, 0, -0.9998605, 0, 1, 0, 0.9998605, 0, -0.016702062, -0.18076229, 0.4130578, -1.1018462)
+shape = SubResource("ConvexPolygonShape3D_2bs7e")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ArenaToppingSurround3"]
+transform = Transform3D(-0.9996799, 0, 0.025304565, 0, 1, 0, -0.025304565, 0, -0.9996799, 0.99318314, 0.43361092, 0.80800533)
+mesh = ExtResource("13_o2bv3")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ArenaToppingSurround3"]
+transform = Transform3D(-0.9996799, 0, 0.025304565, 0, 1, 0, -0.025304565, 0, -0.9996799, 0.99318314, 0.43361092, 0.80800533)
+shape = SubResource("ConvexPolygonShape3D_4qqrj")
+
+[node name="ArenaRopeSurround7" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround7"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround7"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround8" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround8"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround8"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround9" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround9"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround9"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround10" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround10"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround10"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround11" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, -3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround11"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround11"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround12" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround12"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround12"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround13" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround13"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround13"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround14" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround14"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround14"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround15" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround15"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround15"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround16" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround16"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround16"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround17" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround17"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround17"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround18" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround18"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround18"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround19" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, 5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround19"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround19"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround20" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround20"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround20"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround21" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, 7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround21"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround21"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround22" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround22"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround22"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround23" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround23"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround23"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround24" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, 10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround24"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround24"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround25" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -9, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround25"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround25"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround26" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -8, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround26"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround26"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround27" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -7, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround27"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround27"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround27"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround28" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -6, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround28"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround28"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround28"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround29" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -5, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround29"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround29"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround29"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround30" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -4, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround30"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround30"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround30"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround31" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -3, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround31"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround31"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround31"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround32" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -2, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround32"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround32"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround32"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround33" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -1, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround33"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround33"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround33"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround34" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 0, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround34"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround34"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround34"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround35" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 1, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround35"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround35"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround35"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround36" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 2, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround36"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround36"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround36"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround37" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 3, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround37"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround37"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround37"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround38" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 4, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround38"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround38"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround38"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround39" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 5, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround39"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround39"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround39"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround40" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 6, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround40"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround40"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround40"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround41" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 7, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround41"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround41"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround41"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround42" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 8, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround42"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround42"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround42"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround43" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 9, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround43"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround43"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround43"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround44" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 10, 4.285249, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround44"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround44"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround44"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround45" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, 10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround45"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround45"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround45"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround46" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround46"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround46"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround46"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround47" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround47"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround47"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround47"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround48" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, 7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround48"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround48"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround48"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround49" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround49"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround49"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround49"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround50" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, 5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround50"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround50"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround50"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround51" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround51"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround51"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround51"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround52" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround52"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround52"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround52"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround53" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround53"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround53"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround53"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround54" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround54"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround54"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround54"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround55" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround55"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround55"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround55"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround56" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround56"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround56"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround56"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround57" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround57"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround57"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround57"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround58" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, -3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround58"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround58"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround58"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround59" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround59"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround59"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround59"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround60" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround60"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround60"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround60"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround61" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround61"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround61"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround61"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround62" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround62"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround62"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround62"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround63" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround63"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround63"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround63"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround64" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, -9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround64"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround64"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround64"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround65" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 10, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround65"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround65"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround65"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround66" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, 9, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround66"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround66"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround66"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround67" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, 8, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround67"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround67"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround67"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround68" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, 7, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround68"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround68"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround68"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround69" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, 6, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround69"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround69"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround69"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround70" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, 5, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround70"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround70"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround70"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround71" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, 4, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround71"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround71"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround71"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround72" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, 3, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround72"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround72"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround72"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround73" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, 2, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround73"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround73"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround73"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround74" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, 1, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround74"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround74"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround74"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround75" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, 0, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround75"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround75"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround75"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround76" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, -1, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround76"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround76"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround76"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround77" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, -2, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround77"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround77"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround77"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround78" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, -3, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround78"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround78"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround78"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround79" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, -4, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround79"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround79"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround79"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround80" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, -5, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround80"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround80"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround80"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround81" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, -6, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround81"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround81"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround81"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround82" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, -7, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround82"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround82"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround82"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround83" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, -8, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround83"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround83"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround83"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRopeSurround84" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -2.6226834e-07, 0, 1, 0, 2.6226834e-07, 0, -1, -9, 4.285249, -10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRopeSurround84"]
+mesh = ExtResource("10_3kj1q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRopeSurround84"]
+shape = SubResource("ConvexPolygonShape3D_ux3h4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaRopeSurround84"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3918586, 0)
+mesh = ExtResource("11_ooy5m")
+
+[node name="ArenaRailingSurround35" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 4, 8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround35"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround35"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround36" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 4, 7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround36"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround36"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround37" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 4, 6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround37"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround37"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround38" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 4, 5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround38"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround38"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround39" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 4, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround39"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround39"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround40" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 4, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround40"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround40"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround41" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 4, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround41"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround41"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround42" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 4, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround42"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround42"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround43" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 4, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround43"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround43"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround44" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 4, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround44"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround44"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround45" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 4, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround45"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround45"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround46" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 4, -3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround46"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround46"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround47" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 4, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround47"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround47"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround48" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 4, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround48"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround48"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround49" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 4, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround49"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround49"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround50" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7, 4, -7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround50"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround50"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround51" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -6, 4, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround51"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround51"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround52" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5, 4, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround52"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround52"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround53" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4, 4, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround53"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround53"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround54" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3, 4, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround54"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround54"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround55" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2, 4, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround55"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround55"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround56" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1, 4, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround56"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround56"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround57" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2, 4, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround57"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround57"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround58" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3, 4, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround58"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround58"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround59" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4, 4, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround59"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround59"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround60" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5, 4, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround60"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround60"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround10" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, -9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround10"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround10"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround11" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 4, -9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround11"]
+mesh = ExtResource("4_0x2rv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround11"]
+shape = SubResource("ConvexPolygonShape3D_fak7k")
+
+[node name="ArenaRailingSurround12" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, -9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround12"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 1)
+mesh = ExtResource("9_856gu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround12"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 1)
+shape = SubResource("ConvexPolygonShape3D_utvpe")
+
+[node name="ArenaRailingSurround13" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 4, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround13"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 1)
+mesh = ExtResource("9_856gu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround13"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 1)
+shape = SubResource("ConvexPolygonShape3D_utvpe")
+
+[node name="ArenaRailingSurround14" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -7, 4, 10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround14"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 1)
+mesh = ExtResource("9_856gu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround14"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 1)
+shape = SubResource("ConvexPolygonShape3D_utvpe")
+
+[node name="ArenaRailingSurround15" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -8, 4, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaRailingSurround15"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 1)
+mesh = ExtResource("9_856gu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaRailingSurround15"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 1)
+shape = SubResource("ConvexPolygonShape3D_utvpe")
+
+[node name="ArenaBeamsSurround" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, 0, -1, -8.742278e-08, -8.742278e-08, -8.742278e-08, 1, -5.273205, 6.779246, -11.166508)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaBeamsSurround"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaBeamsSurround"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+shape = SubResource("ConvexPolygonShape3D_s1p7i")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ArenaBeamsSurround"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArenaBeamsSurround"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+shape = SubResource("ConvexPolygonShape3D_n44no")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaBeamsSurround"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ArenaBeamsSurround"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_gu5dc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ArenaBeamsSurround"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ArenaBeamsSurround"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_4fkk0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ArenaBeamsSurround"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ArenaBeamsSurround"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_ljtg0")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ArenaBeamsSurround"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ArenaBeamsSurround"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_21h2c")
+
+[node name="ArenaBeamsSurround9" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, 0, -1, -8.742278e-08, -8.742278e-08, -8.742278e-08, 1, -5.392988, 6.779246, 10.833492)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaBeamsSurround9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaBeamsSurround9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+shape = SubResource("ConvexPolygonShape3D_s1p7i")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ArenaBeamsSurround9"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArenaBeamsSurround9"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+shape = SubResource("ConvexPolygonShape3D_n44no")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaBeamsSurround9"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ArenaBeamsSurround9"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_gu5dc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ArenaBeamsSurround9"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ArenaBeamsSurround9"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_4fkk0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ArenaBeamsSurround9"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ArenaBeamsSurround9"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_ljtg0")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ArenaBeamsSurround9"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ArenaBeamsSurround9"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_21h2c")
+
+[node name="ArenaBeamsSurround2" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, 0, -1, -8.742278e-08, -8.742278e-08, -8.742278e-08, 1, -0.396657, 6.779246, -11.166508)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaBeamsSurround2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaBeamsSurround2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+shape = SubResource("ConvexPolygonShape3D_s1p7i")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ArenaBeamsSurround2"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArenaBeamsSurround2"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+shape = SubResource("ConvexPolygonShape3D_n44no")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaBeamsSurround2"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ArenaBeamsSurround2"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_gu5dc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ArenaBeamsSurround2"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ArenaBeamsSurround2"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_4fkk0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ArenaBeamsSurround2"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ArenaBeamsSurround2"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_ljtg0")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ArenaBeamsSurround2"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ArenaBeamsSurround2"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_21h2c")
+
+[node name="ArenaBeamsSurround8" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, 0, -1, -8.742278e-08, -8.742278e-08, -8.742278e-08, 1, -0.396657, 6.779246, 10.833492)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaBeamsSurround8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaBeamsSurround8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+shape = SubResource("ConvexPolygonShape3D_s1p7i")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ArenaBeamsSurround8"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArenaBeamsSurround8"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+shape = SubResource("ConvexPolygonShape3D_n44no")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaBeamsSurround8"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ArenaBeamsSurround8"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_gu5dc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ArenaBeamsSurround8"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ArenaBeamsSurround8"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_4fkk0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ArenaBeamsSurround8"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ArenaBeamsSurround8"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_ljtg0")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ArenaBeamsSurround8"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ArenaBeamsSurround8"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_21h2c")
+
+[node name="ArenaBeamsSurround3" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, 0, -1, -8.742278e-08, -8.742278e-08, -8.742278e-08, 1, 4.6301303, 6.779246, -11.213413)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaBeamsSurround3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaBeamsSurround3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+shape = SubResource("ConvexPolygonShape3D_s1p7i")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ArenaBeamsSurround3"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArenaBeamsSurround3"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+shape = SubResource("ConvexPolygonShape3D_n44no")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaBeamsSurround3"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ArenaBeamsSurround3"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_gu5dc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ArenaBeamsSurround3"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ArenaBeamsSurround3"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_4fkk0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ArenaBeamsSurround3"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ArenaBeamsSurround3"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_ljtg0")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ArenaBeamsSurround3"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ArenaBeamsSurround3"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_21h2c")
+
+[node name="ArenaBeamsSurround7" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, 0, -1, -8.742278e-08, -8.742278e-08, -8.742278e-08, 1, 4.6301303, 6.779246, 10.786587)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaBeamsSurround7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaBeamsSurround7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+shape = SubResource("ConvexPolygonShape3D_s1p7i")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ArenaBeamsSurround7"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArenaBeamsSurround7"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+shape = SubResource("ConvexPolygonShape3D_n44no")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaBeamsSurround7"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ArenaBeamsSurround7"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_gu5dc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ArenaBeamsSurround7"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ArenaBeamsSurround7"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_4fkk0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ArenaBeamsSurround7"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ArenaBeamsSurround7"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_ljtg0")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ArenaBeamsSurround7"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ArenaBeamsSurround7"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_21h2c")
+
+[node name="ArenaBeamsSurround4" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 8.742278e-08, -1, 0, -1, -8.742278e-08, -1, 1.1464113e-14, -1.3113416e-07, 11.165363, 6.779246, -6.2854652)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaBeamsSurround4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaBeamsSurround4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+shape = SubResource("ConvexPolygonShape3D_s1p7i")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ArenaBeamsSurround4"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArenaBeamsSurround4"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+shape = SubResource("ConvexPolygonShape3D_n44no")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaBeamsSurround4"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ArenaBeamsSurround4"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_gu5dc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ArenaBeamsSurround4"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ArenaBeamsSurround4"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_4fkk0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ArenaBeamsSurround4"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ArenaBeamsSurround4"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_ljtg0")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ArenaBeamsSurround4"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ArenaBeamsSurround4"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_21h2c")
+
+[node name="ArenaBeamsSurround12" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 8.742278e-08, -1, 0, -1, -8.742278e-08, -1, 1.1464113e-14, -1.3113416e-07, -8.834637, 6.779246, -6.2854652)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaBeamsSurround12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaBeamsSurround12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+shape = SubResource("ConvexPolygonShape3D_s1p7i")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ArenaBeamsSurround12"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArenaBeamsSurround12"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+shape = SubResource("ConvexPolygonShape3D_n44no")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaBeamsSurround12"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ArenaBeamsSurround12"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_gu5dc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ArenaBeamsSurround12"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ArenaBeamsSurround12"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_4fkk0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ArenaBeamsSurround12"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ArenaBeamsSurround12"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_ljtg0")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ArenaBeamsSurround12"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ArenaBeamsSurround12"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_21h2c")
+
+[node name="ArenaBeamsSurround5" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 8.742278e-08, -1, 0, -1, -8.742278e-08, -1, 1.1464113e-14, -1.3113416e-07, 11.165363, 6.779246, -0.2923205)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaBeamsSurround5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaBeamsSurround5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+shape = SubResource("ConvexPolygonShape3D_s1p7i")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ArenaBeamsSurround5"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArenaBeamsSurround5"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+shape = SubResource("ConvexPolygonShape3D_n44no")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaBeamsSurround5"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ArenaBeamsSurround5"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_gu5dc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ArenaBeamsSurround5"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ArenaBeamsSurround5"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_4fkk0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ArenaBeamsSurround5"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ArenaBeamsSurround5"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_ljtg0")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ArenaBeamsSurround5"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ArenaBeamsSurround5"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_21h2c")
+
+[node name="ArenaBeamsSurround11" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3113416e-07, 8.742278e-08, -1, 0, -1, -8.742278e-08, -1, 1.1464113e-14, -1.3113416e-07, -8.834637, 6.779246, -0.2923205)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaBeamsSurround11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaBeamsSurround11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+shape = SubResource("ConvexPolygonShape3D_s1p7i")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ArenaBeamsSurround11"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArenaBeamsSurround11"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+shape = SubResource("ConvexPolygonShape3D_n44no")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaBeamsSurround11"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ArenaBeamsSurround11"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_gu5dc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ArenaBeamsSurround11"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ArenaBeamsSurround11"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_4fkk0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ArenaBeamsSurround11"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ArenaBeamsSurround11"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_ljtg0")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ArenaBeamsSurround11"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ArenaBeamsSurround11"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_21h2c")
+
+[node name="ArenaBeamsSurround6" type="StaticBody3D" parent="."]
+transform = Transform3D(0.014171731, 8.7413994e-08, -0.99989957, 0, -1, -8.742278e-08, -0.99989957, 1.238932e-09, -0.014171731, 11.2693615, 6.779246, 5.627994)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaBeamsSurround6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaBeamsSurround6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+shape = SubResource("ConvexPolygonShape3D_s1p7i")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ArenaBeamsSurround6"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArenaBeamsSurround6"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+shape = SubResource("ConvexPolygonShape3D_n44no")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaBeamsSurround6"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ArenaBeamsSurround6"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_gu5dc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ArenaBeamsSurround6"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ArenaBeamsSurround6"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_4fkk0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ArenaBeamsSurround6"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ArenaBeamsSurround6"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_ljtg0")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ArenaBeamsSurround6"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ArenaBeamsSurround6"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_21h2c")
+
+[node name="ArenaBeamsSurround10" type="StaticBody3D" parent="."]
+transform = Transform3D(0.014171731, 8.7413994e-08, -0.99989957, 0, -1, -8.742278e-08, -0.99989957, 1.238932e-09, -0.014171731, -8.7306385, 6.779246, 5.627994)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaBeamsSurround10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaBeamsSurround10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
+shape = SubResource("ConvexPolygonShape3D_s1p7i")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ArenaBeamsSurround10"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+mesh = ExtResource("15_0qnhv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArenaBeamsSurround10"]
+transform = Transform3D(-1, 7.642742e-15, -8.742278e-08, -7.642742e-15, 1, 1.7484555e-07, 8.742278e-08, 1.7484555e-07, -1, -1.3743734, 0.24233294, 1.0025063)
+shape = SubResource("ConvexPolygonShape3D_n44no")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ArenaBeamsSurround10"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ArenaBeamsSurround10"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 2.1187153, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_gu5dc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ArenaBeamsSurround10"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="ArenaBeamsSurround10"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, 1.1222711, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_4fkk0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="ArenaBeamsSurround10"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="ArenaBeamsSurround10"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -1.8728821, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_ljtg0")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="ArenaBeamsSurround10"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+mesh = ExtResource("16_r8ues")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="ArenaBeamsSurround10"]
+transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 0, -1.7484555e-07, 1, -2.8725512, 0.9435711, 0.1989851)
+shape = SubResource("ConvexPolygonShape3D_21h2c")
