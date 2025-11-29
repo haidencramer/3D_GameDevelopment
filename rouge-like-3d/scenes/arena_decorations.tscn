@@ -1,6 +1,5 @@
-[gd_scene load_steps=40 format=3 uid="uid://caxurjhk2aufq"]
+[gd_scene load_steps=39 format=3 uid="uid://caxurjhk2aufq"]
 
-[ext_resource type="PackedScene" uid="uid://cyhvbso41web5" path="res://scenes/arena.tscn" id="1_rxmmw"]
 [ext_resource type="ArrayMesh" uid="uid://cuh74npjebx37" path="res://assets/Modular Village/Wood_Floor_Straight_1.obj" id="2_y56iy"]
 [ext_resource type="ArrayMesh" uid="uid://bhmeo36rh1nix" path="res://assets/Modular Village/Wood_Floor_Straight_2.obj" id="3_ceb2g"]
 [ext_resource type="ArrayMesh" uid="uid://dhgmfwcfxkesf" path="res://assets/Modular Village/Wood_Railing_Straight.obj" id="4_0x2rv"]
@@ -87,8 +86,6 @@ points = PackedVector3Array(-0.6, 0, 0.4, -0.4, 0, 0.4, -0.6, 0, 0.6, -0.6, 1, 0
 points = PackedVector3Array(-0.6, 0, 0.4, -0.4, 0, 0.4, -0.6, 0, 0.6, -0.6, 1, 0.4, -0.4, 0, 0.6, -0.4, 1, 0.4, -0.6, 1, 0.6, -0.4, 1, 0.6)
 
 [node name="ArenaDecorations" type="Node3D"]
-
-[node name="Arena" parent="." instance=ExtResource("1_rxmmw")]
 
 [node name="PlayerEntryPlank" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.038485765, 0)
@@ -2931,7 +2928,7 @@ transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 
 shape = SubResource("ConvexPolygonShape3D_21h2c")
 
 [node name="ArenaBeamsSurround12" type="StaticBody3D" parent="."]
-transform = Transform3D(1.3113416e-07, 8.742278e-08, -1, 0, -1, -8.742278e-08, -1, 1.1464113e-14, -1.3113416e-07, -8.834637, 6.779246, -6.2854652)
+transform = Transform3D(1.3113416e-07, 8.742278e-08, -1, 0, -1, -8.742278e-08, -1, 1.1464113e-14, -1.3113416e-07, -8.834637, 6.779246, -6.3742366)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaBeamsSurround12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
@@ -3033,7 +3030,7 @@ transform = Transform3D(-4.371138e-08, -1, -1.7484555e-07, 1, -4.371138e-08, 0, 
 shape = SubResource("ConvexPolygonShape3D_21h2c")
 
 [node name="ArenaBeamsSurround11" type="StaticBody3D" parent="."]
-transform = Transform3D(1.3113416e-07, 8.742278e-08, -1, 0, -1, -8.742278e-08, -1, 1.1464113e-14, -1.3113416e-07, -8.834637, 6.779246, -0.2923205)
+transform = Transform3D(1.3113416e-07, 8.742278e-08, -1, 0, -1, -8.742278e-08, -1, 1.1464113e-14, -1.3113416e-07, -8.834637, 6.779246, -0.3801645)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaBeamsSurround11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37437344, 0.24233294, 0.39980602)
