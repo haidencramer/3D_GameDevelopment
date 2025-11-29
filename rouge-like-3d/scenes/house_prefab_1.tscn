@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://7806l1p4p8bh"]
-
-[node name="HousePrefab1" type="Node3D"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
