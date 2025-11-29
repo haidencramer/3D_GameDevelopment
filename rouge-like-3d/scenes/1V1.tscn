@@ -114,6 +114,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.245, 12.604, 11.75)
 
 [node name="PickupArea" type="Area3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.245, 12.604, 11.75)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/PickupArea"]
 shape = SubResource("SphereShape3D_or3vb")
@@ -144,11 +145,21 @@ base_offset = 2.0
 
 [node name="Zweihander" parent="hoverNode" instance=ExtResource("6_4emov")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1720657, 0, -7.447835)
+weapon_name = "Weapon"
+weight = 1.0
+angular_drag = 5.0
 
 [node name="Estoc" parent="hoverNode" instance=ExtResource("6_3kbgm")]
+weapon_name = "Weapon"
+weight = 1.0
 
 [node name="MaceV1" parent="hoverNode" instance=ExtResource("8_nnxr5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6806622, 1.2453742, -6.4045897)
+weapon_name = "Weapon"
+weight = 1.0
+angular_drag = 5.0
 
 [node name="Katana" parent="hoverNode" instance=ExtResource("7_73w2x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.080091, 0.21021509, 0)
+weapon_name = "Weapon"
+weight = 1.0

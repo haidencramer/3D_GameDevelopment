@@ -53,9 +53,29 @@ func _on_animation_finished(anim_name: String) -> void:
 		elif anim_name == "Armature|Jump" and not is_on_floor():
 			anim_player.play(anim_name)
 
+#func _physics_process(delta: float) -> void:
+	#if Input.is_action_just_pressed("jump") and is_on_floor():
+		#jumping = true
+	#
+	#_handle_weapon_input()
+	#_handle_turning(delta)
+	#
+	#velocity = _walk(delta) + _gravity(delta) + _jump(delta)
+	#_update_animation()
+	#move_and_slide()
+	
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		jumping = true
+	
+	# DEBUG: Test if E key is being detected at all
+	if Input.is_key_pressed(KEY_E):
+		print("E key detected!")
+	
+	# DEBUG: Check if pickup_weapon action exists
+	if Input.is_action_just_pressed("pickup_weapon"):
+		print("pickup_weapon action triggered!")
+		print("Nearby weapons: ", nearby_weapons.size())
 	
 	_handle_weapon_input()
 	_handle_turning(delta)
@@ -63,40 +83,67 @@ func _physics_process(delta: float) -> void:
 	velocity = _walk(delta) + _gravity(delta) + _jump(delta)
 	_update_animation()
 	move_and_slide()
+	
+
 
 # -----------------------------
 # WEAPON INPUT FIXED
 # -----------------------------
+#func _handle_weapon_input() -> void:
+	#if Input.is_action_just_pressed("pickup_weapon"):
+		#if held_weapon:
+			#drop_weapon()
+		#else:
+			#pickup_nearest_weapon()
+#
+	#if Input.is_action_just_pressed("drop_weapon") and held_weapon:
+		#drop_weapon()
+		
 func _handle_weapon_input() -> void:
-	if Input.is_action_just_pressed("pickup_weapon"):
+	# Use direct key check instead of action
+	if Input.is_key_pressed(KEY_E):
 		if held_weapon:
 			drop_weapon()
 		else:
 			pickup_nearest_weapon()
-
+	
 	if Input.is_action_just_pressed("drop_weapon") and held_weapon:
 		drop_weapon()
 
+#func pickup_nearest_weapon() -> void:
+	#if nearby_weapons.is_empty():
+		#print("No weapons nearby")
+		#return
+	#
+	#var closest_weapon: Weapon = null
+	#var closest_distance: float = INF
+	#
+	#for weapon in nearby_weapons:
+		#if not is_instance_valid(weapon):
+			#continue
+		#
+		#var distance = global_position.distance_to(weapon.global_position)
+		#if distance < closest_distance:
+			#closest_distance = distance
+			#closest_weapon = weapon
+	#
+	#if closest_weapon and closest_distance <= pickup_range:
+		#held_weapon = closest_weapon
+		#held_weapon.pickup(self, hand_point)
+		#print("Picked up: ", held_weapon.weapon_name)
+		
 func pickup_nearest_weapon() -> void:
 	if nearby_weapons.is_empty():
 		print("No weapons nearby")
 		return
 	
-	var closest_weapon: Weapon = null
-	var closest_distance: float = INF
+	# Just grab the first weapon in range (PickupArea already filtered by distance)
+	var weapon_to_pickup = nearby_weapons[0]
 	
-	for weapon in nearby_weapons:
-		if not is_instance_valid(weapon):
-			continue
-		
-		var distance = global_position.distance_to(weapon.global_position)
-		if distance < closest_distance:
-			closest_distance = distance
-			closest_weapon = weapon
-	
-	if closest_weapon and closest_distance <= pickup_range:
-		held_weapon = closest_weapon
+	if is_instance_valid(weapon_to_pickup):
+		held_weapon = weapon_to_pickup
 		held_weapon.pickup(self, hand_point)
+		nearby_weapons.erase(weapon_to_pickup)  # Remove from nearby list
 		print("Picked up: ", held_weapon.weapon_name)
 
 func drop_weapon() -> void:
