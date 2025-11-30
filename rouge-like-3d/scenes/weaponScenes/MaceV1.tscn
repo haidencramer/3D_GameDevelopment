@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtusjjrb5x3qr"]
+
+[ext_resource type="Script" uid="uid://bgibg4xtdqjum" path="res://scripts/weapon.gd" id="1_fhmgj"]
+[ext_resource type="PackedScene" uid="uid://co7j0ko123gou" path="res://assets/ALL/Mace1/Mace.blend" id="2_unwus"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_unwus"]
+radius = 0.24169922
+height = 1.0643921
+
+[node name="MaceV1" type="RigidBody3D"]
+script = ExtResource("1_fhmgj")
+weapon_name = "MaceV1"
+weight = 2.0
+angular_drag = 2.5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.6693304, 0, 0, 0, 1, 0, 0, 0, 0.617662, 0, 0.022159398, 0)
+shape = SubResource("CapsuleShape3D_unwus")
+
+[node name="MaceV1" parent="." instance=ExtResource("2_unwus")]
+
+[node name="GripPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8552367, 0)

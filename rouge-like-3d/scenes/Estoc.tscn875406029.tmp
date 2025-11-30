@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddusqhmbeh55m"]
+
+[ext_resource type="Script" uid="uid://bgibg4xtdqjum" path="res://scripts/weapon.gd" id="1_48h8v"]
+[ext_resource type="PackedScene" uid="uid://ds4r6qsq8tmw4" path="res://assets/ALL/Estoc/estoc.blend" id="2_tcgbm"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tcgbm"]
+height = 1.4174805
+
+[node name="Estoc" type="RigidBody3D"]
+script = ExtResource("1_48h8v")
+weapon_name = "Estoc"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.108606234, 0, 0, 0, 2.784413, 0, 0, 0, 0.11252068, 0, 1.9069492, 0)
+shape = SubResource("CylinderShape3D_tcgbm")
+
+[node name="GripPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.64388525, 0)
+
+[node name="Estoc" parent="." instance=ExtResource("2_tcgbm")]

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b3w3g7dpfexv2"
-path="res://.godot/imported/Katana.fbx-4051ec64c663d26a32ec92bbf13d8678.scn"
+uid="uid://362q3nvshnfl"
+path="res://.godot/imported/tree28.fbx-759752bee40fb1af62f03d7fbfb70cf4.scn"
 
 [deps]
 
-source_file="res://assets/ALL/Katana/Katana.fbx"
-dest_files=["res://.godot/imported/Katana.fbx-4051ec64c663d26a32ec92bbf13d8678.scn"]
+source_file="res://assets/tree_pack_1.1/models/tree28.fbx"
+dest_files=["res://.godot/imported/tree28.fbx-759752bee40fb1af62f03d7fbfb70cf4.scn"]
 
 [params]
 
