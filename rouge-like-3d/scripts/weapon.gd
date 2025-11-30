@@ -129,8 +129,9 @@ func _update_held_position() -> void:
 	if not grip_point or not holder:
 		return
 	
-	var hand_point = holder.get_node_or_null("HandPoint")
+	var hand_point = holder.get_node_or_null("SpiderModel/HandPoint")
 	if not hand_point:
+		push_error("Could not find HandPoint at SpiderModel/HandPoint")
 		return
 	
 	# Calculate target position based on grip point offset

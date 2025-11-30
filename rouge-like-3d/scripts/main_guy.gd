@@ -30,7 +30,7 @@ var nearby_weapons: Array[Weapon] = []
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var anim_player: AnimationPlayer = $SpiderModel/spider/AnimationPlayer
 @onready var spider_model: Node3D = $SpiderModel
-@onready var hand_point: Node3D = $HandPoint
+@onready var hand_point: Node3D = $SpiderModel/HandPoint
 @onready var pickup_area: Area3D = $PickupArea
 
 func _ready() -> void:
