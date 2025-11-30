@@ -13,7 +13,7 @@ func _process(delta):
 
 
 func on_start_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/staircase.tscn")
+	get_tree().change_scene_to_file("res://scenes/1V1.tscn")
 
 
 func _on_options_button_pressed() -> void:
