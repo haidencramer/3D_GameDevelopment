@@ -6,6 +6,12 @@ class_name Player extends CharacterBody3D
 @export var turn_speed: float = 2.5
 @export var mouse_sensitivity: float = 0.002
 @export var pickup_range: float = 35.0  # Increased to match scene distances
+# Health variables
+@export var max_health: float = 100.0
+var current_health: float
+
+# Reference to the health bar UI
+var health_bar: ProgressBar
 
 var jumping: bool = false
 var backflipping: bool = false
@@ -34,6 +40,15 @@ var nearby_weapons: Array[Weapon] = []
 @onready var pickup_area: Area3D = $PickupArea
 
 func _ready() -> void:
+	# Initialize health
+	current_health = max_health
+	
+	# Get reference to the health bar (assuming it's in a CanvasLayer)
+	health_bar = get_node("/root/Main/CanvasLayer/Control/HealthBar")
+	if health_bar:
+		health_bar.max_value = max_health
+		health_bar.value = current_health
+	
 	capture_mouse()
 	
 	print("=== PLAYER READY ===")
@@ -75,6 +90,35 @@ func _on_animation_finished(anim_name: String) -> void:
 			anim_player.play(anim_name)
 		elif anim_name == "Armature|Jump" and not is_on_floor():
 			anim_player.play(anim_name)
+
+func take_damage(damage: float):
+	"""Called when the player takes damage"""
+	current_health = max(0, current_health - damage)
+	update_health_bar()
+	
+	# Optional: Add visual/audio feedback
+	print("Player took ", damage, " damage. Health: ", current_health, "/", max_health)
+	
+	# Check if player is dead
+	if current_health <= 0:
+		die()
+
+func heal(amount: float):
+	"""Heal the player"""
+	current_health = min(max_health, current_health + amount)
+	update_health_bar()
+
+func update_health_bar():
+	"""Update the health bar UI"""
+	if health_bar:
+		health_bar.value = current_health
+
+func die():
+	"""Handle player death"""
+	print("Player died!")
+	# Add your death logic here (restart level, show game over screen, etc.)
+	# For example:
+	# get_tree().reload_current_scene()
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -253,3 +297,9 @@ func _jump(delta: float) -> Vector3:
 	
 	jump_vel = Vector3.ZERO if is_on_floor() or is_on_ceiling_only() else jump_vel.move_toward(Vector3.ZERO, gravity * delta)
 	return jump_vel
+	
+func _process(_delta):
+	if Input.is_action_just_pressed("ui_down"):
+		take_damage(10)  # Test damage
+	if Input.is_action_just_pressed("ui_up"):
+		heal(10)  # Test healing

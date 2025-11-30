@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cyhvbso41web5" path="res://scenes/arena.tscn" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://caxurjhk2aufq" path="res://scenes/arena_decorations.tscn" id="2_tbgi4"]
-[ext_resource type="PackedScene" path="res://scenes/EnvironmentFloor.tscn" id="3_tefeu"]
+[ext_resource type="PackedScene" uid="uid://7806l1p4p8bh" path="res://scenes/EnvironmentFloor.tscn" id="3_tefeu"]
 [ext_resource type="Script" uid="uid://cnhf6v4jvrkgi" path="res://scenes/Minimap.gd" id="4_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://dqvgs3gxdcp7f" path="res://scenes/play_spider.tscn" id="5_tbgi4"]
 
@@ -25,11 +25,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.641546, 34.469696, 48.1104
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, -0.0033685341, 0.99999434, 0, -0.99999434, -0.0033685341, 0, 50.88166, 0)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." node_paths=PackedStringArray("player")]
+[node name="MiniMapUI" type="CanvasLayer" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("4_o6xl0")
 player = NodePath("../CharacterBody3D")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MiniMapUI"]
 custom_minimum_size = Vector2(180, 180)
 anchors_preset = 1
 anchor_left = 1.0
@@ -39,13 +39,28 @@ offset_bottom = 180.0
 grow_horizontal = 0
 stretch = true
 
-[node name="MinimapViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer"]
+[node name="MinimapViewport" type="SubViewport" parent="MiniMapUI/SubViewportContainer"]
 handle_input_locally = false
 size = Vector2i(180, 180)
 render_target_update_mode = 4
 
-[node name="MinimapCamera3D" type="Camera3D" parent="CanvasLayer/SubViewportContainer/MinimapViewport"]
+[node name="MinimapCamera3D" type="Camera3D" parent="MiniMapUI/SubViewportContainer/MinimapViewport"]
 transform = Transform3D(1, 0, 0, 0, 0.034341276, 0.9994102, 0, -0.9994102, 0.034341276, 1.8958111, 46.596756, 2.7372103)
 projection = 1
 size = 86.809
 far = 94.29
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBar" type="ProgressBar" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 220.0
+offset_bottom = 50.0
