@@ -13,8 +13,8 @@
 size = Vector3(46.611572, 0.3493042, 6.1411133)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_or3vb"]
-height = 1.5476074
-radius = 0.95947266
+height = 1.5145721
+radius = 0.5878906
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_or3vb"]
 radius = 3.0
@@ -93,7 +93,7 @@ transform = Transform3D(1, 0, 0, 0, -1.3659809e-08, 0.3125, 0, -0.12820512, -5.6
 script = ExtResource("3_4emov")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(2.458966, 0, 0, 0, 1.0774878, 0, 0, 0, 2.3764455, -21.24453, 12.688215, 12.335775)
+transform = Transform3D(1.4844034, 0, 0, 0, 1.0774878, 0, 0, 0, 2.7951865, -21.24453, 12.706012, 12.335775)
 shape = SubResource("CylinderShape3D_or3vb")
 
 [node name="SpiderModel" type="Node3D" parent="CharacterBody3D"]
@@ -103,7 +103,7 @@ transform = Transform3D(2.458966, 0, 0, 0, 0.6032852, 0, 0, 0, 3.2313428, -22.12
 transform = Transform3D(-0.406675, 0, 3.5552663e-08, 0, 1.6575909, 0, -2.7054632e-08, 0, -0.30946892, 0.34114647, 0.784008, -0.20634556)
 
 [node name="HandPoint" type="Node3D" parent="CharacterBody3D/SpiderModel"]
-transform = Transform3D(0.33832857, -0.22679152, 0, 0.84708047, 1.4246212, 0, -2.1989092e-15, 0, 0.30946895, -0.32870197, 0.6455231, -0.69428897)
+transform = Transform3D(0.33832857, -0.22679152, 0, 0.84708047, 1.4246212, 0, -2.1989092e-15, 0, 0.30946895, -0.32870388, 5.2544746, -0.60840726)
 
 [node name="CameraPivot" type="Node3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.128, 12.604, 11.75)
