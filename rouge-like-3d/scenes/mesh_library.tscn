@@ -1,4 +1,4 @@
-[gd_scene load_steps=156 format=3 uid="uid://cwrsurliu5cam"]
+[gd_scene load_steps=159 format=3 uid="uid://cwrsurliu5cam"]
 
 [ext_resource type="ArrayMesh" uid="uid://bhouvra71gf37" path="res://assets/Modular Village/Canopy_Beam.obj" id="1_t26kt"]
 [ext_resource type="ArrayMesh" uid="uid://cgdfg4bch3gfu" path="res://assets/Modular Village/Canopy_Beam_Short.obj" id="2_xgnxg"]
@@ -155,6 +155,13 @@
 [ext_resource type="ArrayMesh" uid="uid://bb3kvcccxn2lo" path="res://assets/Modular Village/Wood_Rope_Straight.obj" id="153_tc0yp"]
 [ext_resource type="ArrayMesh" uid="uid://dpxsyy6hhx1u5" path="res://assets/Modular Village/Wood_Steps.obj" id="154_lmnop"]
 [ext_resource type="ArrayMesh" uid="uid://blhdtdangojc6" path="res://assets/Modular Village/Wood_Steps_Stucco.obj" id="155_y7qwq"]
+[ext_resource type="ArrayMesh" uid="uid://borud822s5acr" path="res://assets/dist/obj_mtl/tree-pyramidal.obj" id="156_6c3s1"]
+[ext_resource type="Texture2D" uid="uid://fwbw5uue3eda" path="res://assets/dist/preview_png/pyramid.png" id="157_ww5wd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yy2ni"]
+albedo_texture = ExtResource("157_ww5wd")
+normal_enabled = true
+normal_texture = ExtResource("157_ww5wd")
 
 [node name="MeshLibrary" type="Node3D"]
 
@@ -777,3 +784,8 @@ mesh = ExtResource("154_lmnop")
 [node name="WoodStepsStucco" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
 mesh = ExtResource("155_y7qwq")
+
+[node name="TreePyramidal" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9578586, 0.34357858, -7.3507476)
+mesh = ExtResource("156_6c3s1")
+surface_material_override/0 = SubResource("StandardMaterial3D_yy2ni")
