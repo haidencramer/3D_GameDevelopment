@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://bu5c4o3d58sq3"]
+[gd_scene load_steps=14 format=3 uid="uid://bu5c4o3d58sq3"]
 
 [ext_resource type="PackedScene" uid="uid://bngx8s06fe1ir" path="res://assets/ModularDungeon/Stairs/Stairs.fbx" id="1_g62b3"]
 [ext_resource type="PackedScene" uid="uid://xx1lrvl7h4xm" path="res://assets/ModularDungeon/Wall2/Wall2.blend" id="2_wmxoq"]
 [ext_resource type="Script" uid="uid://c0tyrqi8f3qb6" path="res://scripts/main_guy.gd" id="3_4emov"]
 [ext_resource type="PackedScene" uid="uid://dinn4mnymc8vo" path="res://scenes/spider.tscn" id="4_nnxr5"]
-[ext_resource type="Script" uid="uid://d1065yomcs5vo" path="res://scripts/hoverScript.gd" id="5_8oafd"]
 [ext_resource type="PackedScene" uid="uid://ddusqhmbeh55m" path="res://scenes/weaponScenes/Estoc.tscn" id="6_3kbgm"]
 [ext_resource type="PackedScene" uid="uid://vtt7g3lbpi5s" path="res://scenes/weaponScenes/Zweihander.tscn" id="6_4emov"]
 [ext_resource type="PackedScene" uid="uid://fw6xhhi357nd" path="res://scenes/weaponScenes/Katana.tscn" id="7_73w2x"]
@@ -110,7 +109,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.128, 12.604, 11.75)
 transform = Transform3D(0.9997733, 0.008219227, -0.01964099, 5.3290705e-15, 0.9224842, 0.38603488, 0.021291412, -0.38594738, 0.92227507, 0.47, 7.645, 8.411)
 
 [node name="HandPoint" type="Node3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.245, 12.604, 11.75)
+transform = Transform3D(0.86130124, -0.50809467, 0, 0.50809467, 0.86130124, 0, 0, 0, 1, -21.905989, 12.993383, 10.012287)
 
 [node name="PickupArea" type="Area3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.245, 12.604, 11.75)
@@ -135,20 +134,14 @@ shadow_bias = 3.296
 shadow_normal_bias = 2.095
 shadow_blur = 2.649
 
-[node name="hoverNode" type="Node3D" parent="."]
+[node name="Zweihander" parent="." instance=ExtResource("6_4emov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9080257, 3.9598145, -7.447835)
+
+[node name="Estoc" parent="." instance=ExtResource("6_3kbgm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.080091, 3.9598145, 0)
-script = ExtResource("5_8oafd")
-float_height = 2.5
-float_speed = 0.75
-base_offset = 2.0
 
-[node name="Zweihander" parent="hoverNode" instance=ExtResource("6_4emov")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1720657, 0, -7.447835)
+[node name="MaceV1" parent="." instance=ExtResource("8_nnxr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.760754, 5.2051888, -6.4045897)
 
-[node name="Estoc" parent="hoverNode" instance=ExtResource("6_3kbgm")]
-
-[node name="MaceV1" parent="hoverNode" instance=ExtResource("8_nnxr5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6806622, 1.2453742, -6.4045897)
-
-[node name="Katana" parent="hoverNode" instance=ExtResource("7_73w2x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.080091, 0.21021509, 0)
+[node name="Katana" parent="." instance=ExtResource("7_73w2x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.1700296, 0)

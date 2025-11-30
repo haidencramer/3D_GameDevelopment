@@ -5,9 +5,10 @@ class_name Player extends CharacterBody3D
 @export_range(0.1, 3.0, 0.1) var jump_height: float = 4.5
 @export var turn_speed: float = 2.5
 @export var mouse_sensitivity: float = 0.002
-@export var pickup_range: float = 3.0
+@export var pickup_range: float = 35.0  # Increased to match scene distances
 
 var jumping: bool = false
+var backflipping: bool = false
 var mouse_captured: bool = false
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -15,6 +16,11 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var walk_vel: Vector3
 var grav_vel: Vector3
 var jump_vel: Vector3
+
+# Backflip parameters
+@export var backflip_height: float = 6.0
+@export var backflip_backward_force: float = 8.0
+@export var backflip_rotation_speed: float = 720.0  # degrees per second
 
 # Weapon system
 var held_weapon: Weapon = null
@@ -30,6 +36,10 @@ var nearby_weapons: Array[Weapon] = []
 func _ready() -> void:
 	capture_mouse()
 	
+	print("=== PLAYER READY ===")
+	print("Hand point exists: ", hand_point != null)
+	print("Pickup area exists: ", pickup_area != null)
+	
 	if anim_player:
 		anim_player.animation_finished.connect(_on_animation_finished)
 		var anim_library = anim_player.get_animation_library("")
@@ -39,9 +49,22 @@ func _ready() -> void:
 				if animation:
 					animation.loop_mode = Animation.LOOP_LINEAR
 	
+	# Connect pickup area signals with debugging
 	if pickup_area:
+		print("Connecting pickup area signals...")
 		pickup_area.body_entered.connect(_on_pickup_area_entered)
 		pickup_area.body_exited.connect(_on_pickup_area_exited)
+		
+		# Check what's already in the area
+		await get_tree().process_frame  # Wait one frame
+		var bodies = pickup_area.get_overlapping_bodies()
+		print("Bodies in pickup area at start: ", bodies.size())
+		for body in bodies:
+			print("  - ", body.name, " (", body.get_class(), ")")
+			if body is Weapon:
+				_on_pickup_area_entered(body)
+	else:
+		push_error("PickupArea not found!")
 
 func _on_animation_finished(anim_name: String) -> void:
 	if anim_player and anim_player.current_animation == anim_name:
@@ -64,58 +87,107 @@ func _physics_process(delta: float) -> void:
 	_update_animation()
 	move_and_slide()
 
-# -----------------------------
-# WEAPON INPUT FIXED
-# -----------------------------
 func _handle_weapon_input() -> void:
+	# E key - pickup weapon (or drop if holding one)
 	if Input.is_action_just_pressed("pickup_weapon"):
+		print("\n=== E KEY PRESSED ===")
+		print("Currently holding weapon: ", held_weapon != null)
+		print("Nearby weapons count: ", nearby_weapons.size())
+		
 		if held_weapon:
 			drop_weapon()
 		else:
 			pickup_nearest_weapon()
-
-	if Input.is_action_just_pressed("drop_weapon") and held_weapon:
-		drop_weapon()
+	
+	# Q key - drop weapon
+	if Input.is_action_just_pressed("drop_weapon"):
+		print("\n=== Q KEY PRESSED ===")
+		if held_weapon:
+			drop_weapon()
+		else:
+			print("Not holding any weapon to drop")
 
 func pickup_nearest_weapon() -> void:
+	print("Attempting to pick up weapon...")
+	print("Nearby weapons: ", nearby_weapons.size())
+	
 	if nearby_weapons.is_empty():
-		print("No weapons nearby")
+		print("ERROR: No weapons nearby!")
+		
+		# Debug: manually check area
+		if pickup_area:
+			var bodies = pickup_area.get_overlapping_bodies()
+			print("DEBUG: Bodies in area: ", bodies.size())
+			for body in bodies:
+				print("  - ", body.name, " is Weapon: ", body is Weapon)
 		return
 	
+	# Find closest weapon
 	var closest_weapon: Weapon = null
 	var closest_distance: float = INF
 	
 	for weapon in nearby_weapons:
 		if not is_instance_valid(weapon):
+			print("Invalid weapon in list, skipping")
+			continue
+		
+		if weapon.is_held:
+			print("Weapon ", weapon.weapon_name, " is already held")
 			continue
 		
 		var distance = global_position.distance_to(weapon.global_position)
+		print("Weapon: ", weapon.weapon_name, " Distance: ", distance)
+		
 		if distance < closest_distance:
 			closest_distance = distance
 			closest_weapon = weapon
 	
-	if closest_weapon and closest_distance <= pickup_range:
-		held_weapon = closest_weapon
-		held_weapon.pickup(self, hand_point)
-		print("Picked up: ", held_weapon.weapon_name)
+	# Pick it up if in range
+	if closest_weapon:
+		print("Closest weapon: ", closest_weapon.weapon_name, " at distance: ", closest_distance)
+		
+		if closest_distance <= pickup_range:
+			held_weapon = closest_weapon
+			held_weapon.pickup(self, hand_point)
+			print("SUCCESS: Picked up ", held_weapon.weapon_name)
+		else:
+			print("ERROR: Weapon too far (", closest_distance, " > ", pickup_range, ")")
+	else:
+		print("ERROR: No valid weapon found")
 
 func drop_weapon() -> void:
 	if held_weapon:
-		held_weapon.drop()
+		print("Dropping weapon: ", held_weapon.weapon_name)
+		var dropped_weapon = held_weapon
 		held_weapon = null
-		print("Dropped weapon")
+		dropped_weapon.drop()
+		print("SUCCESS: Weapon dropped")
 
 func _on_pickup_area_entered(body: Node3D) -> void:
+	print("\n=== BODY ENTERED PICKUP AREA ===")
+	print("Body name: ", body.name)
+	print("Body class: ", body.get_class())
+	print("Is Weapon: ", body is Weapon)
+	
 	if body is Weapon:
-		nearby_weapons.append(body)
-		print("Weapon in range: ", body.weapon_name)
+		var weapon = body as Weapon
+		print("Weapon name: ", weapon.weapon_name)
+		print("Is held: ", weapon.is_held)
+		
+		if not weapon.is_held and not nearby_weapons.has(weapon):
+			nearby_weapons.append(weapon)
+			print("SUCCESS: Added to nearby weapons. Total: ", nearby_weapons.size())
+		else:
+			print("Weapon already in list or is held")
 
 func _on_pickup_area_exited(body: Node3D) -> void:
+	print("\n=== BODY EXITED PICKUP AREA ===")
+	print("Body name: ", body.name)
+	
 	if body is Weapon:
 		nearby_weapons.erase(body)
-		print("Weapon out of range: ", body.weapon_name)
+		print("Removed from nearby weapons. Total: ", nearby_weapons.size())
 
-# ------ movement unchanged ------
 func _handle_turning(delta: float) -> void:
 	if Input.is_action_pressed(&"move_left"):
 		spider_model.rotation.y += turn_speed * delta

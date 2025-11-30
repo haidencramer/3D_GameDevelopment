@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="rougeLike3D"
-run/main_scene="uid://bu5c4o3d58sq3"
+run/main_scene="uid://7b2t023kufan"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 
 [autoload]
