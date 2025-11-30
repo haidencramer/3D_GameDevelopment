@@ -1,3 +1,51 @@
-[gd_scene format=3 uid="uid://blxq6yo2n3g48"]
+[gd_scene load_steps=6 format=3 uid="uid://blxq6yo2n3g48"]
+
+[ext_resource type="PackedScene" uid="uid://cyhvbso41web5" path="res://scenes/arena.tscn" id="1_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://caxurjhk2aufq" path="res://scenes/arena_decorations.tscn" id="2_tbgi4"]
+[ext_resource type="PackedScene" path="res://scenes/EnvironmentFloor.tscn" id="3_tefeu"]
+[ext_resource type="Script" uid="uid://cnhf6v4jvrkgi" path="res://scenes/Minimap.gd" id="4_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://dqvgs3gxdcp7f" path="res://scenes/play_spider.tscn" id="5_tbgi4"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Arena" parent="." instance=ExtResource("1_jyhfs")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.040575027, -0.055208206, 0.25939178)
+
+[node name="ArenaDecorations" parent="." instance=ExtResource("2_tbgi4")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.040575027, -0.055208206, 0.25939178)
+
+[node name="EnvironmentFloor" parent="." instance=ExtResource("3_tefeu")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.040575027, -0.055208206, 0.25939178)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("5_tbgi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.641546, 34.469696, 48.11042)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, -0.0033685341, 0.99999434, 0, -0.99999434, -0.0033685341, 0, 50.88166, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("4_o6xl0")
+player = NodePath("../CharacterBody3D")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer"]
+custom_minimum_size = Vector2(180, 180)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -180.0
+offset_bottom = 180.0
+grow_horizontal = 0
+stretch = true
+
+[node name="MinimapViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(180, 180)
+render_target_update_mode = 4
+
+[node name="MinimapCamera3D" type="Camera3D" parent="CanvasLayer/SubViewportContainer/MinimapViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.034341276, 0.9994102, 0, -0.9994102, 0.034341276, 1.8958111, 46.596756, 2.7372103)
+projection = 1
+size = 86.809
+far = 94.29
