@@ -1,0 +1,779 @@
+[gd_scene load_steps=156 format=3 uid="uid://cwrsurliu5cam"]
+
+[ext_resource type="ArrayMesh" uid="uid://bhouvra71gf37" path="res://assets/Modular Village/Canopy_Beam.obj" id="1_t26kt"]
+[ext_resource type="ArrayMesh" uid="uid://cgdfg4bch3gfu" path="res://assets/Modular Village/Canopy_Beam_Short.obj" id="2_xgnxg"]
+[ext_resource type="ArrayMesh" uid="uid://c7xevkqkuqsls" path="res://assets/Modular Village/Canopy_Corner.obj" id="3_6c3s1"]
+[ext_resource type="ArrayMesh" uid="uid://bepyr6lsuseky" path="res://assets/Modular Village/Canopy_Full.obj" id="4_ww5wd"]
+[ext_resource type="ArrayMesh" uid="uid://d2w1klfihbimg" path="res://assets/Modular Village/Canopy_Ramp_Corner.obj" id="5_yy2ni"]
+[ext_resource type="ArrayMesh" uid="uid://3tj6aa6cga21" path="res://assets/Modular Village/Canopy_Ramp_Full.obj" id="6_ra106"]
+[ext_resource type="ArrayMesh" uid="uid://03skv1hdyjkh" path="res://assets/Modular Village/Canopy_Ramp_Mid.obj" id="7_lmyqm"]
+[ext_resource type="ArrayMesh" uid="uid://b2vtgohpimgi4" path="res://assets/Modular Village/Canopy_Side.obj" id="8_i2dp7"]
+[ext_resource type="ArrayMesh" uid="uid://bxepq7o1x8soj" path="res://assets/Modular Village/Canopy_Sides_Opposite.obj" id="9_tn2m4"]
+[ext_resource type="ArrayMesh" uid="uid://dsb4kuwmux3vh" path="res://assets/Modular Village/Canopy_Top.obj" id="10_mudus"]
+[ext_resource type="ArrayMesh" uid="uid://d0y467psbmxom" path="res://assets/Modular Village/Cobblestone_Dirt_Transition_1.obj" id="11_32kg1"]
+[ext_resource type="ArrayMesh" uid="uid://dotxvl6bi2ax3" path="res://assets/Modular Village/Cobblestone_Dirt_Transition_2.obj" id="12_sap2h"]
+[ext_resource type="ArrayMesh" uid="uid://bi3ngxqk3hnrf" path="res://assets/Modular Village/Cobblestone_Dirt_Transition_3.obj" id="13_o6w7r"]
+[ext_resource type="ArrayMesh" uid="uid://b2cirdhuyr1xk" path="res://assets/Modular Village/Cobblestone_Dirt_Transition_4.obj" id="14_knwlp"]
+[ext_resource type="ArrayMesh" uid="uid://li6o0p2s830c" path="res://assets/Modular Village/Cobblestone_Floor_1.obj" id="15_bkplh"]
+[ext_resource type="ArrayMesh" uid="uid://b245ym8nw0jgp" path="res://assets/Modular Village/Dirt_Fading.obj" id="16_rpw6h"]
+[ext_resource type="ArrayMesh" uid="uid://cf2kxa56p1xf4" path="res://assets/Modular Village/Dirt_Fading_from_Gathered.obj" id="17_7tt0i"]
+[ext_resource type="ArrayMesh" uid="uid://d33ni2bbliv01" path="res://assets/Modular Village/Dirt_Gathered_Corner.obj" id="18_hscm8"]
+[ext_resource type="ArrayMesh" uid="uid://d3gr3rdvtbqkd" path="res://assets/Modular Village/Dirt_Gathered_Straight.obj" id="19_10mns"]
+[ext_resource type="ArrayMesh" uid="uid://c6qvkt1m3auoc" path="res://assets/Modular Village/Kit_Window_Upper_Convex.obj" id="20_dhknj"]
+[ext_resource type="ArrayMesh" uid="uid://gg34un3fxxyp" path="res://assets/Modular Village/Kit_Window_Upper_Straight.obj" id="21_xwtnq"]
+[ext_resource type="ArrayMesh" uid="uid://cfpveel2htf2i" path="res://assets/Modular Village/Prop_Barrel_1.obj" id="22_7w4ms"]
+[ext_resource type="ArrayMesh" uid="uid://b1qh6u0oo1fxy" path="res://assets/Modular Village/Prop_Barrel_1_Open.obj" id="23_bfdwy"]
+[ext_resource type="ArrayMesh" uid="uid://cc5de2nx2ae8o" path="res://assets/Modular Village/Prop_Barrel_2.obj" id="24_sdua8"]
+[ext_resource type="ArrayMesh" uid="uid://c3h7agovhyv48" path="res://assets/Modular Village/Prop_Boat_1.obj" id="25_aand8"]
+[ext_resource type="ArrayMesh" uid="uid://cep2btpxdxu61" path="res://assets/Modular Village/Prop_Boat_2.obj" id="26_n2ovn"]
+[ext_resource type="ArrayMesh" uid="uid://cyks6yja47ory" path="res://assets/Modular Village/Prop_Boat_Oars_1.obj" id="27_elhha"]
+[ext_resource type="ArrayMesh" uid="uid://caek2lcotmfce" path="res://assets/Modular Village/Prop_Boat_Oars_2.obj" id="28_fkqsk"]
+[ext_resource type="ArrayMesh" uid="uid://b4qpdd8bn8glf" path="res://assets/Modular Village/Prop_Broom.obj" id="29_avjxu"]
+[ext_resource type="ArrayMesh" uid="uid://c8gvae7iidkhq" path="res://assets/Modular Village/Prop_Cart_1.obj" id="30_rkj4g"]
+[ext_resource type="ArrayMesh" uid="uid://caj3w1fr8k57s" path="res://assets/Modular Village/Prop_Cart_1_Barrels.obj" id="31_0pdwh"]
+[ext_resource type="ArrayMesh" uid="uid://dls7qntme5toy" path="res://assets/Modular Village/Prop_Cart_1_Hay.obj" id="32_oao78"]
+[ext_resource type="ArrayMesh" uid="uid://d1fbfhfxui7uc" path="res://assets/Modular Village/Prop_Crate_1.obj" id="33_klwx3"]
+[ext_resource type="ArrayMesh" uid="uid://caxyb4s8kp2hs" path="res://assets/Modular Village/Prop_Crate_1_Open.obj" id="34_4f35l"]
+[ext_resource type="ArrayMesh" uid="uid://bo7c61e6fxi6v" path="res://assets/Modular Village/Prop_Hay_1.obj" id="35_wndr2"]
+[ext_resource type="ArrayMesh" uid="uid://dtn5ul3qqp6n1" path="res://assets/Modular Village/Prop_Ladder_1.obj" id="36_04bb0"]
+[ext_resource type="ArrayMesh" uid="uid://ddxd5gb3a3qwu" path="res://assets/Modular Village/Prop_Lamp_Street.obj" id="37_qrcgm"]
+[ext_resource type="ArrayMesh" uid="uid://df7bfefnq31si" path="res://assets/Modular Village/Prop_Well_1.obj" id="38_yb3tw"]
+[ext_resource type="ArrayMesh" uid="uid://d4jy3imreag6k" path="res://assets/Modular Village/Prop_Well_Cobblestone.obj" id="39_uxpox"]
+[ext_resource type="ArrayMesh" uid="uid://6docp6d7gqj8" path="res://assets/Modular Village/Prop_Well_Dirt.obj" id="40_dn7mc"]
+[ext_resource type="ArrayMesh" uid="uid://dwmd5g8bqevsi" path="res://assets/Modular Village/Prop_Well_Grass.obj" id="41_ya77x"]
+[ext_resource type="ArrayMesh" uid="uid://ccns5gavsn2eo" path="res://assets/Modular Village/Prop_Well_Inside.obj" id="42_qb05w"]
+[ext_resource type="ArrayMesh" uid="uid://cb3fe8yhpjb6q" path="res://assets/Modular Village/Roof_Accent_Rake_Concave.obj" id="43_2pj0c"]
+[ext_resource type="ArrayMesh" uid="uid://cvrc1ogh6xgr8" path="res://assets/Modular Village/Roof_Accent_Rake_Convex.obj" id="44_1ntun"]
+[ext_resource type="ArrayMesh" uid="uid://c52p5epdfplpm" path="res://assets/Modular Village/Roof_Accent_Rake_Eave.obj" id="45_s7m5l"]
+[ext_resource type="ArrayMesh" uid="uid://ci5opdfrt6u4o" path="res://assets/Modular Village/Roof_Accent_Rake_Straight.obj" id="46_17wrm"]
+[ext_resource type="ArrayMesh" uid="uid://c6w6m4i2nbmvw" path="res://assets/Modular Village/Roof_Accent_Ridge.obj" id="47_77en4"]
+[ext_resource type="ArrayMesh" uid="uid://djakg08yv341l" path="res://assets/Modular Village/Roof_Accent_Ridge_End.obj" id="48_bt1pm"]
+[ext_resource type="ArrayMesh" uid="uid://55kshr0i7pk8" path="res://assets/Modular Village/Roof_Concave_Corner_Inner.obj" id="49_a0u4v"]
+[ext_resource type="ArrayMesh" uid="uid://bcj8rbhl0u6sm" path="res://assets/Modular Village/Roof_Concave_Corner_Outer.obj" id="50_25e8w"]
+[ext_resource type="ArrayMesh" uid="uid://d3cw53cvh2s7x" path="res://assets/Modular Village/Roof_Concave_Corner_Outer_Eave.obj" id="51_qd7g4"]
+[ext_resource type="ArrayMesh" uid="uid://i02l74q7b1me" path="res://assets/Modular Village/Roof_Concave_Side.obj" id="52_a7hhu"]
+[ext_resource type="ArrayMesh" uid="uid://bg66usb0eahkf" path="res://assets/Modular Village/Roof_Concave_Side_Eave.obj" id="53_0qwkq"]
+[ext_resource type="ArrayMesh" uid="uid://dh4v0cnkcp5op" path="res://assets/Modular Village/Roof_Concave_Side_Eave_Edge.obj" id="54_bjtc8"]
+[ext_resource type="ArrayMesh" uid="uid://bc6x7ffhsenlq" path="res://assets/Modular Village/Roof_Concave_Side_Edge.obj" id="55_8jhru"]
+[ext_resource type="ArrayMesh" uid="uid://b6nmeg00lyveh" path="res://assets/Modular Village/Roof_Convex_Corner_Inner.obj" id="56_0ihm7"]
+[ext_resource type="ArrayMesh" uid="uid://06qafsfjtwqa" path="res://assets/Modular Village/Roof_Convex_Corner_Outer.obj" id="57_8oqla"]
+[ext_resource type="ArrayMesh" uid="uid://c72ly0reu4cml" path="res://assets/Modular Village/Roof_Convex_Corner_Outer_Eave.obj" id="58_rcrek"]
+[ext_resource type="ArrayMesh" uid="uid://thqpxj4qbmah" path="res://assets/Modular Village/Roof_Convex_Side.obj" id="59_fsjra"]
+[ext_resource type="ArrayMesh" uid="uid://b61f37js3u36v" path="res://assets/Modular Village/Roof_Convex_Side_Eave.obj" id="60_4mw0g"]
+[ext_resource type="ArrayMesh" uid="uid://buwhwi3obcgie" path="res://assets/Modular Village/Roof_Convex_Side_Eave_Edge.obj" id="61_kacfw"]
+[ext_resource type="ArrayMesh" uid="uid://dqp0u80gvs2hm" path="res://assets/Modular Village/Roof_Convex_Side_Edge.obj" id="62_dxhgr"]
+[ext_resource type="ArrayMesh" uid="uid://tm7sw7etimrc" path="res://assets/Modular Village/Roof_Prop_Chimney_Pipe.obj" id="63_73mc5"]
+[ext_resource type="ArrayMesh" uid="uid://c005yisaplsrj" path="res://assets/Modular Village/Roof_Prop_Chimney_Stone.obj" id="64_isa0t"]
+[ext_resource type="ArrayMesh" uid="uid://qj8e57amaaxv" path="res://assets/Modular Village/Roof_Straight_Corner_Inner.obj" id="65_6mxp2"]
+[ext_resource type="ArrayMesh" uid="uid://cj1gdf8ln74k3" path="res://assets/Modular Village/Roof_Straight_Corner_Outer.obj" id="66_1y442"]
+[ext_resource type="ArrayMesh" uid="uid://db2s5wi2ekbbl" path="res://assets/Modular Village/Roof_Straight_Corner_Outer_Eave.obj" id="67_0ch7d"]
+[ext_resource type="ArrayMesh" uid="uid://c0suwl5f0bjta" path="res://assets/Modular Village/Roof_Straight_Side.obj" id="68_8lhu3"]
+[ext_resource type="ArrayMesh" uid="uid://8vjb7t0d02dh" path="res://assets/Modular Village/Roof_Straight_Side_Eave.obj" id="69_5nheb"]
+[ext_resource type="ArrayMesh" uid="uid://cmor8jvymeidd" path="res://assets/Modular Village/Roof_Straight_Side_Eave_Edge.obj" id="70_06f70"]
+[ext_resource type="ArrayMesh" uid="uid://20ww75d2yy3x" path="res://assets/Modular Village/Roof_Straight_Side_Edge.obj" id="71_310kg"]
+[ext_resource type="ArrayMesh" uid="uid://b85vuf3sp8jd5" path="res://assets/Modular Village/Stone_Arch.obj" id="72_xe14s"]
+[ext_resource type="ArrayMesh" uid="uid://kf1bnimhsu7x" path="res://assets/Modular Village/Stone_Arch_Outer.obj" id="73_rxa6w"]
+[ext_resource type="ArrayMesh" uid="uid://dtqltn08brj0i" path="res://assets/Modular Village/Stone_Curb_1.obj" id="74_f5mds"]
+[ext_resource type="ArrayMesh" uid="uid://cb2vy5pn5mhp6" path="res://assets/Modular Village/Stone_Curb_2.obj" id="75_yvojl"]
+[ext_resource type="ArrayMesh" uid="uid://cb6d5n4hl85jo" path="res://assets/Modular Village/Stone_Curb_3.obj" id="76_b8yqe"]
+[ext_resource type="ArrayMesh" uid="uid://b47fe7nht3ham" path="res://assets/Modular Village/Stone_Curb_4.obj" id="77_fbedf"]
+[ext_resource type="ArrayMesh" uid="uid://bvp44fmbw68vf" path="res://assets/Modular Village/Stone_Doorway_Narrow_Tall_1.obj" id="78_bi5pn"]
+[ext_resource type="ArrayMesh" uid="uid://dxsgqqbnyucuq" path="res://assets/Modular Village/Stone_Doorway_Narrow_Tall_2.obj" id="79_cajdl"]
+[ext_resource type="ArrayMesh" uid="uid://bx031j06sybep" path="res://assets/Modular Village/Stone_Doorway_Wide_Tall_1.obj" id="80_14qqb"]
+[ext_resource type="ArrayMesh" uid="uid://b680tfn383c34" path="res://assets/Modular Village/Stone_Doorway_Wide_Tall_2.obj" id="81_ka73w"]
+[ext_resource type="ArrayMesh" uid="uid://xuf1isq1it0q" path="res://assets/Modular Village/Stone_Floor_1.obj" id="82_skkd3"]
+[ext_resource type="ArrayMesh" uid="uid://b43iejxpb53nf" path="res://assets/Modular Village/Stone_Floor_2.obj" id="83_r0ucl"]
+[ext_resource type="ArrayMesh" uid="uid://bb4cro7m31vjf" path="res://assets/Modular Village/Stone_Pillar.obj" id="84_phnhu"]
+[ext_resource type="ArrayMesh" uid="uid://bmc4eiu3u460m" path="res://assets/Modular Village/Stone_Pillar_Base.obj" id="85_o0mnx"]
+[ext_resource type="ArrayMesh" uid="uid://dpxb5ic86cvq3" path="res://assets/Modular Village/Stone_Sewer_Grate_1.obj" id="86_1sfx3"]
+[ext_resource type="ArrayMesh" uid="uid://ben3ac2hityhn" path="res://assets/Modular Village/Stone_Sewer_Grate_2.obj" id="87_e8uve"]
+[ext_resource type="ArrayMesh" uid="uid://tgw1tblgcy77" path="res://assets/Modular Village/Stone_Stairs_Railing.obj" id="88_4nge2"]
+[ext_resource type="ArrayMesh" uid="uid://cwxv87kte2w8h" path="res://assets/Modular Village/Stone_Steps.obj" id="89_djc5y"]
+[ext_resource type="ArrayMesh" uid="uid://pwqujue82aos" path="res://assets/Modular Village/Stone_Steps_Side_1.obj" id="90_nx4p6"]
+[ext_resource type="ArrayMesh" uid="uid://77iar0u3gpk5" path="res://assets/Modular Village/Stone_Steps_Side_2.obj" id="91_0ceui"]
+[ext_resource type="ArrayMesh" uid="uid://bxhg5sjf1qygu" path="res://assets/Modular Village/Stone_to_Stucco_Doorway_Wide_Tall_1.obj" id="92_54m6x"]
+[ext_resource type="ArrayMesh" uid="uid://bhhh8g4j4n3ow" path="res://assets/Modular Village/Stone_to_Stucco_Doorway_Wide_Tall_2.obj" id="93_gljrf"]
+[ext_resource type="ArrayMesh" uid="uid://ckukehjekgu6u" path="res://assets/Modular Village/Stone_Wall_1.obj" id="94_fvg0m"]
+[ext_resource type="ArrayMesh" uid="uid://bdekdyp0fowf1" path="res://assets/Modular Village/Stone_Wall_2.obj" id="95_cavom"]
+[ext_resource type="ArrayMesh" uid="uid://bmcucxn0sdl40" path="res://assets/Modular Village/Stone_Wall_3.obj" id="96_whrxc"]
+[ext_resource type="ArrayMesh" uid="uid://beg31sa05u5e1" path="res://assets/Modular Village/Stone_Wall_4.obj" id="97_jl7rv"]
+[ext_resource type="ArrayMesh" uid="uid://b76kg6eix6uex" path="res://assets/Modular Village/Stone_Wall_5.obj" id="98_6h1gx"]
+[ext_resource type="ArrayMesh" uid="uid://ob4gsmkcoxis" path="res://assets/Modular Village/Stucco_Arch_Half.obj" id="99_5k5m2"]
+[ext_resource type="ArrayMesh" uid="uid://oass8kvdh5c0" path="res://assets/Modular Village/Stucco_Arch_Half_Outer.obj" id="100_2y77j"]
+[ext_resource type="ArrayMesh" uid="uid://ogn8w42bono4" path="res://assets/Modular Village/Stucco_Block.obj" id="101_3kyqd"]
+[ext_resource type="ArrayMesh" uid="uid://duokffyqmtpnq" path="res://assets/Modular Village/Stucco_Doorway_Narrow_Tall.obj" id="102_10i41"]
+[ext_resource type="ArrayMesh" uid="uid://b2kjif5cqkjdq" path="res://assets/Modular Village/Stucco_Doorway_Wide_Tall.obj" id="103_ht665"]
+[ext_resource type="ArrayMesh" uid="uid://2ou2e8sgll1r" path="res://assets/Modular Village/Stucco_Prop_Support_Angled_Large.obj" id="104_aeh6n"]
+[ext_resource type="ArrayMesh" uid="uid://r7t2fg3l0qyr" path="res://assets/Modular Village/Stucco_Prop_Support_Angled_Low.obj" id="105_atrpf"]
+[ext_resource type="ArrayMesh" uid="uid://dmiylsxgd0crj" path="res://assets/Modular Village/Stucco_Prop_Support_Angled_Small.obj" id="106_ecxy0"]
+[ext_resource type="ArrayMesh" uid="uid://dysvo2j0ll5de" path="res://assets/Modular Village/Stucco_Prop_Support_Beam_1.obj" id="107_14kxc"]
+[ext_resource type="ArrayMesh" uid="uid://cq3i2kpmelxfj" path="res://assets/Modular Village/Stucco_Prop_Support_Beam_2.obj" id="108_va6eb"]
+[ext_resource type="ArrayMesh" uid="uid://dvrf2ll4a2fmc" path="res://assets/Modular Village/Stucco_Prop_Support_Beam_3.obj" id="109_1ac2g"]
+[ext_resource type="ArrayMesh" uid="uid://cd51qq2igcl6j" path="res://assets/Modular Village/Stucco_Prop_Support_Pillar_1.obj" id="110_gxh57"]
+[ext_resource type="ArrayMesh" uid="uid://c330bnckgyst3" path="res://assets/Modular Village/Stucco_Prop_Support_Pillar_2.obj" id="111_3xn0x"]
+[ext_resource type="ArrayMesh" uid="uid://bdpsf6suro7s2" path="res://assets/Modular Village/Stucco_Prop_Support_Pillar_3.obj" id="112_rvpd3"]
+[ext_resource type="ArrayMesh" uid="uid://upbhauydpg3e" path="res://assets/Modular Village/Stucco_Window_Double_Narrow.obj" id="113_utkur"]
+[ext_resource type="ArrayMesh" uid="uid://bma244ll3cysa" path="res://assets/Modular Village/Stucco_Window_Double_Narrow_Tall.obj" id="114_7x3e5"]
+[ext_resource type="ArrayMesh" uid="uid://dmjyklc236gei" path="res://assets/Modular Village/Stucco_Window_Double_Wide.obj" id="115_wdxgu"]
+[ext_resource type="ArrayMesh" uid="uid://c4hkgwxarvjq8" path="res://assets/Modular Village/Stucco_Window_Double_Wide_Tall.obj" id="116_vy3mq"]
+[ext_resource type="ArrayMesh" uid="uid://hharufa5cahy" path="res://assets/Modular Village/Stucco_Window_Rounded_Narrow.obj" id="117_guwwv"]
+[ext_resource type="ArrayMesh" uid="uid://bbof8ikpkqs81" path="res://assets/Modular Village/Stucco_Window_Rounded_Narrow_Tall.obj" id="118_0dti3"]
+[ext_resource type="ArrayMesh" uid="uid://c8vluvcn5s3yg" path="res://assets/Modular Village/Stucco_Window_Rounded_Wide.obj" id="119_878wt"]
+[ext_resource type="ArrayMesh" uid="uid://ilbhka8q8l6h" path="res://assets/Modular Village/Stucco_Window_Rounded_Wide_Tall.obj" id="120_jthw4"]
+[ext_resource type="ArrayMesh" uid="uid://cixlnhluj43kb" path="res://assets/Modular Village/Stucco_Window_Single_Narrow.obj" id="121_cbccf"]
+[ext_resource type="ArrayMesh" uid="uid://x3tra0dmfnwe" path="res://assets/Modular Village/Stucco_Window_Single_Narrow_Tall.obj" id="122_hynd4"]
+[ext_resource type="ArrayMesh" uid="uid://cahr7e8lch4g" path="res://assets/Modular Village/Stucco_Window_Single_Wide.obj" id="123_kuqn4"]
+[ext_resource type="ArrayMesh" uid="uid://d3enjj5u11yqv" path="res://assets/Modular Village/Stucco_Window_Single_Wide_Tall.obj" id="124_mhg7v"]
+[ext_resource type="ArrayMesh" uid="uid://bkeaqvkoh8r5m" path="res://assets/Modular Village/Wall_Prop_Bell_1.obj" id="125_hniq5"]
+[ext_resource type="ArrayMesh" uid="uid://btn62vdno3ws6" path="res://assets/Modular Village/Wall_Prop_Door_Ornate.obj" id="126_jm2ox"]
+[ext_resource type="ArrayMesh" uid="uid://bcbbjiapjnv63" path="res://assets/Modular Village/Wall_Prop_Door_Simple.obj" id="127_pppf1"]
+[ext_resource type="ArrayMesh" uid="uid://lm7oysf08d6i" path="res://assets/Modular Village/Wall_Prop_Lamp.obj" id="128_eg141"]
+[ext_resource type="ArrayMesh" uid="uid://dh6a3k4qpopuf" path="res://assets/Modular Village/Wall_Prop_Sign_1.obj" id="129_r4sg6"]
+[ext_resource type="ArrayMesh" uid="uid://bmfldrgi3wi4g" path="res://assets/Modular Village/Wall_Prop_Windmill_1.obj" id="130_xurmi"]
+[ext_resource type="ArrayMesh" uid="uid://dne10pc8p8652" path="res://assets/Modular Village/Waterwheel_1.obj" id="131_qiye2"]
+[ext_resource type="ArrayMesh" uid="uid://64ywu1vpuvfd" path="res://assets/Modular Village/Waterwheel_Flume_Curved.obj" id="132_q0eb6"]
+[ext_resource type="ArrayMesh" uid="uid://cdpxeb73d62jf" path="res://assets/Modular Village/Waterwheel_Flume_End.obj" id="133_5xr54"]
+[ext_resource type="ArrayMesh" uid="uid://dpl7rtsvo388x" path="res://assets/Modular Village/Waterwheel_Flume_Ramp.obj" id="134_ei326"]
+[ext_resource type="ArrayMesh" uid="uid://bxnsnn51wf6ry" path="res://assets/Modular Village/Waterwheel_Flume_Ramp_Supported.obj" id="135_wox0f"]
+[ext_resource type="ArrayMesh" uid="uid://dn6h0jnx80dir" path="res://assets/Modular Village/Waterwheel_Flume_Straight.obj" id="136_05c32"]
+[ext_resource type="ArrayMesh" uid="uid://1uiehidesm1w" path="res://assets/Modular Village/Waterwheel_Flume_Support_Brace.obj" id="137_m1e0p"]
+[ext_resource type="ArrayMesh" uid="uid://co41q5b3m7sgx" path="res://assets/Modular Village/Waterwheel_Flume_Support_Brace_Double.obj" id="138_tcp1b"]
+[ext_resource type="ArrayMesh" uid="uid://pcmcwhopf6jb" path="res://assets/Modular Village/Waterwheel_Flume_Support_Pillar.obj" id="139_32yeu"]
+[ext_resource type="ArrayMesh" uid="uid://cdaotyop6qqj8" path="res://assets/Modular Village/Wood_Baseboard.obj" id="140_kx3hb"]
+[ext_resource type="ArrayMesh" uid="uid://ff43w2al0x6d" path="res://assets/Modular Village/Wood_Floor_Corner.obj" id="141_3j1aw"]
+[ext_resource type="ArrayMesh" uid="uid://cuh74npjebx37" path="res://assets/Modular Village/Wood_Floor_Straight_1.obj" id="142_7sbmd"]
+[ext_resource type="ArrayMesh" uid="uid://bhmeo36rh1nix" path="res://assets/Modular Village/Wood_Floor_Straight_2.obj" id="143_vto0f"]
+[ext_resource type="ArrayMesh" uid="uid://cdmav2bl7285a" path="res://assets/Modular Village/Wood_Floor_Straight_3.obj" id="144_g0e1t"]
+[ext_resource type="ArrayMesh" uid="uid://ctf4w5jrxfeb2" path="res://assets/Modular Village/Wood_Floor_Straight_4.obj" id="145_yxgyj"]
+[ext_resource type="ArrayMesh" uid="uid://805guvt1cio4" path="res://assets/Modular Village/Wood_Post_Large.obj" id="146_r2x3a"]
+[ext_resource type="ArrayMesh" uid="uid://cprkekut3s1ln" path="res://assets/Modular Village/Wood_Post_Small.obj" id="147_ecqow"]
+[ext_resource type="ArrayMesh" uid="uid://covbtw070p4xx" path="res://assets/Modular Village/Wood_Railing_Corner.obj" id="148_1dae4"]
+[ext_resource type="ArrayMesh" uid="uid://kxr7p86xaak0" path="res://assets/Modular Village/Wood_Railing_Stairs.obj" id="149_xavlv"]
+[ext_resource type="ArrayMesh" uid="uid://dhgmfwcfxkesf" path="res://assets/Modular Village/Wood_Railing_Straight.obj" id="150_642th"]
+[ext_resource type="ArrayMesh" uid="uid://b8ak8xkcu7sv5" path="res://assets/Modular Village/Wood_Rope_Corner.obj" id="151_62jg3"]
+[ext_resource type="ArrayMesh" uid="uid://cwmix2dibisy8" path="res://assets/Modular Village/Wood_Rope_Stairs.obj" id="152_u5pyc"]
+[ext_resource type="ArrayMesh" uid="uid://bb3kvcccxn2lo" path="res://assets/Modular Village/Wood_Rope_Straight.obj" id="153_tc0yp"]
+[ext_resource type="ArrayMesh" uid="uid://dpxsyy6hhx1u5" path="res://assets/Modular Village/Wood_Steps.obj" id="154_lmnop"]
+[ext_resource type="ArrayMesh" uid="uid://blhdtdangojc6" path="res://assets/Modular Village/Wood_Steps_Stucco.obj" id="155_y7qwq"]
+
+[node name="MeshLibrary" type="Node3D"]
+
+[node name="CanopyBeam" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("1_t26kt")
+
+[node name="CanopyBeamShort" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("2_xgnxg")
+
+[node name="CanopyCorner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("3_6c3s1")
+
+[node name="CanopyFull" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("4_ww5wd")
+
+[node name="CanopyRampCorner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("5_yy2ni")
+
+[node name="CanopyRampFull" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("6_ra106")
+
+[node name="CanopyRampMid" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("7_lmyqm")
+
+[node name="CanopySide" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("8_i2dp7")
+
+[node name="CanopySidesOpposite" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("9_tn2m4")
+
+[node name="CanopyTop" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("10_mudus")
+
+[node name="CobblestoneDirtTransition1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("11_32kg1")
+
+[node name="CobblestoneDirtTransition2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("12_sap2h")
+
+[node name="CobblestoneDirtTransition3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("13_o6w7r")
+
+[node name="CobblestoneDirtTransition4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("14_knwlp")
+
+[node name="CobblestoneFloor1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("15_bkplh")
+
+[node name="DirtFading" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("16_rpw6h")
+
+[node name="DirtFadingFromGathered" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("17_7tt0i")
+
+[node name="DirtGatheredCorner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("18_hscm8")
+
+[node name="DirtGatheredStraight" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("19_10mns")
+
+[node name="KitWindowUpperConvex" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("20_dhknj")
+
+[node name="KitWindowUpperStraight" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("21_xwtnq")
+
+[node name="PropBarrel1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("22_7w4ms")
+
+[node name="PropBarrel1Open" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("23_bfdwy")
+
+[node name="PropBarrel2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("24_sdua8")
+
+[node name="PropBoat1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("25_aand8")
+
+[node name="PropBoat2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("26_n2ovn")
+
+[node name="PropBoatOars1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("27_elhha")
+
+[node name="PropBoatOars2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("28_fkqsk")
+
+[node name="PropBroom" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("29_avjxu")
+
+[node name="PropCart1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("30_rkj4g")
+
+[node name="PropCart1Barrels" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("31_0pdwh")
+
+[node name="PropCart1Hay" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("32_oao78")
+
+[node name="PropCrate1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("33_klwx3")
+
+[node name="PropCrate1Open" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("34_4f35l")
+
+[node name="PropHay1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("35_wndr2")
+
+[node name="PropLadder1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("36_04bb0")
+
+[node name="PropLampStreet" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("37_qrcgm")
+
+[node name="PropWell1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("38_yb3tw")
+
+[node name="PropWellCobblestone" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("39_uxpox")
+
+[node name="PropWellDirt" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("40_dn7mc")
+
+[node name="PropWellGrass" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("41_ya77x")
+
+[node name="PropWellInside" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("42_qb05w")
+
+[node name="RoofAccentRakeConcave" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("43_2pj0c")
+
+[node name="RoofAccentRakeConvex" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("44_1ntun")
+
+[node name="RoofAccentRakeEave" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("45_s7m5l")
+
+[node name="RoofAccentRakeStraight" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("46_17wrm")
+
+[node name="RoofAccentRidge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("47_77en4")
+
+[node name="RoofAccentRidgeEnd" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("48_bt1pm")
+
+[node name="RoofConcaveCornerInner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("49_a0u4v")
+
+[node name="RoofConcaveCornerOuter" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("50_25e8w")
+
+[node name="RoofConcaveCornerOuterEave" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("51_qd7g4")
+
+[node name="RoofConcaveSide" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("52_a7hhu")
+
+[node name="RoofConcaveSideEave" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("53_0qwkq")
+
+[node name="RoofConcaveSideEaveEdge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("54_bjtc8")
+
+[node name="RoofConcaveSideEdge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("55_8jhru")
+
+[node name="RoofConvexCornerInner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("56_0ihm7")
+
+[node name="RoofConvexCornerOuter" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("57_8oqla")
+
+[node name="RoofConvexCornerOuterEave" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("58_rcrek")
+
+[node name="RoofConvexSide" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("59_fsjra")
+
+[node name="RoofConvexSideEave" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("60_4mw0g")
+
+[node name="RoofConvexSideEaveEdge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("61_kacfw")
+
+[node name="RoofConvexSideEdge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("62_dxhgr")
+
+[node name="RoofPropChimneyPipe" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("63_73mc5")
+
+[node name="RoofPropChimneyStone" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("64_isa0t")
+
+[node name="RoofStraightCornerInner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("65_6mxp2")
+
+[node name="RoofStraightCornerOuter" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("66_1y442")
+
+[node name="RoofStraightCornerOuterEave" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("67_0ch7d")
+
+[node name="RoofStraightSide" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("68_8lhu3")
+
+[node name="RoofStraightSideEave" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("69_5nheb")
+
+[node name="RoofStraightSideEaveEdge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("70_06f70")
+
+[node name="RoofStraightSideEdge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("71_310kg")
+
+[node name="StoneArch" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("72_xe14s")
+
+[node name="StoneArchOuter" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("73_rxa6w")
+
+[node name="StoneCurb1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("74_f5mds")
+
+[node name="StoneCurb2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("75_yvojl")
+
+[node name="StoneCurb3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("76_b8yqe")
+
+[node name="StoneCurb4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("77_fbedf")
+
+[node name="StoneDoorwayNarrowTall1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("78_bi5pn")
+
+[node name="StoneDoorwayNarrowTall2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("79_cajdl")
+
+[node name="StoneDoorwayWideTall1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("80_14qqb")
+
+[node name="StoneDoorwayWideTall2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("81_ka73w")
+
+[node name="StoneFloor1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("82_skkd3")
+
+[node name="StoneFloor2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("83_r0ucl")
+
+[node name="StonePillar" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("84_phnhu")
+
+[node name="StonePillarBase" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("85_o0mnx")
+
+[node name="StoneSewerGrate1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("86_1sfx3")
+
+[node name="StoneSewerGrate2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("87_e8uve")
+
+[node name="StoneStairsRailing" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("88_4nge2")
+
+[node name="StoneSteps" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("89_djc5y")
+
+[node name="StoneStepsSide1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("90_nx4p6")
+
+[node name="StoneStepsSide2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("91_0ceui")
+
+[node name="StoneToStuccoDoorwayWideTall1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("92_54m6x")
+
+[node name="StoneToStuccoDoorwayWideTall2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("93_gljrf")
+
+[node name="StoneWall1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("94_fvg0m")
+
+[node name="StoneWall2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("95_cavom")
+
+[node name="StoneWall3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("96_whrxc")
+
+[node name="StoneWall4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("97_jl7rv")
+
+[node name="StoneWall5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("98_6h1gx")
+
+[node name="StuccoArchHalf" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("99_5k5m2")
+
+[node name="StuccoArchHalfOuter" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("100_2y77j")
+
+[node name="StuccoBlock" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("101_3kyqd")
+
+[node name="StuccoDoorwayNarrowTall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("102_10i41")
+
+[node name="StuccoDoorwayWideTall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("103_ht665")
+
+[node name="StuccoPropSupportAngledLarge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("104_aeh6n")
+
+[node name="StuccoPropSupportAngledLow" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("105_atrpf")
+
+[node name="StuccoPropSupportAngledSmall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("106_ecxy0")
+
+[node name="StuccoPropSupportBeam1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("107_14kxc")
+
+[node name="StuccoPropSupportBeam2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("108_va6eb")
+
+[node name="StuccoPropSupportBeam3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("109_1ac2g")
+
+[node name="StuccoPropSupportPillar1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("110_gxh57")
+
+[node name="StuccoPropSupportPillar2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("111_3xn0x")
+
+[node name="StuccoPropSupportPillar3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("112_rvpd3")
+
+[node name="StuccoWindowDoubleNarrow" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("113_utkur")
+
+[node name="StuccoWindowDoubleNarrowTall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("114_7x3e5")
+
+[node name="StuccoWindowDoubleWide" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("115_wdxgu")
+
+[node name="StuccoWindowDoubleWideTall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("116_vy3mq")
+
+[node name="StuccoWindowRoundedNarrow" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("117_guwwv")
+
+[node name="StuccoWindowRoundedNarrowTall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("118_0dti3")
+
+[node name="StuccoWindowRoundedWide" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("119_878wt")
+
+[node name="StuccoWindowRoundedWideTall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("120_jthw4")
+
+[node name="StuccoWindowSingleNarrow" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("121_cbccf")
+
+[node name="StuccoWindowSingleNarrowTall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("122_hynd4")
+
+[node name="StuccoWindowSingleWide" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("123_kuqn4")
+
+[node name="StuccoWindowSingleWideTall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("124_mhg7v")
+
+[node name="WallPropBell1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("125_hniq5")
+
+[node name="WallPropDoorOrnate" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("126_jm2ox")
+
+[node name="WallPropDoorSimple" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("127_pppf1")
+
+[node name="WallPropLamp" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("128_eg141")
+
+[node name="WallPropSign1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("129_r4sg6")
+
+[node name="WallPropWindmill1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("130_xurmi")
+
+[node name="Waterwheel1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("131_qiye2")
+
+[node name="WaterwheelFlumeCurved" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("132_q0eb6")
+
+[node name="WaterwheelFlumeEnd" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("133_5xr54")
+
+[node name="WaterwheelFlumeRamp" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("134_ei326")
+
+[node name="WaterwheelFlumeRampSupported" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("135_wox0f")
+
+[node name="WaterwheelFlumeStraight" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("136_05c32")
+
+[node name="WaterwheelFlumeSupportBrace" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("137_m1e0p")
+
+[node name="WaterwheelFlumeSupportBraceDouble" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("138_tcp1b")
+
+[node name="WaterwheelFlumeSupportPillar" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("139_32yeu")
+
+[node name="WoodBaseboard" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("140_kx3hb")
+
+[node name="WoodFloorCorner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("141_3j1aw")
+
+[node name="WoodFloorStraight1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("142_7sbmd")
+
+[node name="WoodFloorStraight2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("143_vto0f")
+
+[node name="WoodFloorStraight3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("144_g0e1t")
+
+[node name="WoodFloorStraight4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("145_yxgyj")
+
+[node name="WoodPostLarge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("146_r2x3a")
+
+[node name="WoodPostSmall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("147_ecqow")
+
+[node name="WoodRailingCorner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("148_1dae4")
+
+[node name="WoodRailingStairs" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("149_xavlv")
+
+[node name="WoodRailingStraight" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("150_642th")
+
+[node name="WoodRopeCorner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("151_62jg3")
+
+[node name="WoodRopeStairs" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("152_u5pyc")
+
+[node name="WoodRopeStraight" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("153_tc0yp")
+
+[node name="WoodSteps" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("154_lmnop")
+
+[node name="WoodStepsStucco" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03735578, -1.1920929e-07, -0.06837964)
+mesh = ExtResource("155_y7qwq")

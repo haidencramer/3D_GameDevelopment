@@ -1,0 +1,208 @@
+[gd_scene load_steps=10 format=3 uid="uid://7b2t023kufan"]
+
+[ext_resource type="Texture2D" uid="uid://dhojkl5002y3p" path="res://assets/Sprites/Button Sprite.png" id="1_d2mlb"]
+[ext_resource type="Script" uid="uid://ugytnogd2r7y" path="res://scripts/MenuControl.gd" id="1_moq3k"]
+[ext_resource type="Texture2D" uid="uid://f3uytcb5qftg" path="res://assets/Sprites/Title Sprite.png" id="2_eb6x1"]
+[ext_resource type="PackedScene" uid="uid://df1djf024r213" path="res://scenes/ButtonMappingMenu.tscn" id="2_yw6rb"]
+[ext_resource type="PackedScene" uid="uid://dlxhxqh8onvm2" path="res://scenes/menuBG.tscn" id="3_eb6x1"]
+
+[sub_resource type="FontFile" id="FontFile_moq3k"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/17/0/ascent = 0.0
+cache/0/17/0/descent = 0.0
+cache/0/17/0/underline_position = 0.0
+cache/0/17/0/underline_thickness = 0.0
+cache/0/17/0/scale = 1.0
+cache/0/18/0/ascent = 0.0
+cache/0/18/0/descent = 0.0
+cache/0/18/0/underline_position = 0.0
+cache/0/18/0/underline_thickness = 0.0
+cache/0/18/0/scale = 1.0
+cache/0/19/0/ascent = 0.0
+cache/0/19/0/descent = 0.0
+cache/0/19/0/underline_position = 0.0
+cache/0/19/0/underline_thickness = 0.0
+cache/0/19/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/21/0/ascent = 0.0
+cache/0/21/0/descent = 0.0
+cache/0/21/0/underline_position = 0.0
+cache/0/21/0/underline_thickness = 0.0
+cache/0/21/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/23/0/ascent = 0.0
+cache/0/23/0/descent = 0.0
+cache/0/23/0/underline_position = 0.0
+cache/0/23/0/underline_thickness = 0.0
+cache/0/23/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/26/0/ascent = 0.0
+cache/0/26/0/descent = 0.0
+cache/0/26/0/underline_position = 0.0
+cache/0/26/0/underline_thickness = 0.0
+cache/0/26/0/scale = 1.0
+cache/0/27/0/ascent = 0.0
+cache/0/27/0/descent = 0.0
+cache/0/27/0/underline_position = 0.0
+cache/0/27/0/underline_thickness = 0.0
+cache/0/27/0/scale = 1.0
+cache/0/28/0/ascent = 0.0
+cache/0/28/0/descent = 0.0
+cache/0/28/0/underline_position = 0.0
+cache/0/28/0/underline_thickness = 0.0
+cache/0/28/0/scale = 1.0
+cache/0/29/0/ascent = 0.0
+cache/0/29/0/descent = 0.0
+cache/0/29/0/underline_position = 0.0
+cache/0/29/0/underline_thickness = 0.0
+cache/0/29/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/31/0/ascent = 0.0
+cache/0/31/0/descent = 0.0
+cache/0/31/0/underline_position = 0.0
+cache/0/31/0/underline_thickness = 0.0
+cache/0/31/0/scale = 1.0
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/33/0/ascent = 0.0
+cache/0/33/0/descent = 0.0
+cache/0/33/0/underline_position = 0.0
+cache/0/33/0/underline_thickness = 0.0
+cache/0/33/0/scale = 1.0
+cache/0/34/0/ascent = 0.0
+cache/0/34/0/descent = 0.0
+cache/0/34/0/underline_position = 0.0
+cache/0/34/0/underline_thickness = 0.0
+cache/0/34/0/scale = 1.0
+cache/0/35/0/ascent = 0.0
+cache/0/35/0/descent = 0.0
+cache/0/35/0/underline_position = 0.0
+cache/0/35/0/underline_thickness = 0.0
+cache/0/35/0/scale = 1.0
+cache/0/36/0/ascent = 0.0
+cache/0/36/0/descent = 0.0
+cache/0/36/0/underline_position = 0.0
+cache/0/36/0/underline_thickness = 0.0
+cache/0/36/0/scale = 1.0
+cache/0/37/0/ascent = 0.0
+cache/0/37/0/descent = 0.0
+cache/0/37/0/underline_position = 0.0
+cache/0/37/0/underline_thickness = 0.0
+cache/0/37/0/scale = 1.0
+cache/0/38/0/ascent = 0.0
+cache/0/38/0/descent = 0.0
+cache/0/38/0/underline_position = 0.0
+cache/0/38/0/underline_thickness = 0.0
+cache/0/38/0/scale = 1.0
+cache/0/39/0/ascent = 0.0
+cache/0/39/0/descent = 0.0
+cache/0/39/0/underline_position = 0.0
+cache/0/39/0/underline_thickness = 0.0
+cache/0/39/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yw6rb"]
+texture = ExtResource("1_d2mlb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eb6x1"]
+texture = ExtResource("1_d2mlb")
+modulate_color = Color(0.2520276, 0.25202766, 0.25202757, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d2mlb"]
+texture = ExtResource("1_d2mlb")
+modulate_color = Color(1.1878442, 1.1878442, 1.1878442, 0.99607843)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_moq3k")
+input_mapping_scene = ExtResource("2_yw6rb")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 724.0
+offset_top = 232.0
+offset_right = 1125.0
+offset_bottom = 328.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_moq3k")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_yw6rb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_eb6x1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_d2mlb")
+text = "Start Game"
+
+[node name="OptionsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 724.0
+offset_top = 336.0
+offset_right = 1125.0
+offset_bottom = 432.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_moq3k")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_yw6rb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_eb6x1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_d2mlb")
+text = "Options"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 724.0
+offset_top = 440.0
+offset_right = 1125.0
+offset_bottom = 536.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_moq3k")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_yw6rb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_eb6x1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_d2mlb")
+text = "Quit Game"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(922.00006, 169.00009)
+scale = Vector2(0.6333333, 0.5608696)
+texture = ExtResource("2_eb6x1")
+
+[node name="Node3D" parent="." instance=ExtResource("3_eb6x1")]
+
+[connection signal="pressed" from="Button" to="." method="on_start_button_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_quit_button_pressed"]

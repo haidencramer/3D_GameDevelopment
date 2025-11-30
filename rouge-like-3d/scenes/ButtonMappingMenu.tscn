@@ -1,0 +1,83 @@
+[gd_scene load_steps=3 format=3 uid="uid://df1djf024r213"]
+
+[ext_resource type="Script" uid="uid://m43hyc1npeeo" path="res://scripts/InputRemapper.gd" id="1_1kuvc"]
+[ext_resource type="Script" uid="uid://32o8qatkcmt3" path="res://scripts/save_button.gd" id="2_ysber"]
+
+[node name="Button Mapping Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 54
+text = "Forward"
+
+[node name="Label2" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 54
+text = "Backward           "
+
+[node name="Label3" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 54
+text = "Turn Left"
+
+[node name="Label4" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 54
+text = "Turn Right"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "asdf"
+script = ExtResource("1_1kuvc")
+action_name = "move_up"
+
+[node name="Button3" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "asdf"
+script = ExtResource("1_1kuvc")
+action_name = "move_down"
+
+[node name="Button4" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "asdf"
+script = ExtResource("1_1kuvc")
+action_name = "move_left"
+
+[node name="Button5" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "asdf"
+script = ExtResource("1_1kuvc")
+action_name = "move_right"
+
+[node name="Button2" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "save"
+script = ExtResource("2_ysber")

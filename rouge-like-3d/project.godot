@@ -14,6 +14,11 @@ config/name="rougeLike3D"
 run/main_scene="uid://bu5c4o3d58sq3"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 
+[autoload]
+
+ButtonMappingMenu="*res://scripts/button_mapping_menu.gd"
+SaveLoad="*res://scripts/save_load.gd"
+
 [input]
 
 move_left={
