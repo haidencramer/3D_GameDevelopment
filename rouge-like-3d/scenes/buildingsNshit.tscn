@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://caxurjhk2aufq" path="res://scenes/arena_decorations.tscn" id="1_moudb"]
 [ext_resource type="PackedScene" uid="uid://cyhvbso41web5" path="res://scenes/arena.tscn" id="2_7n3rs"]
 [ext_resource type="PackedScene" uid="uid://7806l1p4p8bh" path="res://scenes/EnvironmentFloor.tscn" id="3_xrygk"]
-[ext_resource type="MeshLibrary" uid="uid://dllt4nuopjkvu" path="res://VillageMeshes/VillageMeshCollection.tres" id="4_gae0u"]
+[ext_resource type="MeshLibrary" uid="uid://dllt4nuopjkvu" path="res://assets/VillageMeshes/VillageMeshCollection.tres" id="4_gae0u"]
 [ext_resource type="ArrayMesh" uid="uid://borud822s5acr" path="res://assets/dist/obj_mtl/tree-pyramidal.obj" id="5_xrygk"]
 [ext_resource type="Texture2D" uid="uid://fwbw5uue3eda" path="res://assets/dist/preview_png/pyramid.png" id="6_gae0u"]
 

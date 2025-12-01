@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dlxhxqh8onvm2"]
 
-[ext_resource type="MeshLibrary" uid="uid://dllt4nuopjkvu" path="res://VillageMeshes/VillageMeshCollection.tres" id="1_c3hd3"]
+[ext_resource type="MeshLibrary" uid="uid://dllt4nuopjkvu" path="res://assets/VillageMeshes/VillageMeshCollection.tres" id="1_c3hd3"]
 [ext_resource type="PackedScene" uid="uid://dinn4mnymc8vo" path="res://scenes/spider.tscn" id="2_pibdw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pibdw"]
