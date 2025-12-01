@@ -251,12 +251,12 @@ func pickup_nearest_weapon() -> void:
 	if closest_weapon:
 		print("Closest weapon: ", closest_weapon.weapon_name, " at distance: ", closest_distance)
 		
-		if closest_distance <= pickup_range:
+		if closest_distance <= 60:
 			held_weapon = closest_weapon
 			held_weapon.pickup(self, hand_point)
 			print("SUCCESS: Picked up ", held_weapon.weapon_name)
 		else:
-			print("ERROR: Weapon too far (", closest_distance, " > ", pickup_range, ")")
+			print("ERROR: Weapon too far (", closest_distance, " > ", 60, ")")
 	else:
 		print("ERROR: No valid weapon found")
 

@@ -1,9 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://cnrj76vg484ml"]
+[gd_scene load_steps=11 format=3 uid="uid://cnrj76vg484ml"]
 
 [ext_resource type="PackedScene" uid="uid://bngx8s06fe1ir" path="res://assets/ModularDungeon/Stairs/Stairs.fbx" id="1_g62b3"]
 [ext_resource type="PackedScene" uid="uid://xx1lrvl7h4xm" path="res://assets/ModularDungeon/Wall2/Wall2.blend" id="2_wmxoq"]
-[ext_resource type="Script" uid="uid://c0tyrqi8f3qb6" path="res://scripts/main_guy.gd" id="3_4emov"]
-[ext_resource type="PackedScene" uid="uid://dinn4mnymc8vo" path="res://scenes/spider.tscn" id="4_nnxr5"]
+[ext_resource type="PackedScene" uid="uid://duiw0nmvcdcrf" path="res://scenes/player2.tscn" id="3_g62b3"]
 [ext_resource type="PackedScene" uid="uid://ddusqhmbeh55m" path="res://scenes/weaponScenes/Estoc.tscn" id="6_3kbgm"]
 [ext_resource type="PackedScene" uid="uid://vtt7g3lbpi5s" path="res://scenes/weaponScenes/Zweihander.tscn" id="6_4emov"]
 [ext_resource type="PackedScene" uid="uid://fw6xhhi357nd" path="res://scenes/weaponScenes/Katana.tscn" id="7_73w2x"]
@@ -11,13 +10,6 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fi7oa"]
 size = Vector3(46.611572, 0.3493042, 6.1411133)
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_or3vb"]
-height = 1.5145721
-radius = 0.5878906
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_or3vb"]
-radius = 3.0
 
 [sub_resource type="Environment" id="Environment_f8b18"]
 
@@ -89,34 +81,7 @@ transform = Transform3D(1, 0, 0, 0, -1.3659809e-08, 0.3125, 0, -0.12820512, -5.6
 [node name="Wall2" parent="Node3D/CollisionShape3D" instance=ExtResource("2_wmxoq")]
 transform = Transform3D(1, 0, 0, 0, -1.3659809e-08, 0.3125, 0, -0.12820512, -5.604024e-09, 17.456205, 0.049351305, 0.79233634)
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-script = ExtResource("3_4emov")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(1.4844034, 0, 0, 0, 1.0774878, 0, 0, 0, 2.7951865, -21.24453, 12.706012, 12.335775)
-shape = SubResource("CylinderShape3D_or3vb")
-
-[node name="SpiderModel" type="Node3D" parent="CharacterBody3D"]
-transform = Transform3D(2.458966, 0, 0, 0, 0.6032852, 0, 0, 0, 3.2313428, -22.127644, 12.603949, 11.750088)
-
-[node name="spider" parent="CharacterBody3D/SpiderModel" instance=ExtResource("4_nnxr5")]
-transform = Transform3D(-0.406675, 0, 3.5552663e-08, 0, 1.6575909, 0, -2.7054632e-08, 0, -0.30946892, 0.34114647, 0.784008, -0.20634556)
-
-[node name="HandPoint" type="Node3D" parent="CharacterBody3D/SpiderModel"]
-transform = Transform3D(0.33832857, -0.22679152, 0, 0.84708047, 1.4246212, 0, -2.1989092e-15, 0, 0.30946895, -0.16240883, 2.8494644, -0.18901968)
-
-[node name="CameraPivot" type="Node3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.128, 12.604, 11.75)
-
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/CameraPivot"]
-transform = Transform3D(0.9997733, 0.008219227, -0.01964099, 5.3290705e-15, 0.9224842, 0.38603488, 0.021291412, -0.38594738, 0.92227507, 0.47, 7.645, 8.411)
-
-[node name="PickupArea" type="Area3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.245, 12.604, 11.75)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/PickupArea"]
-shape = SubResource("SphereShape3D_or3vb")
-debug_color = Color(0.75686276, 0.44705883, 0.25490198, 1)
+[node name="CharacterBody3D" parent="." instance=ExtResource("3_g62b3")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_f8b18")

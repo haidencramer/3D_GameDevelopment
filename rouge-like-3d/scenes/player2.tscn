@@ -1,30 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqvgs3gxdcp7f"]
+[gd_scene load_steps=5 format=3 uid="uid://duiw0nmvcdcrf"]
 
-[ext_resource type="Script" uid="uid://c0tyrqi8f3qb6" path="res://scripts/main_guy.gd" id="1_syr32"]
-[ext_resource type="PackedScene" uid="uid://dinn4mnymc8vo" path="res://scenes/spider.tscn" id="2_5r5nc"]
+[ext_resource type="Script" uid="uid://c0tyrqi8f3qb6" path="res://scripts/main_guy.gd" id="1_c08b3"]
+[ext_resource type="PackedScene" uid="uid://dinn4mnymc8vo" path="res://scenes/spider.tscn" id="2_agjl5"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_or3vb"]
-height = 1.5476074
-radius = 0.95947266
+height = 1.5145721
+radius = 0.5878906
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_or3vb"]
 radius = 3.0
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
-script = ExtResource("1_syr32")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.20284, -11.913633, -29.023075)
+script = ExtResource("1_c08b3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(2.458966, 0, 0, 0, 1.0774878, 0, 0, 0, 2.3764455, -21.24453, 12.688215, 12.335775)
+transform = Transform3D(1.4844034, 0, 0, 0, 1.0774878, 0, 0, 0, 2.7951865, -21.24453, 12.706012, 12.335775)
 shape = SubResource("CylinderShape3D_or3vb")
 
 [node name="SpiderModel" type="Node3D" parent="."]
 transform = Transform3D(2.458966, 0, 0, 0, 0.6032852, 0, 0, 0, 3.2313428, -22.127644, 12.603949, 11.750088)
 
-[node name="spider" parent="SpiderModel" instance=ExtResource("2_5r5nc")]
+[node name="spider" parent="SpiderModel" instance=ExtResource("2_agjl5")]
 transform = Transform3D(-0.406675, 0, 3.5552663e-08, 0, 1.6575909, 0, -2.7054632e-08, 0, -0.30946892, 0.34114647, 0.784008, -0.20634556)
 
 [node name="HandPoint" type="Node3D" parent="SpiderModel"]
-transform = Transform3D(0.3502697, -0.20662941, 0, 0.8422131, 1.427685, 0, 0, 0, 0.3094689, 0.0901413, 0.6455231, -0.5377953)
+transform = Transform3D(0.33832857, -0.22679152, 0, 0.84708047, 1.4246212, 0, -2.1989092e-15, 0, 0.30946895, -0.16240883, 2.8494644, -0.18901968)
 
 [node name="CameraPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.128, 12.604, 11.75)
@@ -33,9 +34,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.128, 12.604, 11.75)
 transform = Transform3D(0.9997733, 0.008219227, -0.01964099, 5.3290705e-15, 0.9224842, 0.38603488, 0.021291412, -0.38594738, 0.92227507, 0.47, 7.645, 8.411)
 
 [node name="PickupArea" type="Area3D" parent="."]
-transform = Transform3D(1.225, 0, 0, 0, 1.225, 0, 0, 0, 1.225, -21.245, 12.604, 11.75)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.245, 12.604, 11.75)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PickupArea"]
-transform = Transform3D(1.85, 0, 0, 0, 1.85, 0, 0, 0, 1.85, 0, 0, 0)
 shape = SubResource("SphereShape3D_or3vb")
 debug_color = Color(0.75686276, 0.44705883, 0.25490198, 1)

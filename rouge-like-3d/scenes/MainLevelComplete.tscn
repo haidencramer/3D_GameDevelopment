@@ -1,15 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgcaf63nxs8as"]
+[gd_scene load_steps=5 format=3 uid="uid://bb5yp4xtgu5so"]
 
 [ext_resource type="Script" uid="uid://fchkjcwf0qvg" path="res://scripts/MainMultiScript.gd" id="1_8nwis"]
-[ext_resource type="PackedScene" uid="uid://crrihxou2jj23" path="res://buildingsNshit.tscn" id="1_jad8w"]
 [ext_resource type="PackedScene" uid="uid://c4vcis3uyprq0" path="res://scenes/arena_obstacles.tscn" id="2_2hjxj"]
-[ext_resource type="Script" uid="uid://cnhf6v4jvrkgi" path="res://scripts/Minimap.gd" id="3_2hjxj"]
+[ext_resource type="PackedScene" uid="uid://crrihxou2jj23" path="res://scenes/buildingsNshit.tscn" id="2_8nwis"]
+[ext_resource type="PackedScene" uid="uid://vtt7g3lbpi5s" path="res://scenes/weaponScenes/Zweihander.tscn" id="5_d1hey"]
 
 [node name="LevelComplete" type="Node3D"]
 script = ExtResource("1_8nwis")
 
-[node name="Arena" parent="." instance=ExtResource("1_jad8w")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+[node name="Arena" parent="." instance=ExtResource("2_8nwis")]
+transform = Transform3D(4.995, 0, 0, 0, 4.995, 0, 0, 0, 4.995, 0, -0.02, 0.295)
 
 [node name="ArenaObstacles" parent="." instance=ExtResource("2_2hjxj")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
@@ -20,7 +20,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.353076, 0)
 [node name="Spawn1" type="Marker3D" parent="SpawnPoints"]
 
 [node name="MiniMapUI" type="CanvasLayer" parent="."]
-script = ExtResource("3_2hjxj")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="MiniMapUI"]
 custom_minimum_size = Vector2(180, 180)
@@ -62,3 +61,6 @@ offset_bottom = 50.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, -0.0033685341, 0.99999434, 0, -0.99999434, -0.0033685341, 0, 50.88166, 0)
+
+[node name="Zweihander" parent="." instance=ExtResource("5_d1hey")]
+transform = Transform3D(2.32, 0, 0, 0, 2.32, 0, 0, 0, 2.32, -6.9194145, 5.6563277, 16.77113)
