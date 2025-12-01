@@ -1,5 +1,5 @@
 class_name Player extends CharacterBody3D
-
+#main_guy.gd
 @export_range(1, 35, 1) var speed: float = 10
 @export_range(10, 400, 1) var acceleration: float = 100
 @export_range(0.1, 3.0, 0.1) var jump_height: float = 4.5
@@ -7,17 +7,9 @@ class_name Player extends CharacterBody3D
 @export var mouse_sensitivity: float = 0.002
 @export var pickup_range: float = 35.0  # Increased to match scene distances
 
-# Health variables
-@export var max_health: float = 100.0
-var current_health: float
-
-# Reference to the health bar UI
-var health_bar: ProgressBar
-
 var jumping: bool = false
 var backflipping: bool = false
 var mouse_captured: bool = false
-var is_dead: bool = false  # Add death state flag
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -38,22 +30,19 @@ var nearby_weapons: Array[Weapon] = []
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var anim_player: AnimationPlayer = $SpiderModel/spider/AnimationPlayer
 @onready var spider_model: Node3D = $SpiderModel
-@onready var hand_point: Node3D = $SpiderModel/HandPoint
+@onready var hand_point: Node3D = $HandPoint
 @onready var pickup_area: Area3D = $PickupArea
 
+func _enter_tree() -> void:
+	# Camera must be corrected once authority is finalized
+	call_deferred("_apply_camera_state")
+	
 func _ready() -> void:
-	# Initialize health
-	current_health = max_health
-	
-	# Get reference to the health bar (assuming it's in a CanvasLayer)
-	health_bar = get_node("/root/Main/CanvasLayer/Control/HealthBar")
-	if health_bar:
-		health_bar.max_value = max_health
-		health_bar.value = current_health
-	
-	capture_mouse()
 	
 	print("=== PLAYER READY ===")
+	print("Player ID: ", name)
+	print("Is my authority: ", is_multiplayer_authority())
+	print("Camera active: ", camera.current if camera else false)
 	print("Hand point exists: ", hand_point != null)
 	print("Pickup area exists: ", pickup_area != null)
 	
@@ -66,22 +55,23 @@ func _ready() -> void:
 				if animation:
 					animation.loop_mode = Animation.LOOP_LINEAR
 	
-	# Connect pickup area signals with debugging
-	if pickup_area:
+	# Only connect pickup signals for YOUR player
+	if is_multiplayer_authority() and pickup_area:
 		print("Connecting pickup area signals...")
 		pickup_area.body_entered.connect(_on_pickup_area_entered)
 		pickup_area.body_exited.connect(_on_pickup_area_exited)
 		
 		# Check what's already in the area
-		await get_tree().process_frame  # Wait one frame
+		await get_tree().process_frame
 		var bodies = pickup_area.get_overlapping_bodies()
 		print("Bodies in pickup area at start: ", bodies.size())
 		for body in bodies:
 			print("  - ", body.name, " (", body.get_class(), ")")
 			if body is Weapon:
 				_on_pickup_area_entered(body)
-	else:
+	elif not pickup_area:
 		push_error("PickupArea not found!")
+	call_deferred("_apply_camera_state")
 
 func _on_animation_finished(anim_name: String) -> void:
 	if anim_player and anim_player.current_animation == anim_name:
@@ -93,77 +83,9 @@ func _on_animation_finished(anim_name: String) -> void:
 		elif anim_name == "Armature|Jump" and not is_on_floor():
 			anim_player.play(anim_name)
 
-func take_damage(damage: float):
-	"""Called when the player takes damage"""
-	if is_dead:
-		return  # Don't take damage if already dead
-	
-	current_health = max(0, current_health - damage)
-	update_health_bar()
-	
-	# Optional: Add visual/audio feedback
-	print("Player took ", damage, " damage. Health: ", current_health, "/", max_health)
-	
-	# Check if player is dead
-	if current_health <= 0:
-		die()
-
-func heal(amount: float):
-	"""Heal the player"""
-	if is_dead:
-		return  # Can't heal if dead
-	
-	current_health = min(max_health, current_health + amount)
-	update_health_bar()
-	print("Player healed ", amount, ". Health: ", current_health, "/", max_health)
-
-func update_health_bar():
-	"""Update the health bar UI"""
-	if health_bar:
-		health_bar.value = current_health
-
-func die():
-	"""Handle player death"""
-	if is_dead:
-		return  # Already dead, don't run again
-	
-	is_dead = true
-	print("========== PLAYER DIED ==========")
-	print("Current health: ", current_health)
-	
-	# Disable player control during death
-	set_physics_process(false)
-	
-	# Drop weapon if holding one
-	if held_weapon:
-		drop_weapon()
-	
-	# Check if animation exists and play it
-	if anim_player.has_animation("Armature|Death1"):
-		print("Playing death animation: Armature|Death1")
-		anim_player.play("Armature|Death1")
-		# Wait for animation to finish
-		await anim_player.animation_finished
-		print("Death animation finished")
-	else:
-		push_error("Death animation 'Armature|Death1' not found!")
-		print("Available animations:")
-		var anim_library = anim_player.get_animation_library("")
-		if anim_library:
-			for anim_name in anim_library.get_animation_list():
-				print("  - ", anim_name)
-	
-	# Wait a moment before restarting
-	await get_tree().create_timer(50.0).timeout
-	
-	# Restart the level
-	print("Reloading scene...")
-	get_tree().reload_current_scene()
-
 func _physics_process(delta: float) -> void:
-	if is_dead:
-		return  # Don't process physics if dead
-	
+	if not is_multiplayer_authority():
+		return
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		jumping = true
 	
@@ -173,6 +95,18 @@ func _physics_process(delta: float) -> void:
 	velocity = _walk(delta) + _gravity(delta) + _jump(delta)
 	_update_animation()
 	move_and_slide()
+	
+	if is_multiplayer_authority():
+		rpc("sync_transform", global_position, rotation)
+		
+@rpc("unreliable")
+func sync_transform(pos: Vector3, rot: Vector3):
+	if not is_multiplayer_authority():
+		global_position = pos
+		rotation = rot
+
+
+
 
 func _handle_weapon_input() -> void:
 	# E key - pickup weapon (or drop if holding one)
@@ -295,7 +229,7 @@ func _walk(delta: float) -> Vector3:
 	return walk_vel
 
 func _update_animation() -> void:
-	if not anim_player or is_dead:
+	if not anim_player:
 		return
 	
 	var current_anim = anim_player.current_animation
@@ -340,17 +274,14 @@ func _jump(delta: float) -> Vector3:
 	
 	jump_vel = Vector3.ZERO if is_on_floor() or is_on_ceiling_only() else jump_vel.move_toward(Vector3.ZERO, gravity * delta)
 	return jump_vel
+func _apply_camera_state():
+	if not camera:
+		return
 
-# TESTING FUNCTIONS - Press keys to test death system
-func _process(_delta):
-	if Input.is_action_just_pressed("ui_down"):
-		print("\n[TEST] Taking 10 damage")
-		take_damage(10)
-	
-	if Input.is_action_just_pressed("ui_up"):
-		print("\n[TEST] Healing 10 HP")
-		heal(10)
-	
-	if Input.is_action_just_pressed("ui_accept"):  # SPACE key
-		print("\n[TEST] Forcing death")
-		die()
+	if is_multiplayer_authority():
+		print("I own this player. Activating my camera.")
+		camera.make_current()
+		capture_mouse()
+	else:
+		print("Not my player. Disabling this camera.")
+		camera.current = false

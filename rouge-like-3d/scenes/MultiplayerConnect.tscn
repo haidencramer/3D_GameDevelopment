@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://br7fc5wnui14w"]
+
+[ext_resource type="Script" path="res://scripts/multiplayer_connect.gd" id="1_uyd8l"]
+
+[node name="MultiplayerConnect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uyd8l")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 163.0
+offset_right = 416.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 56
+text = "127.0.0.1"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 171.0
+offset_right = 668.0
+offset_bottom = 226.0
+placeholder_text = "IP Address of Host"
+
+[node name="Create" type="Button" parent="."]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 272.0
+offset_right = 360.0
+offset_bottom = 318.0
+text = "Create
+"
+
+[node name="Host" type="Button" parent="."]
+layout_mode = 0
+offset_left = 513.0
+offset_top = 269.0
+offset_right = 647.0
+offset_bottom = 315.0
+text = "Join
+"
+
+[node name="Name" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -92.0
+offset_top = 104.0
+offset_right = 92.0
+offset_bottom = 144.0
+grow_horizontal = 2
+placeholder_text = "Username"
+
+[connection signal="pressed" from="Create" to="." method="_on_create_pressed"]
+[connection signal="pressed" from="Host" to="." method="_on_host_pressed"]
