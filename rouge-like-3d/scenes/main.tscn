@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cyhvbso41web5" path="res://scenes/arena.tscn" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://caxurjhk2aufq" path="res://scenes/arena_decorations.tscn" id="2_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://7806l1p4p8bh" path="res://scenes/EnvironmentFloor.tscn" id="3_tefeu"]
-[ext_resource type="Script" uid="uid://cnhf6v4jvrkgi" path="res://scenes/Minimap.gd" id="4_o6xl0"]
+[ext_resource type="Script" uid="uid://cnhf6v4jvrkgi" path="res://scripts/Minimap.gd" id="4_o6xl0"]
 
 [node name="Main" type="Node2D"]
 
@@ -21,9 +21,8 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.040575027, -0.055208206, 0
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, -0.0033685341, 0.99999434, 0, -0.99999434, -0.0033685341, 0, 50.88166, 0)
 
-[node name="MiniMapUI" type="CanvasLayer" parent="." node_paths=PackedStringArray("player")]
+[node name="MiniMapUI" type="CanvasLayer" parent="."]
 script = ExtResource("4_o6xl0")
-player = NodePath("")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="MiniMapUI"]
 custom_minimum_size = Vector2(180, 180)
