@@ -20,4 +20,4 @@ shape = SubResource("CapsuleShape3D_unwus")
 [node name="MaceV1" parent="." instance=ExtResource("2_unwus")]
 
 [node name="GripPoint" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8552367, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2148349, 0)
