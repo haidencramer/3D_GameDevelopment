@@ -33,6 +33,10 @@ var nearby_weapons: Array[Weapon] = []
 @onready var hand_point: Node3D = $HandPoint
 @onready var pickup_area: Area3D = $PickupArea
 
+func _enter_tree() -> void:
+	# Camera must be corrected once authority is finalized
+	call_deferred("_apply_camera_state")
+	
 func _ready() -> void:
 	
 	print("=== PLAYER READY ===")
@@ -67,6 +71,7 @@ func _ready() -> void:
 				_on_pickup_area_entered(body)
 	elif not pickup_area:
 		push_error("PickupArea not found!")
+	call_deferred("_apply_camera_state")
 
 func _on_animation_finished(anim_name: String) -> void:
 	if anim_player and anim_player.current_animation == anim_name:
@@ -269,3 +274,14 @@ func _jump(delta: float) -> Vector3:
 	
 	jump_vel = Vector3.ZERO if is_on_floor() or is_on_ceiling_only() else jump_vel.move_toward(Vector3.ZERO, gravity * delta)
 	return jump_vel
+func _apply_camera_state():
+	if not camera:
+		return
+
+	if is_multiplayer_authority():
+		print("I own this player. Activating my camera.")
+		camera.make_current()
+		capture_mouse()
+	else:
+		print("Not my player. Disabling this camera.")
+		camera.current = false
