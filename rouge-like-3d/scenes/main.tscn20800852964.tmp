@@ -1,13 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://c28qnji1mbj2n"]
 
-[ext_resource type="PackedScene" uid="uid://cyhvbso41web5" path="res://scenes/arena.tscn" id="1_jyhfs"]
+[ext_resource type="PackedScene" path="res://scenes/arena.tscn" id="1_jyhfs"]
 [ext_resource type="Script" uid="uid://devtgu6t1k7x" path="res://scripts/MainMultiScript.gd" id="1_tefeu"]
 [ext_resource type="PackedScene" uid="uid://uohxodf2eb7c" path="res://scenes/arena_decorations.tscn" id="2_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://7806l1p4p8bh" path="res://scenes/EnvironmentFloor.tscn" id="3_tefeu"]
-[ext_resource type="Script" uid="uid://cnhf6v4jvrkgi" path="res://scenes/Minimap.gd" id="4_o6xl0"]
+[ext_resource type="PackedScene" path="res://scenes/EnvironmentFloor.tscn" id="3_tefeu"]
+[ext_resource type="Script" path="res://scenes/Minimap.gd" id="4_o6xl0"]
 
 [node name="Main" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2745314, 0)
 script = ExtResource("1_tefeu")
 
 [node name="Arena" parent="." instance=ExtResource("1_jyhfs")]
@@ -24,8 +23,9 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.040575027, -0.055208206, 0
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, -0.0033685341, 0.99999434, 0, -0.99999434, -0.0033685341, 0, 50.88166, 0)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("4_o6xl0")
+player = NodePath("")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer"]
 custom_minimum_size = Vector2(180, 180)

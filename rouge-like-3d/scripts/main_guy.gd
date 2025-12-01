@@ -1,5 +1,5 @@
 class_name Player extends CharacterBody3D
-
+#main_guy.gd
 @export_range(1, 35, 1) var speed: float = 10
 @export_range(10, 400, 1) var acceleration: float = 100
 @export_range(0.1, 3.0, 0.1) var jump_height: float = 4.5
@@ -30,13 +30,15 @@ var nearby_weapons: Array[Weapon] = []
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var anim_player: AnimationPlayer = $SpiderModel/spider/AnimationPlayer
 @onready var spider_model: Node3D = $SpiderModel
-@onready var hand_point: Node3D = $SpiderModel/HandPoint
+@onready var hand_point: Node3D = $HandPoint
 @onready var pickup_area: Area3D = $PickupArea
 
 func _ready() -> void:
-	capture_mouse()
 	
 	print("=== PLAYER READY ===")
+	print("Player ID: ", name)
+	print("Is my authority: ", is_multiplayer_authority())
+	print("Camera active: ", camera.current if camera else false)
 	print("Hand point exists: ", hand_point != null)
 	print("Pickup area exists: ", pickup_area != null)
 	
@@ -49,21 +51,21 @@ func _ready() -> void:
 				if animation:
 					animation.loop_mode = Animation.LOOP_LINEAR
 	
-	# Connect pickup area signals with debugging
-	if pickup_area:
+	# Only connect pickup signals for YOUR player
+	if is_multiplayer_authority() and pickup_area:
 		print("Connecting pickup area signals...")
 		pickup_area.body_entered.connect(_on_pickup_area_entered)
 		pickup_area.body_exited.connect(_on_pickup_area_exited)
 		
 		# Check what's already in the area
-		await get_tree().process_frame  # Wait one frame
+		await get_tree().process_frame
 		var bodies = pickup_area.get_overlapping_bodies()
 		print("Bodies in pickup area at start: ", bodies.size())
 		for body in bodies:
 			print("  - ", body.name, " (", body.get_class(), ")")
 			if body is Weapon:
 				_on_pickup_area_entered(body)
-	else:
+	elif not pickup_area:
 		push_error("PickupArea not found!")
 
 func _on_animation_finished(anim_name: String) -> void:
@@ -77,6 +79,8 @@ func _on_animation_finished(anim_name: String) -> void:
 			anim_player.play(anim_name)
 
 func _physics_process(delta: float) -> void:
+	if not is_multiplayer_authority():
+		return
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		jumping = true
 	
@@ -86,6 +90,18 @@ func _physics_process(delta: float) -> void:
 	velocity = _walk(delta) + _gravity(delta) + _jump(delta)
 	_update_animation()
 	move_and_slide()
+	
+	if is_multiplayer_authority():
+		rpc("sync_transform", global_position, rotation)
+		
+@rpc("unreliable")
+func sync_transform(pos: Vector3, rot: Vector3):
+	if not is_multiplayer_authority():
+		global_position = pos
+		rotation = rot
+
+
+
 
 func _handle_weapon_input() -> void:
 	# E key - pickup weapon (or drop if holding one)
