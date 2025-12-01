@@ -5,7 +5,7 @@ class_name Player extends CharacterBody3D
 @export_range(0.1, 3.0, 0.1) var jump_height: float = 4.5
 @export var turn_speed: float = 2.5
 @export var mouse_sensitivity: float = 0.002
-@export var pickup_range: float = 35.0
+@export var pickup_range: float = 70.0
 
 # Health variables
 @export var max_health: float = 100.0
@@ -38,7 +38,7 @@ var nearby_weapons: Array[Weapon] = []
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var anim_player: AnimationPlayer = $SpiderModel/spider/AnimationPlayer
 @onready var spider_model: Node3D = $SpiderModel
-@onready var hand_point: Node3D = $SpiderModel/HandPoint
+@onready var hand_point: Node3D = $HandPoint
 @onready var pickup_area: Area3D = $PickupArea
 
 func _enter_tree() -> void:

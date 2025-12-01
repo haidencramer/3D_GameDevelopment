@@ -1,8 +1,8 @@
 extends CanvasLayer
 
 # Reference to the minimap viewport
-@onready var minimap_viewport = $SubViewportContainer/SubViewport
-@onready var minimap_camera = $SubViewportContainer/SubViewport/MinimapCamera3D
+@onready var minimap_viewport = $SubViewportContainer/MinimapViewport
+@onready var minimap_camera = $SubViewportContainer/MinimapViewport/MinimapCamera3D
 
 # Reference to the player (set this in the editor or via code)
 @export var player: Node3D

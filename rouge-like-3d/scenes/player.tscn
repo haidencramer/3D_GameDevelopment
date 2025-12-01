@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://slu0cwubipe1"]
 
-[ext_resource type="PackedScene" uid="uid://dqvgs3gxdcp7f" path="res://scenes/play_spider.tscn" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://dqvgs3gxdcp7f" path="res://scenes/play_spider.tscn" id="1_igli2"]
 
 [node name="Player" type="Node3D"]
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_3vyb7")]
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_igli2")]
 transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 7.456007, -3.9700117, -4.2293925)
