@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgcaf63nxs8as"]
+[gd_scene load_steps=7 format=3 uid="uid://bgcaf63nxs8as"]
 
 [ext_resource type="Script" uid="uid://fchkjcwf0qvg" path="res://scripts/MainMultiScript.gd" id="1_8nwis"]
-[ext_resource type="PackedScene" uid="uid://crrihxou2jj23" path="res://buildingsNshit.tscn" id="1_jad8w"]
+[ext_resource type="PackedScene" uid="uid://crrihxou2jj23" path="res://scenes/buildingsNshit.tscn" id="1_jad8w"]
 [ext_resource type="PackedScene" uid="uid://c4vcis3uyprq0" path="res://scenes/arena_obstacles.tscn" id="2_2hjxj"]
 [ext_resource type="Script" uid="uid://cnhf6v4jvrkgi" path="res://scripts/Minimap.gd" id="3_2hjxj"]
+[ext_resource type="PackedScene" uid="uid://fw6xhhi357nd" path="res://scenes/weaponScenes/Katana.tscn" id="5_hw2wa"]
+[ext_resource type="PackedScene" uid="uid://vtt7g3lbpi5s" path="res://scenes/weaponScenes/Zweihander.tscn" id="6_d4sw4"]
 
 [node name="LevelComplete" type="Node3D"]
 script = ExtResource("1_8nwis")
@@ -62,3 +64,9 @@ offset_bottom = 50.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, -0.0033685341, 0.99999434, 0, -0.99999434, -0.0033685341, 0, 50.88166, 0)
+
+[node name="Katana" parent="." instance=ExtResource("5_hw2wa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.026482, 7.7106776, 18.545338)
+
+[node name="Zweihander" parent="." instance=ExtResource("6_d4sw4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1166344, 6.6762376, 10.172104)
