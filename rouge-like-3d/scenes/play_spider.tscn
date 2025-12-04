@@ -46,6 +46,8 @@ shape = SubResource("SphereShape3D_or3vb")
 debug_color = Color(0.75686276, 0.44705883, 0.25490198, 1)
 
 [node name="HitBox" type="Area3D" parent="."]
+collision_layer = 0
+monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.236889, 12.446746, 9.576403)

@@ -11,6 +11,14 @@ class_name Player extends CharacterBody3D
 @export var max_health: float = 100.0
 var current_health: float
 
+# Attack variables
+@export var attack_damage: float = 20.0
+@export var attack_cooldown: float = 0.8
+@export var attack_range: float = 4.0  # Increased to 4m
+@export var attack_angle: float = 90.0  # Increased to 90 degrees for easier hitting
+var can_attack: bool = true
+var is_attacking: bool = false
+
 # Reference to the health bar UI
 var health_bar: ProgressBar
 
@@ -30,7 +38,7 @@ var jump_vel: Vector3
 @export var backflip_backward_force: float = 8.0
 @export var backflip_rotation_speed: float = 720.0
 
-# Weapon system
+# Weapon system (keeping for now, but attack system doesn't need it)
 var held_weapon: Weapon = null
 var nearby_weapons: Array[Weapon] = []
 
@@ -51,14 +59,14 @@ func _ready() -> void:
 	
 	# Get reference to the health bar (only for local player)
 	if is_multiplayer_authority():
-		health_bar = get_node("/root/LevelComplete/CanvasLayer/Control/HealthBar")
+		health_bar = get_node_or_null("/root/LevelComplete/CanvasLayer/Control/HealthBar")
 		if health_bar:
 			health_bar.max_value = max_health
 			health_bar.value = current_health
 	
 	# CRITICAL: Set player collision layers correctly
-	collision_layer = 1
-	collision_mask = 1
+	collision_layer = 2  # Players exist on layer 2
+	collision_mask = 1   # Players collide with world only
 	
 	print("=== PLAYER READY ===")
 	print("Player ID: ", name)
@@ -75,7 +83,8 @@ func _ready() -> void:
 		if anim_library:
 			for anim_name in anim_library.get_animation_list():
 				var animation = anim_library.get_animation(anim_name)
-				if animation:
+				# Don't loop attack animations
+				if animation and not anim_name.contains("Attack"):
 					animation.loop_mode = Animation.LOOP_LINEAR
 	
 	# Only connect pickup signals for YOUR player
@@ -98,6 +107,11 @@ func _ready() -> void:
 	call_deferred("_apply_camera_state")
 
 func _on_animation_finished(anim_name: String) -> void:
+	# Reset attacking state when attack animation finishes
+	if anim_name.contains("Attack"):
+		is_attacking = false
+		print("Attack animation finished")
+	
 	if anim_player and anim_player.current_animation == anim_name:
 		var is_moving = abs(Input.get_axis(&"move_down", &"move_up")) > 0.1
 		if anim_name == "Armature|Walk" and is_moving:
@@ -107,15 +121,19 @@ func _on_animation_finished(anim_name: String) -> void:
 		elif anim_name == "Armature|Jump" and not is_on_floor():
 			anim_player.play(anim_name)
 
-func take_damage(damage: float):
-	"""Called when the player takes damage"""
+@rpc("any_peer", "call_local", "reliable")
+func take_damage(damage: float, attacker_id: int):
+	"""Called via RPC when player takes damage"""
 	if is_dead:
 		return
 	
 	current_health = max(0, current_health - damage)
-	update_health_bar()
 	
-	print("Player took ", damage, " damage. Health: ", current_health, "/", max_health)
+	# Only update UI for local player
+	if is_multiplayer_authority():
+		update_health_bar()
+	
+	print("Player ", name, " took ", damage, " damage from player ", attacker_id, ". Health: ", current_health, "/", max_health)
 	
 	if current_health <= 0:
 		die()
@@ -140,8 +158,11 @@ func die():
 		return
 	
 	is_dead = true
-	print("========== PLAYER DIED ==========")
-	print("Current health: ", current_health)
+	print("========== PLAYER ", name, " DIED ==========")
+	
+	# Notify all clients this player died
+	if is_multiplayer_authority():
+		rpc("sync_death")
 	
 	# Disable player control during death
 	set_physics_process(false)
@@ -164,18 +185,30 @@ func die():
 			for anim_name in anim_library.get_animation_list():
 				print("  - ", anim_name)
 	
-	# Wait a moment before restarting
-	await get_tree().create_timer(2.0).timeout
-	
-	# Restart the level
-	print("Reloading scene...")
-	get_tree().reload_current_scene()
+	# Only reload for the dead player
+	if is_multiplayer_authority():
+		await get_tree().create_timer(2.0).timeout
+		print("Reloading scene...")
+		get_tree().reload_current_scene()
+
+@rpc("any_peer", "call_local", "reliable")
+func sync_death():
+	"""Sync death state across all clients"""
+	if not is_dead:
+		is_dead = true
+		set_physics_process(false)
+		if anim_player.has_animation("Armature|Death1"):
+			anim_player.play("Armature|Death1")
 
 func _physics_process(delta: float) -> void:
 	if not is_multiplayer_authority() or is_dead:
 		return
 	
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	# Handle attack input - SPACEBAR to attack
+	if Input.is_action_just_pressed("ui_accept") and can_attack and not is_attacking:
+		perform_attack()
+	
+	if Input.is_action_just_pressed("jump") and is_on_floor() and not is_attacking:
 		jumping = true
 	
 	_handle_weapon_input()
@@ -190,9 +223,136 @@ func _physics_process(delta: float) -> void:
 
 @rpc("unreliable")
 func sync_transform(pos: Vector3, rot: Vector3):
+	"""Sync transform for non-authoritative clients"""
 	if not is_multiplayer_authority():
 		global_position = pos
 		rotation = rot
+
+func perform_attack() -> void:
+	"""Initiate an attack"""
+	if not can_attack or is_attacking:
+		return
+	
+	print("\n=== PERFORMING ATTACK ===")
+	print("My position: ", global_position)
+	print("My forward direction: ", -spider_model.global_transform.basis.z)
+	
+	is_attacking = true
+	can_attack = false
+	
+	# Play attack animation
+	if anim_player.has_animation("Armature|Attack1"):
+		anim_player.play("Armature|Attack1")
+		print("Playing attack animation: Armature|Attack1")
+	elif anim_player.has_animation("Armature|Attack"):
+		anim_player.play("Armature|Attack")
+		print("Playing attack animation: Armature|Attack")
+	else:
+		print("WARNING: No attack animation found!")
+		var anim_library = anim_player.get_animation_library("")
+		if anim_library:
+			print("Available animations:")
+			for anim_name in anim_library.get_animation_list():
+				print("  - ", anim_name)
+		
+		if anim_player.has_animation("Armature|Idle"):
+			anim_player.play("Armature|Idle")
+	
+	# Delay the hit check to sync with animation peak
+	get_tree().create_timer(0.2).timeout.connect(_check_attack_hit)
+	
+	# Start cooldown
+	get_tree().create_timer(attack_cooldown).timeout.connect(_reset_attack_cooldown)
+
+func _reset_attack_cooldown() -> void:
+	can_attack = true
+	print("Attack ready again")
+
+func _check_attack_hit() -> void:
+	"""Check if attack hit any players - Uses direct world query instead of Area3D"""
+	if not is_multiplayer_authority():
+		return
+	
+	print("\n=== CHECKING FOR HITS ===")
+	
+	# Get all nodes in the scene
+	var all_players = get_tree().get_nodes_in_group("players")
+	
+	# If no group exists, try to find players manually
+	if all_players.is_empty():
+		print("No players in 'players' group, searching manually...")
+		var root = get_tree().root
+		all_players = _find_all_players(root)
+	
+	print("Total players found in scene: ", all_players.size())
+	
+	var hits_detected = 0
+	
+	for node in all_players:
+		if not node is Player:
+			continue
+			
+		var target = node as Player
+		
+		# Skip self
+		if target == self:
+			print("  Skipping self (", target.name, ")")
+			continue
+		
+		print("\n--- Checking player: ", target.name, " ---")
+		print("  Target position: ", target.global_position)
+		
+		# Calculate distance
+		var distance = global_position.distance_to(target.global_position)
+		print("  Distance: ", distance, "m (max: ", attack_range, "m)")
+		
+		if distance > attack_range:
+			print("  ❌ TOO FAR - outside attack range")
+			continue
+		
+		# Calculate angle
+		var to_target = (target.global_position - global_position).normalized()
+		var forward = -spider_model.global_transform.basis.z.normalized()
+		
+		var dot_product = forward.dot(to_target)
+		var angle = rad_to_deg(acos(clamp(dot_product, -1.0, 1.0)))
+		
+		print("  Forward: ", forward)
+		print("  To Target: ", to_target)
+		print("  Angle: ", angle, "° (max: ", attack_angle / 2, "°)")
+		
+		if angle > attack_angle / 2:
+			print("  ❌ WRONG ANGLE - not facing target")
+			continue
+		
+		# All checks passed!
+		print("  ✅ DISTANCE PASSED")
+		print("  ✅ ANGLE PASSED")
+		print("\n*** 🎯 HIT CONFIRMED on player ", target.name, " ***")
+		print("Dealing ", attack_damage, " damage!\n")
+		
+		# Deal damage via RPC
+		target.rpc("take_damage", attack_damage, int(name))
+		hits_detected += 1
+	
+	if hits_detected == 0:
+		print("\n❌ NO HITS - No valid targets in range")
+	else:
+		print("\n✅ Total hits: ", hits_detected)
+	
+	print("=== HIT CHECK COMPLETE ===\n")
+
+func _find_all_players(node: Node) -> Array:
+	"""Recursively find all Player nodes in the scene tree"""
+	var players = []
+	
+	if node is Player:
+		players.append(node)
+	
+	for child in node.get_children():
+		players.append_array(_find_all_players(child))
+	
+	return players
 
 func _handle_weapon_input() -> void:
 	# E key - pickup weapon (or drop if holding one)
@@ -294,6 +454,9 @@ func _on_pickup_area_exited(body: Node3D) -> void:
 		print("Removed from nearby weapons. Total: ", nearby_weapons.size())
 
 func _handle_turning(delta: float) -> void:
+	if is_attacking:
+		return  # Don't turn during attack
+	
 	if Input.is_action_pressed(&"move_left"):
 		spider_model.rotation.y += turn_speed * delta
 	if Input.is_action_pressed(&"move_right"):
@@ -301,6 +464,9 @@ func _handle_turning(delta: float) -> void:
 	camera_pivot.rotation.y = spider_model.rotation.y
 
 func _walk(delta: float) -> Vector3:
+	if is_attacking:
+		return walk_vel.move_toward(Vector3.ZERO, acceleration * delta * 2)  # Slow down during attack
+	
 	var forward_input = Input.get_axis(&"move_down", &"move_up")
 	
 	if forward_input != 0:
@@ -314,6 +480,10 @@ func _walk(delta: float) -> Vector3:
 
 func _update_animation() -> void:
 	if not anim_player or is_dead:
+		return
+	
+	# Don't interrupt attack animation
+	if is_attacking:
 		return
 	
 	var current_anim = anim_player.current_animation
@@ -350,7 +520,7 @@ func _gravity(delta: float) -> Vector3:
 	return grav_vel
 
 func _jump(delta: float) -> Vector3:
-	if jumping:
+	if jumping and not is_attacking:
 		if is_on_floor():
 			jump_vel = Vector3(0, sqrt(4 * jump_height * gravity), 0)
 		jumping = false
@@ -371,14 +541,14 @@ func _apply_camera_state():
 		print("Not my player. Disabling this camera.")
 		camera.current = false
 
-# TESTING FUNCTIONS - Press keys to test death system
+# TESTING FUNCTIONS - Press keys to test
 func _process(_delta):
 	if not is_multiplayer_authority():
 		return
 	
 	if Input.is_action_just_pressed("ui_down"):
 		print("\n[TEST] Taking 10 damage")
-		take_damage(10)
+		rpc("take_damage", 10.0, int(name))
 	
 	if Input.is_action_just_pressed("ui_up"):
 		print("\n[TEST] Healing 10 HP")
