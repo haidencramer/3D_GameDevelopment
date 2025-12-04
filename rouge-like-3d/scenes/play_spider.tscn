@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqvgs3gxdcp7f"]
+[gd_scene load_steps=7 format=3 uid="uid://dqvgs3gxdcp7f"]
 
 [ext_resource type="Script" uid="uid://c0tyrqi8f3qb6" path="res://scripts/main_guy.gd" id="1_syr32"]
 [ext_resource type="PackedScene" uid="uid://dinn4mnymc8vo" path="res://scenes/spider.tscn" id="2_5r5nc"]
@@ -9,6 +9,12 @@ radius = 0.95947266
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_or3vb"]
 radius = 3.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_syr32"]
+size = Vector3(2.40625, 1.6201172, 1.0097656)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5r5nc"]
+radius = 2.3134766
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_syr32")
@@ -38,3 +44,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.245, 12.604, 11.75)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PickupArea"]
 shape = SubResource("SphereShape3D_or3vb")
 debug_color = Color(0.75686276, 0.44705883, 0.25490198, 1)
+
+[node name="HitBox" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.236889, 12.446746, 9.576403)
+shape = SubResource("BoxShape3D_syr32")
+
+[node name="Hurt Box" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hurt Box"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.264042, 12.604, 12.438988)
+shape = SubResource("CylinderShape3D_5r5nc")
