@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://7b2t023kufan"]
+[gd_scene load_steps=10 format=3 uid="uid://7b2t023kufan"]
 
 [ext_resource type="Texture2D" uid="uid://dhojkl5002y3p" path="res://assets/Sprites/Button Sprite.png" id="1_d2mlb"]
 [ext_resource type="Script" uid="uid://ugytnogd2r7y" path="res://scripts/MenuControl.gd" id="1_moq3k"]
 [ext_resource type="Texture2D" uid="uid://f3uytcb5qftg" path="res://assets/Sprites/Title Sprite.png" id="2_eb6x1"]
+[ext_resource type="PackedScene" uid="uid://df1djf024r213" path="res://scenes/ButtonMappingMenu.tscn" id="2_yw6rb"]
 [ext_resource type="PackedScene" uid="uid://dlxhxqh8onvm2" path="res://scenes/menuBG.tscn" id="3_eb6x1"]
 
 [sub_resource type="FontFile" id="FontFile_moq3k"]
@@ -151,6 +152,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_moq3k")
+input_mapping_scene = ExtResource("2_yw6rb")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
