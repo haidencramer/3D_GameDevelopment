@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://ivsw62pismig"]
+
+[ext_resource type="Script" uid="uid://v3i6r8wjbhop" path="res://scripts/GodotCredits.gd" id="1_jet1m"]
+[ext_resource type="PackedScene" uid="uid://dlxhxqh8onvm2" path="res://scenes/menuBG.tscn" id="2_spvsy"]
+
+[node name="GodotCredits" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jet1m")
+
+[node name="Node3D" parent="." instance=ExtResource("2_spvsy")]
+
+[node name="CreditsContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Line" type="Label" parent="CreditsContainer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 650.0
+offset_right = 1152.0
+offset_bottom = 646.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "Credits line"
+horizontal_alignment = 1
