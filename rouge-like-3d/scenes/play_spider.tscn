@@ -11,7 +11,7 @@ radius = 0.95947266
 radius = 3.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_syr32"]
-size = Vector3(2.40625, 1.6201172, 1.0097656)
+size = Vector3(2.40625, 1.6201172, 1.7358398)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_5r5nc"]
 radius = 2.3134766
@@ -50,7 +50,7 @@ collision_layer = 0
 monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.236889, 12.446746, 9.576403)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.236889, 12.446746, 15.260893)
 shape = SubResource("BoxShape3D_syr32")
 
 [node name="Hurt Box" type="Area3D" parent="."]

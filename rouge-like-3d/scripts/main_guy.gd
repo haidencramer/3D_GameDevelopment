@@ -14,8 +14,8 @@ var current_health: float
 # Attack variables
 @export var attack_damage: float = 20.0
 @export var attack_cooldown: float = 0.8
-@export var attack_range: float = 4.0  # Increased to 4m
-@export var attack_angle: float = 90.0  # Increased to 90 degrees for easier hitting
+@export var attack_range: float = 6.0  # Increased to 4m
+@export var attack_angle: float = 100.0  # Increased to 90 degrees for easier hitting
 var can_attack: bool = true
 var is_attacking: bool = false
 
