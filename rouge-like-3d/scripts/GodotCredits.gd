@@ -42,11 +42,12 @@ var credits = [
 	],[
 		"Assets",
 		"",
-		"Aamatniekss",
+		"Village:",
+		"Fertil Soil Productions",
 		"",
-		"Szadi art",
+		"trees:",
+		"Elegant Crow",
 		"",
-		"Kronovi",
 	],[
 		"Tools used",
 		"",
