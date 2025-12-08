@@ -45,36 +45,60 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 54
 text = "Turn Right"
 
+[node name="Label5" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 54
+text = "Attack"
+
+[node name="Label6" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 54
+text = "Jump"
+
 [node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
 
 [node name="Button" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 46
-text = "asdf"
+text = "W"
 script = ExtResource("1_1kuvc")
 action_name = "move_up"
 
 [node name="Button3" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 46
-text = "asdf"
+text = "S"
 script = ExtResource("1_1kuvc")
 action_name = "move_down"
 
 [node name="Button4" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 46
-text = "asdf"
+text = "A"
 script = ExtResource("1_1kuvc")
 action_name = "move_left"
 
 [node name="Button5" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 46
-text = "asdf"
+text = "D"
 script = ExtResource("1_1kuvc")
 action_name = "move_right"
+
+[node name="Button6" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "Space"
+script = ExtResource("1_1kuvc")
+action_name = "attack"
+
+[node name="Button7" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "Shift"
+script = ExtResource("1_1kuvc")
+action_name = "jump"
 
 [node name="Button2" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2

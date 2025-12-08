@@ -14,8 +14,8 @@ var current_health: float
 # Attack variables
 @export var attack_damage: float = 20.0
 @export var attack_cooldown: float = 0.8
-@export var attack_range: float = 6.0  # Increased to 4m
-@export var attack_angle: float = 100.0  # Increased to 90 degrees for easier hitting
+@export var attack_range: float = 6.0
+@export var attack_angle: float = 100.0
 var can_attack: bool = true
 var is_attacking: bool = false
 
@@ -38,7 +38,7 @@ var jump_vel: Vector3
 @export var backflip_backward_force: float = 8.0
 @export var backflip_rotation_speed: float = 720.0
 
-# Weapon system (keeping for now, but attack system doesn't need it)
+# Weapon system
 var held_weapon: Weapon = null
 var nearby_weapons: Array[Weapon] = []
 
@@ -204,8 +204,8 @@ func _physics_process(delta: float) -> void:
 	if not is_multiplayer_authority() or is_dead:
 		return
 	
-	# Handle attack input - SPACEBAR to attack
-	if Input.is_action_just_pressed("ui_accept") and can_attack and not is_attacking:
+	# Handle attack input - changed from ui_accept to attack
+	if Input.is_action_just_pressed("attack") and can_attack and not is_attacking:
 		perform_attack()
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor() and not is_attacking:
@@ -540,20 +540,3 @@ func _apply_camera_state():
 	else:
 		print("Not my player. Disabling this camera.")
 		camera.current = false
-
-# TESTING FUNCTIONS - Press keys to test
-func _process(_delta):
-	if not is_multiplayer_authority():
-		return
-	
-	if Input.is_action_just_pressed("ui_down"):
-		print("\n[TEST] Taking 10 damage")
-		rpc("take_damage", 10.0, int(name))
-	
-	if Input.is_action_just_pressed("ui_up"):
-		print("\n[TEST] Healing 10 HP")
-		heal(10)
-	
-	if Input.is_key_pressed(KEY_P):  
-		print("\n[TEST] Forcing death")
-		die()

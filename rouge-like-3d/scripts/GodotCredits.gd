@@ -48,6 +48,8 @@ var credits = [
 		"trees:",
 		"Elegant Crow",
 		"",
+		"low-poly spider",
+		"Puck"
 	],[
 		"Tools used",
 		"",
