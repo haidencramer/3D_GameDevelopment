@@ -55,7 +55,17 @@ func spawn_player(id: int):
 	players_spawned[id] = player
 
 func get_spawn_position(index: int) -> Vector3:
-	# Spread players out so they don't overlap
+	# Get all children of the SpawnPoints node
+	var spawn_point_nodes = spawn_points.get_children()
+	
+	# If we have spawn points defined, use them
+	if spawn_point_nodes.size() > 0:
+		# Use modulo to cycle through spawn points if more players than points
+		var spawn_index = index % spawn_point_nodes.size()
+		return spawn_point_nodes[spawn_index].global_position
+	
+	# Fallback to circular pattern if no spawn points exist
+	print("WARNING: No spawn points found, using default circular spawn")
 	var radius = 5.0
 	var angle = (index * TAU) / 4.0
 	return Vector3(cos(angle) * radius, 2.0, sin(angle) * radius)

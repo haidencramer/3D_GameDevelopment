@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bgcaf63nxs8as"]
 
-[ext_resource type="Script" uid="uid://fchkjcwf0qvg" path="res://scripts/MainMultiScript.gd" id="1_8nwis"]
+[ext_resource type="Script" uid="uid://devtgu6t1k7x" path="res://scripts/MainMultiScript.gd" id="1_8nwis"]
 [ext_resource type="PackedScene" uid="uid://crrihxou2jj23" path="res://scenes/buildingsNshit.tscn" id="1_jad8w"]
 [ext_resource type="PackedScene" uid="uid://c4vcis3uyprq0" path="res://scenes/arena_obstacles.tscn" id="2_2hjxj"]
 [ext_resource type="Script" uid="uid://cnhf6v4jvrkgi" path="res://scripts/Minimap.gd" id="3_2hjxj"]
@@ -15,10 +15,10 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 
 [node name="SpawnPoints" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.379189, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.38015, 24.379189, -8.1158905)
 
 [node name="Spawn1" type="Marker3D" parent="SpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 37.011696, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26488495, 1.3644047, 11.212655)
 
 [node name="MiniMapUI" type="CanvasLayer" parent="."]
 script = ExtResource("3_2hjxj")
